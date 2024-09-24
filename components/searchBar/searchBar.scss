@@ -1,0 +1,38 @@
+@import '../../styles/styles.scss';
+
+.search-bar input {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: $sideBar;
+    border-color: $sideBar;
+}
+.search-bar .input-group-text {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: $sideBar;
+    border-color: $sideBar;
+}
+.btn-custom {
+    margin-left: 20px;
+    border-radius: 50px;
+    background-color: $searchButton;
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: $searchButton;
+    color: white;
+}
+
+.search-bar input:focus {
+    background-color: $sideBar;
+    border-color: $sideBar;
+}
+
+.bi-search {
+    color: white;
+}
+
+body {
+    background-color: $pageBackground;
+}
