@@ -104,6 +104,7 @@
 /*Notifications (Bell)*/
 .search__body{
   color: white;
+  border-bottom: 1px solid white;
 }
 .notif__bar {
   background-color:rgba(127, 161, 195, 1);
