@@ -18,23 +18,10 @@
   color: rgb(255, 255, 255);
 }
 
-.admin {
-  background-color: rgb(170, 18, 18);
+.projectBackground {
+  background-color: rgb(127, 161, 195);
 }
 
-.manager {
-  background-color: rgb(55, 24, 94);
-}
-
-.collab {
+.projectButton {
   background-color: rgb(100, 130, 173);
-}
-
-.profile {
-  width: 300px;
-}
-
-.user__body {
-  color: white;
-  text-shadow: 1px 1px 1px black;
-}/*# sourceMappingURL=profiles.css.map */
+}/*# sourceMappingURL=projet.css.map */
