@@ -17,3 +17,28 @@
     background-color: $returnButton;
     color: $white;
 }
+.projectButtonNext {
+
+    background-color: $managerColor;
+    color: $white;
+}
+
+.projectButton:hover {
+
+    background-color: $pageBackground;
+}
+.projectButtonCreate:hover {
+
+    background-color: $createButtonProject;
+    color: $white;
+}
+.projectButtonReturn:hover {
+
+    background-color: $returnButton;
+    color: $white;
+}
+.projectButtonNext:hover {
+
+    background-color: $managerColor;
+    color: $white;
+}
