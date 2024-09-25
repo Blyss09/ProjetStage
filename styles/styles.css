@@ -11,6 +11,9 @@
 .dashboard__title {
   color: rgba(245, 237, 237, 1);
 }
+.dashboard__body{
+  border-bottom: 1px solid white;
+}
 .filter__title {
   margin-left: 40rem;
   margin-right: 5px;
