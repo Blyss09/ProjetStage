@@ -47,7 +47,7 @@
 .nav-item .nav-link.active {
   font-weight: bold;
 }
-.nav-item .nav-link.active + .img i {
+.nav-item .nav-link.active + .img_arrow i {
   font-size: 34px;
   position: relative;
   right: 3px;
