@@ -1,0 +1,39 @@
+.bell {
+  background-color: rgb(37, 150, 190);
+}
+
+.filterButton {
+  background-color: rgb(100, 130, 173);
+}
+
+.dateControl::-moz-placeholder {
+  color: rgb(127, 161, 195);
+}
+
+.dateControl::placeholder {
+  color: rgb(127, 161, 195);
+}
+
+.fontWhite {
+  color: rgb(255, 255, 255);
+}
+
+.bell {
+  background-color: rgb(37, 150, 190);
+}
+
+.filterButton {
+  background-color: rgb(100, 130, 173);
+}
+
+.dateControl::-moz-placeholder {
+  color: rgb(127, 161, 195);
+}
+
+.dateControl::placeholder {
+  color: rgb(127, 161, 195);
+}
+
+.fontWhite {
+  color: rgb(255, 255, 255);
+}/*# sourceMappingURL=calendars.css.map */
