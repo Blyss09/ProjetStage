@@ -1,37 +1,122 @@
 @charset "UTF-8";
+.bell {
+  background-color: rgb(37, 150, 190);
+}
 
-/*Profiles*/
+.filterButton {
+  background-color: rgb(100, 130, 173);
+}
+
+.dateControl::-moz-placeholder {
+  color: rgb(127, 161, 195);
+}
+
+.dateControl::placeholder {
+  color: rgb(127, 161, 195);
+}
+
+.fontWhite {
+  color: rgb(255, 255, 255);
+}
+
+.mainLogIn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 70vh;
+  text-align: center;
+}
+
+.inputLogIn {
+  margin: 30px 0;
+}
+
+.form-control {
+  width: auto;
+}
+
+.forgottenPass {
+  text-decoration: none;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.buttonsLogIn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.connectionButton {
+  color: white;
+  text-decoration: none;
+  background-color: rgb(37, 150, 190);
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.footerLogIn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.sendingButton {
+  color: white;
+  text-decoration: none;
+  background-color: rgb(37, 150, 190);
+  padding: 10px 30px;
+  border-radius: 50px;
+}
+
 .container-fluid {
-  background-color: rgba(100, 130, 173, 1);
+  background-color: rgb(100, 130, 173);
   height: 100vh;
 }
+
 .sidebar {
-  background-color:rgba(127, 161, 195, 1);
+  background-color: rgb(127, 161, 195);
 }
+
 .dashboard__title {
-  color: rgba(245, 237, 237, 1);
+  color: rgb(245, 237, 237);
 }
-.dashboard__body{
+
+.dashboard__body {
   border-bottom: 1px solid white;
 }
+
 .filter__title {
   margin-left: 40rem;
   margin-right: 5px;
 }
-.filter-size{
+
+.filter-size {
   width: 130px;
 }
-.filter-size::placeholder{
+
+.filter-size::-moz-placeholder {
   text-align: center !important;
 }
+
+.filter-size::placeholder {
+  text-align: center !important;
+}
+
 .rounded-table {
   border-radius: 15px;
   overflow: hidden;
 }
+
 .user__body {
   color: white;
   text-shadow: 1px 1px 1px black;
 }
+
 .user__icon i {
   color: rgb(255, 255, 255);
   font-size: 50px;
@@ -43,17 +128,19 @@
 .admin {
   background-color: rgb(170, 18, 18);
 }
+
 /*manager*/
 .manager {
   background-color: rgb(55, 24, 94);
 }
+
 /*collaborateur*/
 .collab {
   background-color: rgb(100, 130, 173);
 }
 
 /*navBars*/
-.house_img{
+.house_img {
   width: 14px;
   height: 23px;
   position: relative;
@@ -61,7 +148,7 @@
   color: white;
 }
 
-.img_arrow{
+.img_arrow {
   width: 14px;
   height: 23px;
 }
@@ -77,6 +164,7 @@
   flex: 1 1 auto;
   color: white;
 }
+
 .nav-item .nav-link::before {
   content: "•";
   font-size: 24px;
@@ -85,32 +173,40 @@
   position: relative;
   top: 2px;
 }
+
 .nav-item .nav-link:hover {
   color: rgb(32, 210, 169);
 }
+
 .nav-item .nav-link.active {
   font-weight: bold;
 }
+
 .nav-item .nav-link.active + .img i {
   font-size: 34px;
   position: relative;
   right: 3px;
   bottom: 8px;
 }
+
 .nav-item .nav-link.active:hover {
   color: white;
 }
+
 .nav-item .bi-chevron-right {
   color: white;
 }
+
 /*Logout Button*/
 .logout__btn {
-  background-color: rgba(248, 60, 60, 1);
+  background-color: rgb(248, 60, 60);
 }
-.logout__btn:hover{
+
+.logout__btn:hover {
   background-color: rgb(150, 41, 41);
 }
-.logout_img{
+
+.logout_img {
   position: relative;
   left: 0px;
   right: 20px;
@@ -120,12 +216,13 @@
 }
 
 /*Notifications (Bell)*/
-.search__body{
+.search__body {
   color: white;
   border-bottom: 1px solid white;
 }
+
 .notif__bar {
-  background-color:rgba(127, 161, 195, 1);
+  background-color: rgb(127, 161, 195);
 }
 
 /*Position actuelle + Search Bar*/
@@ -194,10 +291,6 @@
   margin: 30px 0;
 }
 
-.form-control {
-  width: 30vw;
-}
-
 .forgottenPass {
   text-decoration: none;
   color: black;
@@ -235,6 +328,199 @@
   border-radius: 50px;
 }
 
+.step-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.activeF {
+  background-color: rgb(6, 24, 69);
+  color: white;
+  border-top: 3px solid rgb(3, 11, 31) !important;
+  border-right: 3px solid rgb(3, 11, 31) !important;
+}
 
-/*# sourceMappingURL=styles.css.map */
+.passiveF {
+  background-color: rgb(76, 146, 137);
+  color: white;
+  border-top: 3px solid rgb(36, 78, 73) !important;
+  border-right: 3px solid rgb(36, 78, 73) !important;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin-right: -15px;
+  border-bottom: none;
+  pointer-events: none;
+}
+
+.step-container .btn:nth-child(1) {
+  z-index: 8;
+}
+
+.step-container .btn:nth-child(2) {
+  z-index: 7;
+}
+
+.step-container .btn:nth-child(3) {
+  z-index: 6;
+}
+
+.step-container .btn:nth-child(4) {
+  z-index: 5;
+}
+
+.step-container .btn:nth-child(5) {
+  z-index: 4;
+}
+
+.step-container .btn:nth-child(6) {
+  z-index: 3;
+}
+
+.step-container .btn:nth-child(7) {
+  z-index: 2;
+}
+
+.step-container .btn:nth-child(8) {
+  z-index: 1;
+}
+
+.custom-hr {
+  width: 50%;
+  margin: 0;
+  border-top: 3px solid rgb(76, 146, 137);
+  font-size: larger;
+  margin-top: -3px;
+}
+
+.table {
+  padding: 0;
+  width: 1200px;
+  font-size: 14px;
+  border-collapse: separate;
+  border-spacing: 0px;
+}
+.table .statut {
+  display: flex;
+  align-items: center;
+  padding-top: 11px;
+  padding-bottom: 16px;
+}
+.table th, .table td {
+  padding: 10px;
+}
+.table th {
+  color: rgb(100, 130, 173);
+  background-color: white;
+  font-weight: 600;
+  border: 0;
+}
+.table th:first-child {
+  border-top-left-radius: 10px;
+}
+.table th:last-child {
+  border-top-right-radius: 10px;
+}
+.table td {
+  background-color: rgb(127, 161, 195);
+  color: white;
+}
+.table td:first-child {
+  border-left: 1px solid white;
+}
+.table td:last-child {
+  border-right: 1px solid white;
+}
+.table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+.table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.waiting {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.finished {
+  width: 15px;
+  height: 15px;
+  background-color: green;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.doing {
+  width: 15px;
+  height: 15px;
+  background-color: orange;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.test {
+  width: 15px;
+  height: 15px;
+  background-color: cyan;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.prod {
+  width: 15px;
+  height: 15px;
+  background-color: yellowgreen;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.stage {
+  width: 15px;
+  height: 15px;
+  background-color: yellow;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.dev {
+  width: 15px;
+  height: 15px;
+  background-color: orange;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.doing {
+  width: 15px;
+  height: 15px;
+  background-color: orange;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.cdc {
+  width: 15px;
+  height: 15px;
+  background-color: purple;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.adminProject {
+  margin-top: 50 px;
+}/*# sourceMappingURL=styles.css.map */
