@@ -10,20 +10,6 @@ $bellColor: rgb(37, 150, 190);
 $white: rgb(255,255,255);
 
 
-.bell {
-  background-color: $bellColor;
-}
-.filterButton {
-  background-color: $pageBackground;
-}
-.dateControl::placeholder {
-
-  color: $sideBar;
-}
-
-.fontWhite {
-  color: $white
-}
 
 
 $pageBackground : rgba(100, 130, 173, 1); //Background
