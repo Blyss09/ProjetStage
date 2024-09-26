@@ -103,6 +103,21 @@
 .nav-item .bi-chevron-right {
   color: white;
 }
+/*Logout Button*/
+.logout__btn {
+  background-color: rgba(248, 60, 60, 1);
+}
+.logout__btn:hover{
+  background-color: rgb(150, 41, 41);
+}
+.logout_img{
+  position: relative;
+  left: 0px;
+  right: 20px;
+  bottom: 2px;
+  width: 20px;
+  height: 20px;
+}
 
 /*Notifications (Bell)*/
 .search__body{
@@ -218,4 +233,8 @@
   background-color: rgb(37, 150, 190);
   padding: 10px 30px;
   border-radius: 50px;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+
+
+/*# sourceMappingURL=styles.css.map */
