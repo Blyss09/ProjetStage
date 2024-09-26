@@ -58,4 +58,28 @@
 .projectButtonNext:hover {
   background-color: rgb(55, 24, 94);
   color: rgb(255, 255, 255);
+}
+
+.front-icons {
+  color: rgb(255, 255, 255);
+}
+
+.card-text {
+  color: rgb(255, 255, 255);
+}
+
+.title-card {
+  color: rgb(100, 130, 173);
+}
+
+.card-body {
+  background-color: rgb(100, 130, 173);
+}
+
+.button-text {
+  color: rgb(255, 255, 255);
+}
+
+.button-icon {
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=projet.css.map */
