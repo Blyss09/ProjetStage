@@ -58,7 +58,7 @@
   height: 23px;
   position: relative;
   bottom: 3px;
-  color: white;
+  color: white; 
 }
 
 .img_arrow{
@@ -194,9 +194,6 @@
   margin: 30px 0;
 }
 
-.form-control {
-  width: 30vw;
-}
 
 .forgottenPass {
   text-decoration: none;
