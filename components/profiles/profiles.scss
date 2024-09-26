@@ -1,0 +1,19 @@
+@import '../../styles/styles.scss';
+
+
+.admin{
+    background-color: $adminColor;
+}
+.manager{
+    background-color: $managerColor;
+}
+.collab{
+    background-color: $pageBackground;
+}
+.profile {
+    width: 300px;
+}
+.user__body{
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}

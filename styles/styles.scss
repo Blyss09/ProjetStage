@@ -1,3 +1,30 @@
+$pageBackground: rgba(100, 130, 173, 1); 
+$sideBar: rgba(127, 161, 195, 1); 
+$logOut: rgba(248, 60, 60, 1); 
+$searchButton: rgb(76, 146, 137); 
+$paginationActive: rgb(6, 24, 69); 
+$createButtonProject: rgb(32, 210, 169); 
+$returnButton: rgb(35, 28, 138);
+$returnButtonPag: rgb(103, 103, 103); 
+$bellColor: rgb(37, 150, 190);
+$white: rgb(255,255,255);
+
+
+.bell {
+  background-color: $bellColor;
+}
+.filterButton {
+  background-color: $pageBackground;
+}
+.dateControl::placeholder {
+
+  color: $sideBar;
+}
+
+.fontWhite {
+  color: $white
+}
+
 $pageBackground : rgba(100, 130, 173, 1); //Background
 $sideBar : rgba(127, 161, 195, 1); //SideBar
 $logOut : rgba(248, 60, 60, 1); //Déconnexion
@@ -6,3 +33,9 @@ $paginationActive : rgb(6,24,69); //Boutton actf de la pagination
 $createButtonProject: rgb(32, 210, 169); //Boutton de création de projet
 $returnButton: rgb(35,28,138); //Boutton retour
 $returnButtonPag: rgb(103, 103, 103); //Boutton retour de la pagination
+$managerColor: rgb(55, 24, 94);
+$adminColor: rgb(170, 18, 18);
+
+
+//tableaux
+$rowCollor: rgba(127, 161, 195);

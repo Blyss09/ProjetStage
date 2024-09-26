@@ -1,0 +1,49 @@
+@import '../../styles/styles.scss';
+
+.container{
+    width: 400px;
+    background-color: $sideBar;
+}
+.img{
+    width: 14px;
+    height: 23px;
+}
+.nav-item {
+    .nav-link {
+        flex: 1 1 auto;
+        color: white;
+
+        &::before {
+            content: "•";
+            font-size: 24px;
+            margin-right: 30px;
+            line-height: 1;
+            position: relative;
+            top: 2px;
+        }
+
+        &:hover {
+            color: $createButtonProject;
+        }
+
+        &.active {
+            font-weight: bold;
+
+            +.img i {
+                font-size: 34px;
+                position: relative;
+                right: 3px;
+                bottom: 8px;
+            }
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
+    .bi-chevron-right{
+        color: white;
+    }
+    
+}

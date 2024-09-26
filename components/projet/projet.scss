@@ -1,0 +1,44 @@
+@import '../../styles/styles.scss';
+.projectBackground {
+
+    background-color: $sideBar;
+}
+.projectButton {
+
+    background-color: $pageBackground;
+}
+.projectButtonCreate {
+
+    background-color: $createButtonProject;
+    color: $white;
+}
+.projectButtonReturn {
+
+    background-color: $returnButton;
+    color: $white;
+}
+.projectButtonNext {
+
+    background-color: $managerColor;
+    color: $white;
+}
+
+.projectButton:hover {
+
+    background-color: $pageBackground;
+}
+.projectButtonCreate:hover {
+
+    background-color: $createButtonProject;
+    color: $white;
+}
+.projectButtonReturn:hover {
+
+    background-color: $returnButton;
+    color: $white;
+}
+.projectButtonNext:hover {
+
+    background-color: $managerColor;
+    color: $white;
+}
