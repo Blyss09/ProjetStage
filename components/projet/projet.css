@@ -58,4 +58,8 @@
 .projectButtonNext:hover {
   background-color: rgb(55, 24, 94);
   color: rgb(255, 255, 255);
+}
+
+.newProject {
+  background-color: rgb(127, 161, 195);
 }/*# sourceMappingURL=projet.css.map */
