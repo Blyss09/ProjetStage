@@ -9,7 +9,7 @@ $returnButtonPag: rgb(103, 103, 103);
 $bellColor: rgb(37, 150, 190);
 $white: rgb(255,255,255);
 $managerColor: rgb(55, 24, 94);
-$adminColor: rgb(170, 18, 18);
+$adminColor: rgba(248, 60, 60, 1); 
 
 
 .bell {
@@ -112,6 +112,19 @@ $rowCollor: rgba(127, 161, 195);
 .dashboard__body{
   border-bottom: 1px solid white;
 }
+/*Button Nouveau Projet*/
+.btn_newproj{
+  background-color: $pageBackground;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 20px;
+
+  
+  &:hover{
+    background-color: $createButtonProject;
+  }
+}
+
 .filter__title {
   margin-left: 40rem;
   margin-right: 5px;
@@ -139,11 +152,11 @@ $rowCollor: rgba(127, 161, 195);
 
 /*admin*/
 .admin {
-  background-color: rgb(170, 18, 18);
+  background-color: $adminColor;
 }
 /*manager*/
 .manager {
-  background-color: rgb(55, 24, 94);
+  background-color: $managerColor;
 }
 /*collaborateur*/
 .collab {
@@ -216,10 +229,10 @@ $rowCollor: rgba(127, 161, 195);
   background-color: rgba(248, 60, 60, 1);
   display: inline-flex;
   align-items: center;
-  margin-top: 12rem;
+  margin-top: 9rem;
 
   @media (max-width: 1440px) {
-    margin-top: 7rem;
+    margin-top: 5rem;
   }
 }
 .logout__btn:hover{

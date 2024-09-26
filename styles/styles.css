@@ -91,6 +91,17 @@
   border-bottom: 1px solid white;
 }
 
+/*Button Nouveau Projet*/
+.btn_newproj {
+  background-color: rgb(100, 130, 173);
+  display: inline-flex;
+  align-items: center;
+  border-radius: 20px;
+}
+.btn_newproj:hover {
+  background-color: rgb(32, 210, 169);
+}
+
 .filter__title {
   margin-left: 40rem;
   margin-right: 5px;
@@ -127,7 +138,7 @@
 
 /*admin*/
 .admin {
-  background-color: rgb(170, 18, 18);
+  background-color: rgb(248, 60, 60);
 }
 
 /*manager*/
@@ -212,11 +223,11 @@
   background-color: rgb(248, 60, 60);
   display: inline-flex;
   align-items: center;
-  margin-top: 12rem;
+  margin-top: 9rem;
 }
 @media (max-width: 1440px) {
   .logout__btn {
-    margin-top: 7rem;
+    margin-top: 5rem;
   }
 }
 
