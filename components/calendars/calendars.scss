@@ -1,0 +1,16 @@
+@import '../../styles/styles.scss';
+
+.bell {
+    background-color: $bellColor;
+  }
+  .filterButton {
+    background-color: $pageBackground;
+  }
+  .dateControl::placeholder {
+  
+    color: $sideBar;
+  }
+  
+  .fontWhite {
+    color: $white
+  }
