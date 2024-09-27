@@ -84,10 +84,22 @@
 
 .dashboard__title {
   color: rgb(245, 237, 237);
+  font-weight: 600;
 }
 
 .dashboard__body {
   border-bottom: 1px solid white;
+}
+
+/*Button Nouveau Projet*/
+.btn_newproj {
+  background-color: rgb(100, 130, 173);
+  display: inline-flex;
+  align-items: center;
+  border-radius: 20px;
+}
+.btn_newproj:hover {
+  background-color: rgb(32, 210, 169);
 }
 
 .filter__title {
@@ -126,7 +138,7 @@
 
 /*admin*/
 .admin {
-  background-color: rgb(170, 18, 18);
+  background-color: rgb(248, 60, 60);
 }
 
 /*manager*/
@@ -153,6 +165,11 @@
   height: 23px;
 }
 
+.navdash {
+  display: flex;
+  flex-direction: column;
+}
+
 .nav-item .nav-link.active + .img_arrow i {
   font-size: 34px;
   position: relative;
@@ -163,6 +180,7 @@
 .nav-item .nav-link {
   flex: 1 1 auto;
   color: white;
+  font-weight: bold;
 }
 
 .nav-item .nav-link::before {
@@ -175,22 +193,25 @@
 }
 
 .nav-item .nav-link:hover {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   color: rgb(32, 210, 169);
 }
 
 .nav-item .nav-link.active {
-  font-weight: bold;
+  color: rgb(239, 243, 3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.nav-item .nav-link.active + .img i {
+.nav-item .nav-link.active + .img_arrow i {
   font-size: 34px;
   position: relative;
   right: 3px;
   bottom: 8px;
+  color: rgb(239, 243, 3);
 }
 
 .nav-item .nav-link.active:hover {
-  color: white;
+  color: rgb(239, 243, 3);
 }
 
 .nav-item .bi-chevron-right {
@@ -200,17 +221,21 @@
 /*Logout Button*/
 .logout__btn {
   background-color: rgb(248, 60, 60);
+  display: inline-flex;
+  align-items: center;
+  margin-top: 9rem;
+}
+@media (max-width: 1440px) {
+  .logout__btn {
+    margin-top: 5rem;
+  }
 }
 
 .logout__btn:hover {
   background-color: rgb(150, 41, 41);
 }
 
-.logout_img {
-  position: relative;
-  left: 0px;
-  right: 20px;
-  bottom: 2px;
+.logout__img {
   width: 20px;
   height: 20px;
 }
@@ -348,13 +373,6 @@
   border-right: 3px solid rgb(36, 78, 73) !important;
 }
 
-.btn {
-  padding: 10px 20px;
-  margin-right: -15px;
-  border-bottom: none;
-  pointer-events: none;
-}
-
 .step-container .btn:nth-child(1) {
   z-index: 8;
 }
@@ -395,48 +413,48 @@
   margin-top: -3px;
 }
 
-.table {
+.proj-table {
   padding: 0;
-  width: 1200px;
+  width: 70vw;
   font-size: 14px;
   border-collapse: separate;
   border-spacing: 0px;
 }
-.table .statut {
+.proj-table .statut {
   display: flex;
   align-items: center;
-  padding-top: 11px;
-  padding-bottom: 16px;
+  padding-top: 0.6rem;
+  padding-bottom: 2rem;
 }
-.table th, .table td {
-  padding: 10px;
+.proj-table th {
+  padding: 1rem;
 }
-.table th {
+.proj-table th {
   color: rgb(100, 130, 173);
   background-color: white;
   font-weight: 600;
   border: 0;
 }
-.table th:first-child {
+.proj-table th:first-child {
   border-top-left-radius: 10px;
 }
-.table th:last-child {
+.proj-table th:last-child {
   border-top-right-radius: 10px;
 }
-.table td {
+.proj-table td {
   background-color: rgb(127, 161, 195);
   color: white;
 }
-.table td:first-child {
+.proj-table td:first-child {
   border-left: 1px solid white;
 }
-.table td:last-child {
+.proj-table td:last-child {
   border-right: 1px solid white;
 }
-.table tr:last-child td:first-child {
+.proj-table tr:last-child td:first-child {
   border-bottom-left-radius: 10px;
 }
-.table tr:last-child td:last-child {
+.proj-table tr:last-child td:last-child {
   border-bottom-right-radius: 10px;
 }
 
@@ -523,6 +541,10 @@
 
 .adminProject {
   margin-top: 50 px;
+}
+
+.startingTask {
+  background-color: green;
 }
 
 .search-bar input {
