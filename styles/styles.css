@@ -63,6 +63,7 @@
 .newProject {
   background-color: rgb(127, 161, 195);
   min-height: 60vh;
+  min-width: 50vw;
 }
 
 .admin {
