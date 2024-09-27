@@ -80,6 +80,7 @@
 
 .sidebar {
   background-color: rgb(127, 161, 195);
+  height: 96vh;
 }
 
 .dashboard__title {
@@ -163,6 +164,9 @@
 .img_arrow {
   width: 14px;
   height: 23px;
+  position: relative;
+  right: 3px;
+  bottom: 0.4rem;
 }
 
 .navdash {
@@ -181,6 +185,12 @@
   flex: 1 1 auto;
   color: white;
   font-weight: bold;
+}
+@media (min-height: 1200px) {
+  .nav-item .nav-link {
+    font-size: 22px;
+    line-height: 40px;
+  }
 }
 
 .nav-item .nav-link::before {
@@ -209,6 +219,11 @@
   bottom: 8px;
   color: rgb(239, 243, 3);
 }
+@media (min-height: 1199px) {
+  .nav-item .nav-link.active + .img_arrow i {
+    font-size: 40px;
+  }
+}
 
 .nav-item .nav-link.active:hover {
   color: rgb(239, 243, 3);
@@ -217,17 +232,22 @@
 .nav-item .bi-chevron-right {
   color: white;
 }
+@media (min-height: 1199px) {
+  .nav-item .bi-chevron-right {
+    font-size: 36px;
+  }
+}
 
 /*Logout Button*/
 .logout__btn {
   background-color: rgb(248, 60, 60);
   display: inline-flex;
   align-items: center;
-  margin-top: 9rem;
+  margin-top: 8rem;
 }
-@media (max-width: 1440px) {
+@media (min-height: 1199px) {
   .logout__btn {
-    margin-top: 5rem;
+    margin-top: 20rem;
   }
 }
 
