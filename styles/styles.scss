@@ -176,7 +176,9 @@ $rowCollor: rgba(127, 161, 195);
   display: flex;
   flex-direction: column;
 }
-
+.navbar-collapse {
+  transition: none !important; // anim bug
+}
 .nav-item .nav-link.active + .img_arrow i {
   font-size: 34px;
   position: relative;
