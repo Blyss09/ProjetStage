@@ -20,11 +20,6 @@
 }
 
 @media (max-width: 1400px) {
-  .sidebar {
-    flex: 0 0 20% !important;
-    max-width: 20% !important;
-    background-color: transparent !important;
-  }
   .admin, .manager, .collab {
     background-color: transparent !important;
   }
@@ -34,20 +29,8 @@
   .img_arrow {
     display: none !important;
   }
-  .main {
-    flex: 0 0 80% !important;
-    max-width: 80% !important;
-  }
 }
 @media (max-width: 992px) {
-  .sidebar {
-    flex: 0 0 30% !important;
-    max-width: 30% !important;
-  }
-  .main {
-    flex: 0 0 70% !important;
-    max-width: 70% !important;
-  }
   .sidebar .user__name,
   .sidebar .user__role {
     font-size: 14px !important;
@@ -103,9 +86,6 @@
   .logout__btn {
     margin-top: 3rem !important;
     margin-bottom: 5.4rem !important;
-  }
-  .main {
-    max-width: 90% !important;
   }
   .notif__bar {
     margin: 0 !important;
