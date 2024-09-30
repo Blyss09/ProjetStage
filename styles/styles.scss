@@ -756,15 +756,112 @@ $passiveFolder : rgb(76, 146, 137);
   background-color: rgba(100, 130, 173, 1);
 }
 
-//Fin Diagramme Statistique
+// projet
 
-// Début Bouton Editer
+$i: !important;
+.newProjectNav {
+  background-color: $sideBar; // Same background color as other navigational elements
+  color: $white;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  font-weight: 600;
+  font-size: 16px;
+  
+  .nav-link {
+    color: inherit$i;
+    text-decoration: none$i;
+    font-size: 1rem$i;
+    position: relative$i;
+    
+    &::before {
+      content: '•'$i;
+      position: absolute$i;
+      top: -15px$i;
+      left: 50%$i;
+      transform: translateX(-50%)$i;
+      font-size: 24px$i;
+      color: transparent$i;
+    }
 
-.editBtn {
-  color: $sideBar;
-  border-color: white;
-  border-radius: 10px;
-  width: 80px;
+    &.active {
+      color: $createButtonProject$i;
+      font-weight: bold$i;
+      
+      &::before {
+        color: $createButtonProject$i; // Highlight the active step
+      }
+    }
+
+    &:hover {
+      color: lighten($createButtonProject, 10%)$i;
+    }
+  }
 }
 
-// Fin Bouton éditer
+.newProjectCard {
+  background-color: $sideBar;
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+  h2 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+}
+
+.newProjectForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  label {
+    color: $sideBar;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  input, textarea {
+    width: 100%$i;
+    padding: 10px$i;
+    border-radius: 5px$i;
+    border: 1px solid rgba(127, 161, 195, 0.5)$i;
+    background-color: rgba(127, 161, 195, 0.1)$i;
+    font-size: 1rem$i;
+    color: $pageBackground$i;
+
+    &::placeholder {
+      color: $sideBar$i;
+    }
+
+    &:focus {
+      border-color: $createButtonProject$i;
+      box-shadow: 0 0 5px rgba(32, 210, 169, 0.3)$i;
+    }
+  }
+
+  textarea {
+    height: 100px$i;
+    resize: none$i;
+  }
+}
+
+button.btn-primary {
+  background-color: $createButtonProject$i;
+  border: none$i;
+  padding: 10px 25px$i;
+  font-size: 1rem$i;
+  border-radius: 30px$i;
+  color: $white$i;
+  width: fit-content$i;
+  align-self: flex-start$i;
+  transition: background-color 0.3s ease$i;
+  
+  &:hover {
+    background-color: darken($createButtonProject, 10%)$i;
+  }
+}
