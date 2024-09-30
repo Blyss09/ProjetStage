@@ -56,6 +56,9 @@
   .admin .user__name, .manager .user__name, .collab .user__name {
     width: 5rem !important;
   }
+  .collab {
+    margin-left: 7rem !important;
+  }
   .user__icon i {
     font-size: 1.9rem !important;
   }
