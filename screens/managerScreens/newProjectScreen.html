@@ -129,60 +129,67 @@
                     </div>
                 </div>
             </div>
-            <div class="step-container d-flex flex-column align-items-center"></div>
-                <div class="btn-group d-flex justify-content-center" role="group">
-                    <button type="button" class="activeF btn btn-lg rounded-top-4 ">
+            <div class="step-container d-flex flex-column align-items-center col-12 mt-4 mb-4 responsive">
+                <div class="btn-group d-flex justify-content-center " role="group">
+                    <button type="button" class="activeF btn btn-lg rounded-top-4 mx-2">
                         Étape 1
                     </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 mx-2">
                         Étape 2
                     </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 mx-2">
                         Étape 3
                     </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 mx-2">
                         Étape 4
                     </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 mx-2">
                         Étape 5
                     </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 mx-2">
                         Étape 6
                     </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 mx-2">
                         Étape 7
                     </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 mx-2">
                         Étape 8
                     </button>
                 </div>
-                <hr class="custom-hr"/> <div class="container newProject d-flex flex-column justify-content-center"></div>
-                <h4 class="text-light fw-semibold">Définir le nom du projet :</h4>
-        
-                <div class="row mb-3 ">
-                    <div class="col-6 offset-3">
-                        <label class="text-white fs-5 mb-2" for="floatingInput1">Nom du projet :</label>
-                        <input type="text" class="form-control rounded" id="floatingInput1" >
+            </div>
+
+           
+            <div class="card mt-3 p-4 newProjectCard">
+                <h4 class="text-light">Définir le nom du projet :</h4>
+                <form>
+                    <div class="mb-3 newProjectForm">
+                        <label for="projectName" class="form-label text-light">Nom du projet :</label>
+                        <input type="text" class="form-control projectInput" id="projectName" placeholder="Nom du projet">
                     </div>
+                    <div class="mb-3 newProjectForm">
+                        <label for="projectType" class="form-label text-light">Type de projet :</label>
+                        <input type="text" class="form-control projectInput" id="projectType" placeholder="Type de projet">
+                    </div>
+                    <div class="mb-7 newProjectForm newProjectComment">
+                        <label for="comment" class="form-label text-light">Ajouter un commentaire :</label>
+                        <textarea class="form-control projectInput" id="comment" rows="3"
+                            placeholder="Ajouter un commentaire"></textarea>
+                    </div>
+                </form>
+
+                <div class="d-flex justify-content-start invisible">
+                    <button type="button" class="btn btn-lg rounded-4 projectButtonReturn">
+                        <i class="bi bi-chevron-left"></i> Retour
+                    </button>
                 </div>
-        
-                <div class="row mb-3">
-                    <div class="col-6 offset-3">
-                        <label class="text-white fs-5 mb-2" for="floatingInput2">Type de projet :</label>
-                        <input type="text" class="form-control rounded" id="floatingInput2" >
-                    </div>
-                </div>
-        
-                <div class="row mb-3">
-                    <div class="col-6 offset-3">
-                        <label class="text-white fs-5 mb-2" for="floatingInput3">Ajouter un commentaire :</label>
-                        <input type="text" class="form-control rounded" id="floatingInput3" >
-                    </div>
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn rounded-5 projectButtonNext">
+                        Suivant <i class="bi bi-chevron-right"></i>
+                    </button>
                 </div>
             </div>
-            </div>
-            </div>
-        </div>
+        </main>
+    </div>
            
             
             
