@@ -138,45 +138,54 @@
                   </div>
             </div>
             <div class="container mt-5">
-                <div class="row justify-content-center">
-                    <div class="col-md-6 d-flex align-items-center">
-                        <div class="input-group search-bar flex-fill">
-                            <span class="input-group-text">
-                                <i class="bi bi-search"></i>
-                            </span>
-                            <input type="text" class="form-control" placeholder="Rechercher...">
+                
+                <ul class="nav nav-tabs">
+                    <li class="nav-item newProjectNav">
+                        <a class="nav-link active" href="#">Étape 1</a>
+                    </li>
+                    <li class="nav-item newProjectLi">
+                        <a class="nav-link" href="#">Étape 2</a>
+                    </li>
+                    <li class="nav-item newProjectLi">
+                        <a class="nav-link" href="#">Étape 3</a>
+                    </li>
+                    <li class="nav-item newProjectLi">
+                        <a class="nav-link" href="#">Étape 4</a>
+                    </li>
+                    <li class="nav-item newProjectLi">
+                        <a class="nav-link" href="#">Étape 5</a>
+                    </li>
+                    <li class="nav-item newProjectLi">
+                        <a class="nav-link" href="#">Étape 6</a>
+                    </li>
+                    <li class="nav-item newProjectLi">
+                        <a class="nav-link" href="#">Étape 7</a>
+                    </li>
+                    <li class="nav-item newProjectLi">
+                        <a class="nav-link" href="#">Étape 8</a>
+                    </li>
+                </ul>
+        
+               
+                <div class="card mt-3 p-4 newProjectCard">
+                    <h4 class="text-light">Définir le nom du projet :</h4>
+                    <form>
+                        <div class="mb-3 newProjectForm">
+                            <label for="projectName" class="form-label">Nom du projet :</label>
+                            <input type="text" class="form-control" id="projectName" placeholder="Nom du projet">
                         </div>
-                        <button class="btn btn-custom">Rechercher</button>
-                    </div>
+                        <div class="mb-3 newProjectForm">
+                            <label for="projectType" class="form-label">Type de projet :</label>
+                            <input type="text" class="form-control" id="projectType" placeholder="Type de projet">
+                        </div>
+                        <div class="mb-7 newProjectForm newProjectComment">
+                            <label for="comment" class="form-label">Ajouter un commentaire :</label>
+                            <textarea class="form-control" id="comment" rows="3" placeholder="Ajouter un commentaire"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary">Suivant</button>
+                    </form>
                 </div>
             </div>
-            
-            <div class="container newProject d-flex flex-column justify-content-center">
-                <h4 class="text-light fw-semibold">Définir le nom du projet :</h4>
-        
-                <div class="row mb-3 ">
-                    <div class="col-6 offset-3">
-                        <label class="text-white fs-5 mb-2" for="floatingInput1">Nom du projet :</label>
-                        <input type="text" class="form-control rounded" id="floatingInput1" >
-                    </div>
-                </div>
-        
-                <div class="row mb-3">
-                    <div class="col-6 offset-3">
-                        <label class="text-white fs-5 mb-2" for="floatingInput2">Type de projet :</label>
-                        <input type="text" class="form-control rounded" id="floatingInput2" >
-                    </div>
-                </div>
-        
-                <div class="row mb-3">
-                    <div class="col-6 offset-3">
-                        <label class="text-white fs-5 mb-2" for="floatingInput3">Ajouter un commentaire :</label>
-                        <input type="text" class="form-control rounded" id="floatingInput3" >
-                    </div>
-                </div>
-            </div>
-            
-        </main>
     </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
