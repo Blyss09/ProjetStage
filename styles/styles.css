@@ -367,4 +367,11 @@
 .form-select,
 .form-control {
   background-color: white !important;
+}
+
+.editBtn {
+  color: rgb(127, 161, 195);
+  border-color: white;
+  border-radius: 10px;
+  width: 80px;
 }/*# sourceMappingURL=styles.css.map */
