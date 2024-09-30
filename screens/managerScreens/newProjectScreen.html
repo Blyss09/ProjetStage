@@ -36,17 +36,15 @@
                         <div class="dashboard__title ms-4 align-self-center">DASHBOARD</div>
                     </div>
                     <div class="d-flex justify-content-center my-4">
-                        <a href="./newProjectScreen.html">
-                            <button type="button" class="btn btn_newproj text-white px-4 p-0">
-                                <i class="bi bi-plus-square-fill mt-2 mx-3 h4"></i>
-                              Nouveau Projet
-                            </button>
-                        </a>
+                        <button type="button" class="btn btn_newproj text-white px-4 p-0">
+                            <i class="bi bi-plus-square-fill mt-2 mx-3 h4"></i>
+                          Nouveau Projet
+                        </button>
                     </div>
                     <ul class="nav row flex-lg-row mt-4">
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4" aria-current="page" href="./managerEnv.html">Projets</a>
+                                <a class="nav-link active ms-4" aria-current="page" href="#">Projets</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -54,7 +52,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link active ms-4" aria-current="page" href="#">Mes tâches</a>
+                                <a class="nav-link ms-4" aria-current="page" href="./managerTasks.html">Mes tâches</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -117,90 +115,45 @@
                     </div>
                   </div>
             </div>
-            <div class="search__body row mt-5 pb-5 mx-0 align-items-center">
-                <h5 class="col-6 col-md-7 p-0">Mes tâches</h5>
-                <div class="col p-0">
-                    <div class="justify-content-center">
-                        <div class="d-flex">
-                            <div class="input-group search-bar flex-fill">
-                                <span class="input-group-text">
-                                    <i class="bi bi-search"></i>
-                                </span>
-                                <input type="text" class="form-control" placeholder="Rechercher...">
-                            </div>
-                            <button class="btn btn-custom">Rechercher</button>
+            <div class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 d-flex align-items-center">
+                        <div class="input-group search-bar flex-fill">
+                            <span class="input-group-text">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Rechercher...">
                         </div>
+                        <button class="btn btn-custom">Rechercher</button>
                     </div>
                 </div>
             </div>
-            <div class="table-responsive ms-4">
-                <table class="table proj-table mt-5 text-center">
-                    <thead>
-                        <tr class="">
-                            <th scope="col">Libellés</th>
-                            <th scope="col">Date de début</th>
-                            <th scope="col">Heure de début</th>
-                            <th scope="col">Date Fin</th>
-                            <th scope="col">Heure Fin</th>
-                            <th scope="col">Statut</th>
-                            <th scope="col">Technologie</th>
-                            <th scope="col">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="col">Libellé de la tâche</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">09:00</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">18:00</td>
-                            <td class="col"><div class="waiting"></div>Attente</td>
-                            <td class="col">WEB</td>
-                            <td class="col"><button class="endingTask">Terminer la tâche</button></td>
-                        </tr>
-                        <tr>
-                            <td class="col">Libellé de la tâche</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">09:00</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">18:00</td>
-                            <td class="col"><div class="waiting"></div>Attente</td>
-                            <td class="col">WEB</td>
-                            <td class="col"><button class="finishedTask">Terminé</button></td>
-                        </tr>
-                        <tr>
-                            <td class="col">Libellé de la tâche</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">09:00</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">18:00</td>
-                            <td class="col"><div class="waiting"></div>Attente</td>
-                            <td class="col">WEB</td>
-                            <td class="col"><button class="endingTask">Terminer la tâche</button></td>
-                        </tr>
-                        <tr>
-                            <td class="col">Libellé de la tâche</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">09:00</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">18:00</td>
-                            <td class="col"><div class="finished"></div>Terminé</td>
-                            <td class="col">WEB</td>
-                            <td class="col"><button class="startingTask">Démarrer la tâche</button></td>
-                        </tr>
-                        <tr>
-                            <td class="col">Libellé de la tâche</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">09:00</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">18:00</td>
-                            <td class="col"><div class="doing"></div>En cours</td>
-                            <td class="col">WEB</td>
-                            <td class="col"><button class="finishedTask">Terminé</button></td>
-                        </tr>
-                    </tbody>
-                </table>
+            
+            <div class="container newProject d-flex flex-column justify-content-center">
+                <h4 class="text-light fw-semibold">Définir le nom du projet :</h4>
+        
+                <div class="row mb-3 ">
+                    <div class="col-6 offset-3">
+                        <label class="text-white fs-5 mb-2" for="floatingInput1">Nom du projet :</label>
+                        <input type="text" class="form-control rounded" id="floatingInput1" >
+                    </div>
+                </div>
+        
+                <div class="row mb-3">
+                    <div class="col-6 offset-3">
+                        <label class="text-white fs-5 mb-2" for="floatingInput2">Type de projet :</label>
+                        <input type="text" class="form-control rounded" id="floatingInput2" >
+                    </div>
+                </div>
+        
+                <div class="row mb-3">
+                    <div class="col-6 offset-3">
+                        <label class="text-white fs-5 mb-2" for="floatingInput3">Ajouter un commentaire :</label>
+                        <input type="text" class="form-control rounded" id="floatingInput3" >
+                    </div>
+                </div>
             </div>
+            
         </main>
     </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
