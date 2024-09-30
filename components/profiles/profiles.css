@@ -722,6 +722,13 @@
   background-color: rgb(100, 130, 173);
 }
 
+.editBtn {
+  color: rgb(127, 161, 195);
+  border-color: white;
+  border-radius: 10px;
+  width: 80px;
+}
+
 .newProjectNav {
   background-color: rgb(127, 161, 195);
   color: rgb(255, 255, 255);
@@ -800,6 +807,48 @@ button.btn-primary:hover {
 
 .projectInput {
   background-color: #fff !important;
+}
+
+.projectBackground {
+  background-color: rgb(127, 161, 195);
+}
+
+.projectButton {
+  background-color: rgb(100, 130, 173);
+}
+
+.projectButtonCreate {
+  background-color: rgb(32, 210, 169);
+  color: rgb(255, 255, 255);
+}
+
+.projectButtonReturn {
+  background-color: rgb(35, 28, 138);
+  color: rgb(255, 255, 255);
+}
+
+.projectButtonNext {
+  background-color: rgb(55, 24, 94);
+  color: rgb(255, 255, 255);
+}
+
+.projectButton:hover {
+  background-color: rgb(100, 130, 173);
+}
+
+.projectButtonCreate:hover {
+  background-color: rgb(32, 210, 169);
+  color: rgb(255, 255, 255);
+}
+
+.projectButtonReturn:hover {
+  background-color: rgb(35, 28, 138);
+  color: rgb(255, 255, 255);
+}
+
+.projectButtonNext:hover {
+  background-color: rgb(55, 24, 94);
+  color: rgb(255, 255, 255);
 }
 
 .admin {

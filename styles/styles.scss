@@ -418,6 +418,10 @@ $rowCollor: rgba(127, 161, 195);
   border-color: rgb(127, 161, 195);
 }
 
+.upper_table {
+  color: white;
+}
+
 .btn-custom {
   margin-left: 20px;
   border-radius: 50px;
@@ -760,6 +764,15 @@ $passiveFolder : rgb(76, 146, 137);
   background-color: rgba(100, 130, 173, 1);
 }
 
+// Début Bouton Editer
+
+.editBtn {
+  color: $sideBar;
+  border-color: white;
+  border-radius: 10px;
+  width: 80px;
+}
+
 // projet
 
 $i: !important;
@@ -817,6 +830,7 @@ $i: !important;
     margin-bottom: 30px;
   }
 }
+
 
 .newProjectForm {
   display: flex;
@@ -896,4 +910,5 @@ button.btn-primary {
   background-color: $managerColor;
   color: $white;
 }
+
 

@@ -415,6 +415,10 @@
   border-color: rgb(127, 161, 195);
 }
 
+.upper_table {
+  color: white;
+}
+
 .btn-custom {
   margin-left: 20px;
   border-radius: 50px;
@@ -720,6 +724,13 @@
 .diagramme {
   color: white;
   background-color: rgb(100, 130, 173);
+}
+
+.editBtn {
+  color: rgb(127, 161, 195);
+  border-color: white;
+  border-radius: 10px;
+  width: 80px;
 }
 
 .newProjectNav {

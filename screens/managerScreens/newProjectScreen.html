@@ -13,8 +13,8 @@
 
 <body>
     <div class="container-fluid row p-4 m-0">
-        <sidebar class="sidebar rounded-3 col-3 p-5 align-items-center">
-            <div class="admin rounded-4 d-flex justify-content-center text-center p-1">
+        <sidebar class="sidebar rounded-3 col col-sm-3 col-md-4 col-lg-3 px-5 pt-5 align-items-center">
+            <div class="manager rounded-4 d-flex justify-content-center text-center p-1">
                 <div class="user__icon me-3">
                     <i class="bi bi-person-circle"></i>
                 </div>
@@ -23,8 +23,8 @@
                     <div class="user__role">Manager</div>
                 </div>
             </div>
-            <nav class="navbar navbar-expand-xxl navbar-light">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -35,16 +35,18 @@
                         </span>
                         <div class="dashboard__title ms-4 align-self-center">DASHBOARD</div>
                     </div>
-                    <div class="d-flex justify-content-center my-4">
-                        <button type="button" class="btn btn_newproj text-white px-4 p-0">
-                            <i class="bi bi-plus-square-fill mt-2 mx-3 h4"></i>
-                          Nouveau Projet
-                        </button>
+                    <div class="newproj__content d-flex justify-content-center my-4">
+                        <a href="./newProjectScreen.html">
+                            <button type="button" class="btn btn_newproj text-white px-4 p-0">
+                                <i class="bi bi-plus-square-fill mt-2 mx-3 h4"></i>
+                              Nouveau Projet
+                            </button>
+                        </a>
                     </div>
-                    <ul class="nav row flex-lg-row mt-4">
+                    <ul class="nav row flex-lg-row mt-4 p-0">
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link active ms-4" aria-current="page" href="#">Projets</a>
+                                <a class="nav-link active ms-4 px-0" aria-current="page" href="#">Projets</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -52,7 +54,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4" aria-current="page" href="./managerTasks.html">Mes tâches</a>
+                                <a class="nav-link ms-4 px-0" aria-current="page" href="./managerTasks.html">Mes tâches</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -60,7 +62,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4" aria-current="page" href="#">Statistiques projets</a>
+                                <a class="nav-link ms-4 px-0" aria-current="page" href="#">Statistiques projets</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -68,7 +70,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4" aria-current="page" href="#">Statistiques collaborateurs</a>
+                                <a class="nav-link ms-4 px-0" aria-current="page" href="#">Statistiques collaborateurs</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -78,10 +80,10 @@
                     <div class="d-flex justify-content-center">
                         <a href="../logInScreens/logIn.html">
                             <button type="button" class="btn logout__btn text-white pe-4">
-                              <svg preserveAspectRatio="none" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="logout__img mx-3">
-                                <path d="M5.50812 4.59244C3.56384 5.74479 2.0867 7.42565 1.29538 9.38619C0.504069 11.3467 0.440639 13.4827 1.11448 15.478C1.78833 17.4732 3.16363 19.2216 5.03679 20.4644C6.90994 21.7072 9.18139 22.3782 11.5148 22.3782C13.8483 22.3782 16.1197 21.7072 17.9929 20.4644C19.8661 19.2216 21.2414 17.4732 21.9152 15.478C22.5891 13.4827 22.5256 11.3467 21.7343 9.38619C20.943 7.42565 19.4659 5.74479 17.5216 4.59244M11.5154 0.819458V9.44342" stroke="#F8F8F8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                              </svg>
-                              Déconnexion
+                            <svg preserveAspectRatio="none" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="logout__img mx-3">
+                            <path d="M5.50812 4.59244C3.56384 5.74479 2.0867 7.42565 1.29538 9.38619C0.504069 11.3467 0.440639 13.4827 1.11448 15.478C1.78833 17.4732 3.16363 19.2216 5.03679 20.4644C6.90994 21.7072 9.18139 22.3782 11.5148 22.3782C13.8483 22.3782 16.1197 21.7072 17.9929 20.4644C19.8661 19.2216 21.2414 17.4732 21.9152 15.478C22.5891 13.4827 22.5256 11.3467 21.7343 9.38619C20.943 7.42565 19.4659 5.74479 17.5216 4.59244M11.5154 0.819458V9.44342" stroke="#F8F8F8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                                Déconnexion
                             </button>
                         </a>
                     </div>
@@ -129,60 +131,67 @@
                     </div>
                 </div>
             </div>
-            <div class="step-container d-flex flex-column align-items-center"></div>
-                <div class="btn-group d-flex justify-content-center" role="group">
-                    <button type="button" class="activeF btn btn-lg rounded-top-4 ">
+            <div class="step-container d-flex flex-column align-items-center col-12 mt-4 mb-4 responsive">
+                <div class="btn-group d-flex justify-content-center " role="group">
+                    <button type="button" class="activeF btn btn-lg rounded-top-4 mx-2">
                         Étape 1
                     </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 mx-2">
                         Étape 2
                     </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 mx-2">
                         Étape 3
                     </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 mx-2">
                         Étape 4
                     </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 mx-2">
                         Étape 5
                     </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 mx-2">
                         Étape 6
                     </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 mx-2">
                         Étape 7
                     </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 mx-2">
                         Étape 8
                     </button>
                 </div>
-                <hr class="custom-hr"/> <div class="container newProject d-flex flex-column justify-content-center"></div>
-                <h4 class="text-light fw-semibold">Définir le nom du projet :</h4>
-        
-                <div class="row mb-3 ">
-                    <div class="col-6 offset-3">
-                        <label class="text-white fs-5 mb-2" for="floatingInput1">Nom du projet :</label>
-                        <input type="text" class="form-control rounded" id="floatingInput1" >
+            </div>
+
+           
+            <div class="card mt-3 p-4 newProjectCard">
+                <h4 class="text-light">Définir le nom du projet :</h4>
+                <form>
+                    <div class="mb-3 newProjectForm">
+                        <label for="projectName" class="form-label text-light">Nom du projet :</label>
+                        <input type="text" class="form-control projectInput" id="projectName" placeholder="Nom du projet">
                     </div>
+                    <div class="mb-3 newProjectForm">
+                        <label for="projectType" class="form-label text-light">Type de projet :</label>
+                        <input type="text" class="form-control projectInput" id="projectType" placeholder="Type de projet">
+                    </div>
+                    <div class="mb-7 newProjectForm newProjectComment">
+                        <label for="comment" class="form-label text-light">Ajouter un commentaire :</label>
+                        <textarea class="form-control projectInput" id="comment" rows="3"
+                            placeholder="Ajouter un commentaire"></textarea>
+                    </div>
+                </form>
+
+                <div class="d-flex justify-content-start invisible">
+                    <button type="button" class="btn btn-lg rounded-4 projectButtonReturn">
+                        <i class="bi bi-chevron-left"></i> Retour
+                    </button>
                 </div>
-        
-                <div class="row mb-3">
-                    <div class="col-6 offset-3">
-                        <label class="text-white fs-5 mb-2" for="floatingInput2">Type de projet :</label>
-                        <input type="text" class="form-control rounded" id="floatingInput2" >
-                    </div>
-                </div>
-        
-                <div class="row mb-3">
-                    <div class="col-6 offset-3">
-                        <label class="text-white fs-5 mb-2" for="floatingInput3">Ajouter un commentaire :</label>
-                        <input type="text" class="form-control rounded" id="floatingInput3" >
-                    </div>
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn rounded-5 projectButtonNext">
+                        Suivant <i class="bi bi-chevron-right"></i>
+                    </button>
                 </div>
             </div>
-            </div>
-            </div>
-        </div>
+        </main>
+    </div>
            
             
             
