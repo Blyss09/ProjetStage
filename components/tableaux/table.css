@@ -1,66 +1,54 @@
-$pageBackground: rgba(100, 130, 173, 1); 
-$sideBar: rgba(127, 161, 195, 1); 
-$logOut: rgba(248, 60, 60, 1); 
-$searchButton: rgb(76, 146, 137); 
-$paginationActive: rgb(6, 24, 69); 
-$createButtonProject: rgb(32, 210, 169); 
-$returnButton: rgb(35, 28, 138);
-$returnButtonPag: rgb(103, 103, 103); 
-$bellColor: rgb(37, 150, 190);
-$white: rgb(255,255,255);
-$managerColor: rgb(55, 24, 94);
-$adminColor: rgba(248, 60, 60, 1); 
-//tableaux
-$rowCollor: rgba(127, 161, 195);
-
+@charset "UTF-8";
 .bell {
-  background-color: $bellColor;
+  background-color: rgb(37, 150, 190);
 }
-.filterButton {
-  background-color: $pageBackground;
-}
-.dateControl::placeholder {
 
-  color: $sideBar;
+.filterButton {
+  background-color: rgb(100, 130, 173);
+}
+
+.dateControl::-moz-placeholder {
+  color: rgb(127, 161, 195);
+}
+
+.dateControl::placeholder {
+  color: rgb(127, 161, 195);
 }
 
 .fontWhite {
-  color: $white
+  color: rgb(255, 255, 255);
 }
 
-//Media Queries
-
-@media (max-width:1400px){
+@media (max-width: 1400px) {
   .sidebar {
-    flex: 0 0 20% !important;
+    flex: 0 0 20% !important; /* Sidebar takes up less space */
     max-width: 20% !important;
     background-color: transparent !important;
   }
-  .admin,.manager,.collab {
+  .admin, .manager, .collab {
     background-color: transparent !important;
   }
   .nav-item .nav-link::before {
     display: none !important;
   }
-  .img_arrow{
+  .img_arrow {
     display: none !important;
   }
   .main {
-    flex: 0 0 80% !important;
+    flex: 0 0 80% !important; /* Main content takes up more space */
     max-width: 80% !important;
   }
-
 }
 @media (max-width: 992px) {
   .sidebar {
-    flex: 0 0 30% !important;
-    max-width: 30% !important;
+    flex: 0 0 25% !important; /* Smaller sidebar */
+    max-width: 25% !important;
   }
   .main {
-    flex: 0 0 70% !important;
-    max-width: 70% !important;
+    flex: 0 0 75% !important; /* Larger main content */
+    max-width: 75% !important;
   }
-
+  /* Adjust padding and text size for smaller view */
   .sidebar .user__name,
   .sidebar .user__role {
     font-size: 14px !important;
@@ -71,64 +59,49 @@ $rowCollor: rgba(127, 161, 195);
   }
 }
 @media (max-width: 768px) {
-  .container-fluid{
+  .container-fluid {
     padding: 0 !important;
   }
   .sidebar {
-    width: 5% !important;
-    padding: 0 !important;
+    width: 5% !important; /* Expand the sidebar to full width */
+    padding: 0 !important; /* Remove padding to save space */
     background-color: transparent !important;
-    font-size: 0.7rem !important;
+    font-size: 0.7rem !important; /* Make the sidebar background transparent */
   }
-  .admin,.manager,.collab {
+  .admin, .manager, .collab {
     margin-left: 11rem !important;
-    
-    .user__name{
-      width: 5rem !important;
-    }
   }
-  .user__icon i{
-    font-size: 1.9rem !important; 
+  .admin .user__name, .manager .user__name, .collab .user__name {
+    width: 5rem !important;
+  }
+  .user__icon i {
+    font-size: 1.9rem !important; /* Adjust the size of the profile icon */
+  }
+  .user__name {
+    font-size: 0.9rem;
+  }
+  .user__role {
+    font-size: 0.8rem;
   }
   .navbar {
     position: relative !important;
     bottom: 3.3rem !important;
   }
-
-  .navbar-collapse{
+  .navbar-collapse {
     background-color: rgb(23, 81, 87);
     margin-top: 0.5rem !important;
     z-index: 100 !important;
   }
-
-  .dashboard__body{
+  .dashboard__body {
     margin: 0 !important;
-    padding: 1rem 0 !important;
   }
-  .btn_newproj{
-    width: 11rem !important;
-    height: 3rem !important;
-  }
-  .newproj__content{
-    margin-bottom: 0 !important;
-  }
-  .logout__content{
-    // margin: 0 !important;
-  }
-
   .navbar-toggler {
     display: block !important;
     margin-left: 0.5rem !important;
   }
-  .logout__btn{
-    margin-top: 3rem !important;
-    margin-bottom: 5.4rem !important;
-  }
-
   .main {
     max-width: 90% !important;
   }
-
   .notif__bar {
     margin: 0 !important;
     background-color: transparent !important;
@@ -137,7 +110,6 @@ $rowCollor: rgba(127, 161, 195);
     padding: 0.5rem !important;
     font-size: 0.8rem !important;
   }
-
   .search__body {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -147,39 +119,33 @@ $rowCollor: rgba(127, 161, 195);
     margin-left: -5rem !important;
     margin-right: 0rem !important;
     border-bottom: 0 !important;
-
-    .title__text{
-      // margin-bottom: 1rem !important;
-      margin-left: 0 !important;
-    }
-  
-    .input-group {
-      height: 2rem !important;
-      flex-wrap: nowrap !important;
-    }
-
-    .input-group-text {
-      padding: 0 0 0 0.5rem !important;
-    }
-    .input-group .form-control{
-      width: 12rem !important;
-    }
-
-    .btn-custom{
-      margin: 0 0 0 1rem !important;
-      height: 2rem !important;
-      line-height: 1rem !important;
-    }
+  }
+  .search__body .title__text {
+    margin-left: 0 !important;
+  }
+  .search__body .input-group {
+    height: 2rem !important;
+    flex-wrap: nowrap !important;
+  }
+  .search__body .input-group-text {
+    padding: 0 0 0 0.5rem !important;
+  }
+  .search__body .input-group .form-control {
+    width: 12rem !important;
+  }
+  .search__body .btn-custom {
+    margin: 0 0 0 1rem !important;
+    height: 2rem !important;
+    line-height: 1rem !important;
   }
   .search__items input {
     font-size: 14px !important;
     width: 100% !important;
   }
-
   .btn-custom {
     margin-top: 1rem !important;
-  } 
-  .table_resp_pos{
+  }
+  .table_resp_pos {
     margin-left: -6rem !important;
   }
   .proj-table {
@@ -187,20 +153,16 @@ $rowCollor: rgba(127, 161, 195);
     margin-right: 0 !important;
     font-size: 0.8rem !important;
   }
-  .table_resp_pos{
+  .table_resp_pos {
     border-top: 1px solid white !important;
   }
 }
-
-
-//Page de connexion
-
 .mainLogIn {
   display: flex;
   justify-content: center;
-  flex-direction: column; 
-  align-items: center;     
-  min-height: 70vh; 
+  flex-direction: column;
+  align-items: center;
+  min-height: 70vh;
   text-align: center;
 }
 
@@ -227,7 +189,7 @@ $rowCollor: rgba(127, 161, 195);
 .connectionButton {
   color: white;
   text-decoration: none;
-  background-color: $bellColor;
+  background-color: rgb(37, 150, 190);
   padding: 10px;
   border-radius: 50px;
 }
@@ -244,60 +206,68 @@ $rowCollor: rgba(127, 161, 195);
 .sendingButton {
   color: white;
   text-decoration: none;
-  background-color: $bellColor;
+  background-color: rgb(37, 150, 190);
   padding: 10px 30px;
   border-radius: 50px;
 }
 
 .container-fluid {
-  background-color: rgba(100, 130, 173, 1);
+  background-color: rgb(100, 130, 173);
   height: 100vh;
 }
+
 .sidebar {
-  background-color:rgba(127, 161, 195, 1);
+  background-color: rgb(127, 161, 195);
   height: 96vh;
-  // @media (min-height: 1081px) and (max-height:1201px) {
-  //   height: 10vh;
-  // }
 }
+
 .dashboard__title {
-  color: rgba(245, 237, 237, 1);
+  color: rgb(245, 237, 237);
   font-weight: 600;
 }
-.dashboard__body{
+
+.dashboard__body {
   border-bottom: 1px solid white;
 }
+
 /*Button Nouveau Projet*/
-.btn_newproj{
-  background-color: $pageBackground;
+.btn_newproj {
+  background-color: rgb(100, 130, 173);
   display: inline-flex;
   align-items: center;
   border-radius: 20px;
-
-  
-  &:hover{
-    background-color: $createButtonProject;
-  }
+}
+.btn_newproj:hover {
+  background-color: rgb(32, 210, 169);
 }
 
 .filter__title {
   margin-left: 40rem;
   margin-right: 5px;
 }
-.filter-size{
+
+.filter-size {
   width: 130px;
 }
-.filter-size::placeholder{
+
+.filter-size::-moz-placeholder {
   text-align: center !important;
 }
+
+.filter-size::placeholder {
+  text-align: center !important;
+}
+
 .rounded-table {
   border-radius: 15px;
   overflow: hidden;
 }
+
 .user__body {
   color: white;
   text-shadow: 1px 1px 1px black;
 }
+
 .user__icon i {
   color: rgb(255, 255, 255);
   font-size: 50px;
@@ -307,27 +277,29 @@ $rowCollor: rgba(127, 161, 195);
 
 /*admin*/
 .admin {
-  background-color: $adminColor;
+  background-color: rgb(248, 60, 60);
 }
+
 /*manager*/
 .manager {
-  background-color: $managerColor;
+  background-color: rgb(55, 24, 94);
 }
+
 /*collaborateur*/
 .collab {
   background-color: rgb(100, 130, 173);
 }
 
 /*navBars*/
-.house_img{
+.house_img {
   width: 14px;
   height: 23px;
   position: relative;
   bottom: 3px;
-  color: white; 
+  color: white;
 }
 
-.img_arrow{
+.img_arrow {
   width: 14px;
   height: 23px;
   position: relative;
@@ -335,13 +307,15 @@ $rowCollor: rgba(127, 161, 195);
   bottom: 0.4rem;
 }
 
-.navdash{
+.navdash {
   display: flex;
   flex-direction: column;
 }
+
 .navbar-collapse {
-  transition: none !important; // anim bug
+  transition: none !important;
 }
+
 .nav-item .nav-link.active + .img_arrow i {
   font-size: 34px;
   position: relative;
@@ -353,12 +327,14 @@ $rowCollor: rgba(127, 161, 195);
   flex: 1 1 auto;
   color: white;
   font-weight: bold;
-
-  @media (min-height:1200px){
+}
+@media (min-height: 1200px) {
+  .nav-item .nav-link {
     font-size: 22px;
     line-height: 40px;
   }
 }
+
 .nav-item .nav-link::before {
   content: "•";
   font-size: 24px;
@@ -367,60 +343,73 @@ $rowCollor: rgba(127, 161, 195);
   position: relative;
   top: 2px;
 }
+
 .nav-item .nav-link:hover {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   color: rgb(32, 210, 169);
 }
+
 .nav-item .nav-link.active {
   color: rgb(239, 243, 3);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
 .nav-item .nav-link.active + .img_arrow i {
   font-size: 34px;
   position: relative;
   right: 3px;
   bottom: 8px;
   color: rgb(239, 243, 3);
-
-  @media (min-height:1199px){
+}
+@media (min-height: 1199px) {
+  .nav-item .nav-link.active + .img_arrow i {
     font-size: 40px;
   }
 }
+
 .nav-item .nav-link.active:hover {
   color: rgb(239, 243, 3);
 }
+
 .nav-item .bi-chevron-right {
   color: white;
-  @media (min-height:1199px){
+}
+@media (min-height: 1199px) {
+  .nav-item .bi-chevron-right {
     font-size: 36px;
   }
 }
+
 /*Logout Button*/
 .logout__btn {
-  background-color: rgba(248, 60, 60, 1);
+  background-color: rgb(248, 60, 60);
   display: inline-flex;
   align-items: center;
   margin-top: 8rem;
-
-  @media (min-height:1199px){
+}
+@media (min-height: 1199px) {
+  .logout__btn {
     margin-top: 20rem;
   }
 }
-.logout__btn:hover{
+
+.logout__btn:hover {
   background-color: rgb(150, 41, 41);
 }
-.logout__img{
+
+.logout__img {
   width: 20px;
   height: 20px;
 }
 
 /*Notifications (Bell)*/
-.search__body{
+.search__body {
   color: white;
   border-bottom: 1px solid white;
 }
+
 .notif__bar {
-  background-color:rgba(127, 161, 195, 1);
+  background-color: rgb(127, 161, 195);
 }
 
 /*Position actuelle + Search Bar*/
@@ -489,7 +478,6 @@ $rowCollor: rgba(127, 161, 195);
   margin: 30px 0;
 }
 
-
 .forgottenPass {
   text-decoration: none;
   color: black;
@@ -527,72 +515,64 @@ $rowCollor: rgba(127, 161, 195);
   border-radius: 50px;
 }
 
-$activeFolder : rgb(6, 24, 69);
-$passiveFolder : rgb(76, 146, 137);
-
-
 .step-container {
-    display: flex;
-    flex-direction: column;  
-    align-items: center;  
-}   
-
-//Style des boutons
-.activeF{
-    background-color: $activeFolder;
-    color: white;
-    border-top : 3px solid rgb(3, 11, 31)!important;
-    border-right: 3px solid rgb(3, 11, 31)!important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.passiveF{
-    background-color: $passiveFolder;
-    color: white;
-    border-top : 3px solid rgb(36, 78, 73)!important;
-    border-right: 3px solid rgb(36, 78, 73)!important;
+.activeF {
+  background-color: rgb(6, 24, 69);
+  color: white;
+  border-top: 3px solid rgb(3, 11, 31) !important;
+  border-right: 3px solid rgb(3, 11, 31) !important;
 }
 
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! A Resoudre !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// .btn {
-//     padding: 10px 20px;
-//     margin-right: -15px;
-//     border-bottom : none;
-//     pointer-events: none;
-// }
+.passiveF {
+  background-color: rgb(76, 146, 137);
+  color: white;
+  border-top: 3px solid rgb(36, 78, 73) !important;
+  border-right: 3px solid rgb(36, 78, 73) !important;
+}
 
-//Chevauchement des boutons
 .step-container .btn:nth-child(1) {
-    z-index: 8;  
-}
-.step-container .btn:nth-child(2) {
-    z-index: 7;  
-}
-.step-container .btn:nth-child(3) {
-    z-index: 6;
-}
-.step-container .btn:nth-child(4) {
-    z-index: 5;
-}
-.step-container .btn:nth-child(5) {
-    z-index: 4;
-}
-.step-container .btn:nth-child(6) {
-    z-index: 3;
-}
-.step-container .btn:nth-child(7) {
-    z-index: 2;
-}
-.step-container .btn:nth-child(8) {
-    z-index: 1;
+  z-index: 8;
 }
 
-//ligne collée au dessous 
+.step-container .btn:nth-child(2) {
+  z-index: 7;
+}
+
+.step-container .btn:nth-child(3) {
+  z-index: 6;
+}
+
+.step-container .btn:nth-child(4) {
+  z-index: 5;
+}
+
+.step-container .btn:nth-child(5) {
+  z-index: 4;
+}
+
+.step-container .btn:nth-child(6) {
+  z-index: 3;
+}
+
+.step-container .btn:nth-child(7) {
+  z-index: 2;
+}
+
+.step-container .btn:nth-child(8) {
+  z-index: 1;
+}
+
 .custom-hr {
-    width: 50%;
-    margin : 0;  
-    border-top: 3px solid $passiveFolder;
-    font-size: larger;
-    margin-top: -3px;
+  width: 50%;
+  margin: 0;
+  border-top: 3px solid rgb(76, 146, 137);
+  font-size: larger;
+  margin-top: -3px;
 }
 
 .proj-table {
@@ -601,154 +581,129 @@ $passiveFolder : rgb(76, 146, 137);
   font-size: 14px;
   border-collapse: separate;
   border-spacing: 0px;
-  
-
-  .statut {
-      display: flex;
-      align-items: center;
-      padding-top: 0.6rem;
-      padding-bottom: 2rem;
-  }
-
-  th {
-      padding: 1rem;
-  }
-
-  th {
-      color: $pageBackground;
-      background-color: white;
-      font-weight: 600;
-      border: 0;
-
-      &:first-child {
-          border-top-left-radius: 10px;
-      }
-
-      &:last-child {
-          border-top-right-radius: 10px;
-      }
-  }
-
-  td {
-      background-color: $rowCollor;
-      color: white;
-
-      &:first-child {
-          border-left: 1px solid white;
-      }
-
-      &:last-child {
-          border-right: 1px solid white;
-      }
-  }
-
-  tr {
-      &:last-child {
-
-          td {
-              &:first-child {
-                  border-bottom-left-radius: 10px;
-              }
-
-              &:last-child {
-                  border-bottom-right-radius: 10px;
-              }
-          }
-      }
-  }
+}
+.proj-table .statut {
+  display: flex;
+  align-items: center;
+  padding-top: 0.6rem;
+  padding-bottom: 2rem;
+}
+.proj-table th {
+  padding: 1rem;
+}
+.proj-table th {
+  color: rgb(100, 130, 173);
+  background-color: white;
+  font-weight: 600;
+  border: 0;
+}
+.proj-table th:first-child {
+  border-top-left-radius: 10px;
+}
+.proj-table th:last-child {
+  border-top-right-radius: 10px;
+}
+.proj-table td {
+  background-color: rgb(127, 161, 195);
+  color: white;
+}
+.proj-table td:first-child {
+  border-left: 1px solid white;
+}
+.proj-table td:last-child {
+  border-right: 1px solid white;
+}
+.proj-table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+.proj-table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
 }
 
 .waiting {
   width: 15px;
   height: 15px;
-  background-color: red; 
-  border-radius: 6px; 
-  display: inline-block; 
+  background-color: red;
+  border-radius: 6px;
+  display: inline-block;
   margin-right: 10px;
 }
 
 .finished {
   width: 15px;
   height: 15px;
-  background-color: green; 
-  border-radius: 6px; 
-  display: inline-block; 
+  background-color: green;
+  border-radius: 6px;
+  display: inline-block;
   margin-right: 10px;
 }
 
 .doing {
   width: 15px;
   height: 15px;
-  background-color: orange; 
-  border-radius: 6px; 
-  display: inline-block; 
+  background-color: orange;
+  border-radius: 6px;
+  display: inline-block;
   margin-right: 10px;
 }
-
-// FIN STATUT TACHES
-
-// DEBUT STATUT PROJET
 
 .test {
   width: 15px;
   height: 15px;
-  background-color: cyan; 
-  border-radius: 6px; 
-  display: inline-block; 
+  background-color: cyan;
+  border-radius: 6px;
+  display: inline-block;
   margin-right: 10px;
 }
 
 .prod {
   width: 15px;
   height: 15px;
-  background-color: yellowgreen; 
-  border-radius: 6px; 
-  display: inline-block; 
+  background-color: yellowgreen;
+  border-radius: 6px;
+  display: inline-block;
   margin-right: 10px;
 }
 
 .stage {
   width: 15px;
   height: 15px;
-  background-color: yellow; 
-  border-radius: 6px; 
-  display: inline-block; 
+  background-color: yellow;
+  border-radius: 6px;
+  display: inline-block;
   margin-right: 10px;
 }
-
 
 .dev {
   width: 15px;
   height: 15px;
-  background-color: orange; 
-  border-radius: 6px; 
-  display: inline-block; 
+  background-color: orange;
+  border-radius: 6px;
+  display: inline-block;
   margin-right: 10px;
 }
 
 .doing {
   width: 15px;
   height: 15px;
-  background-color: orange; 
-  border-radius: 6px; 
-  display: inline-block; 
+  background-color: orange;
+  border-radius: 6px;
+  display: inline-block;
   margin-right: 10px;
 }
 
 .cdc {
   width: 15px;
   height: 15px;
-  background-color: purple; 
-  border-radius: 6px; 
-  display: inline-block; 
+  background-color: purple;
+  border-radius: 6px;
+  display: inline-block;
   margin-right: 10px;
 }
 
 .adminProject {
   margin-top: 50 px;
 }
-
-// Début Bouton Actions
 
 .startingTask {
   background-color: green;
@@ -773,3 +728,145 @@ $passiveFolder : rgb(76, 146, 137);
   width: 125px;
   padding: 5px;
 }
+
+body {
+  background-color: rgb(100, 130, 173);
+}
+
+span {
+  color: white;
+}
+
+.main {
+  text-align: center;
+}
+
+.waiting {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.finished {
+  width: 15px;
+  height: 15px;
+  background-color: green;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.doing {
+  width: 15px;
+  height: 15px;
+  background-color: orange;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.test {
+  width: 15px;
+  height: 15px;
+  background-color: cyan;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.prod {
+  width: 15px;
+  height: 15px;
+  background-color: yellowgreen;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.stage {
+  width: 15px;
+  height: 15px;
+  background-color: yellow;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.dev {
+  width: 15px;
+  height: 15px;
+  background-color: orange;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.doing {
+  width: 15px;
+  height: 15px;
+  background-color: orange;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.cdc {
+  width: 15px;
+  height: 15px;
+  background-color: purple;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.container {
+  margin-top: 10px;
+}
+
+.table {
+  padding: 0;
+  width: 1200px;
+  font-size: 14px;
+  border-collapse: separate;
+  border-spacing: 0px;
+}
+.table .statut {
+  display: flex;
+  align-items: center;
+  padding-top: 11px;
+  padding-bottom: 16px;
+}
+.table th, .table td {
+  padding: 10px;
+}
+.table th {
+  color: rgb(100, 130, 173);
+  background-color: white;
+  font-weight: 600;
+  border: 0;
+}
+.table th:first-child {
+  border-top-left-radius: 10px;
+}
+.table th:last-child {
+  border-top-right-radius: 10px;
+}
+.table td {
+  background-color: rgb(127, 161, 195);
+  color: white;
+}
+.table td:first-child {
+  border-left: 1px solid white;
+}
+.table td:last-child {
+  border-right: 1px solid white;
+}
+.table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+.table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}/*# sourceMappingURL=table.css.map */
