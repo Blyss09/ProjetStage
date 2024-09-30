@@ -732,4 +732,9 @@
   border-radius: 20px;
   width: 125px;
   padding: 5px;
+}
+
+.diagramme {
+  color: white;
+  background-color: rgb(100, 130, 173);
 }/*# sourceMappingURL=styles.css.map */
