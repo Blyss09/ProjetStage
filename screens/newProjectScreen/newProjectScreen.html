@@ -137,53 +137,66 @@
                     </div>
                   </div>
             </div>
-            <div class="container mt-5">
-                
-                <ul class="nav nav-tabs">
-                    <li class="nav-item newProjectNav">
-                        <a class="nav-link active" href="#">Étape 1</a>
-                    </li>
-                    <li class="nav-item newProjectLi">
-                        <a class="nav-link" href="#">Étape 2</a>
-                    </li>
-                    <li class="nav-item newProjectLi">
-                        <a class="nav-link" href="#">Étape 3</a>
-                    </li>
-                    <li class="nav-item newProjectLi">
-                        <a class="nav-link" href="#">Étape 4</a>
-                    </li>
-                    <li class="nav-item newProjectLi">
-                        <a class="nav-link" href="#">Étape 5</a>
-                    </li>
-                    <li class="nav-item newProjectLi">
-                        <a class="nav-link" href="#">Étape 6</a>
-                    </li>
-                    <li class="nav-item newProjectLi">
-                        <a class="nav-link" href="#">Étape 7</a>
-                    </li>
-                    <li class="nav-item newProjectLi">
-                        <a class="nav-link" href="#">Étape 8</a>
-                    </li>
-                </ul>
+            <div class="step-container d-flex flex-column align-items-center"></div>
+            <div class="btn-group d-flex justify-content-center" role="group">
+                <button type="button" class="activeF btn btn-lg rounded-top-4 ">
+                    Étape 1
+                </button>
+                <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    Étape 2
+                </button>
+                <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    Étape 3
+                </button>
+                <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    Étape 4
+                </button>
+                <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    Étape 5
+                </button>
+                <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    Étape 6
+                </button>
+                <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    Étape 7
+                </button>
+                <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    Étape 8
+                </button>
+            </div>
         
                
                 <div class="card mt-3 p-4 newProjectCard">
                     <h4 class="text-light">Définir le nom du projet :</h4>
                     <form>
                         <div class="mb-3 newProjectForm">
-                            <label for="projectName" class="form-label">Nom du projet :</label>
-                            <input type="text" class="form-control" id="projectName" placeholder="Nom du projet">
+                            <label for="projectName" class="form-label text-light">Nom du projet :</label>
+                            <input type="text" class="form-control projectInput " id="projectName" placeholder="Nom du projet">
                         </div>
                         <div class="mb-3 newProjectForm">
-                            <label for="projectType" class="form-label">Type de projet :</label>
-                            <input type="text" class="form-control" id="projectType" placeholder="Type de projet">
+                            <label for="projectType" class="form-label text-light">Type de projet :</label>
+                            <input type="text" class="form-control projectInput" id="projectType" placeholder="Type de projet">
                         </div>
                         <div class="mb-7 newProjectForm newProjectComment">
-                            <label for="comment" class="form-label">Ajouter un commentaire :</label>
-                            <textarea class="form-control" id="comment" rows="3" placeholder="Ajouter un commentaire"></textarea>
+                            <label for="comment" class="form-label text-light">Ajouter un commentaire :</label>
+                            <textarea class="form-control projectInput" id="comment" rows="3" placeholder="Ajouter un commentaire"></textarea>
                         </div>
-                        <button type="button" class="btn btn-primary">Suivant</button>
+                        
                     </form>
+                    <div class="d-flex justify-content-start invisible">
+                        <button type="button" class="btn btn-lg rounded-4 projectButtonReturn">
+                             <span class="img"></span>
+                                <i class="bi bi-chevron-left"></i>
+                            </span>Retour
+                        </button>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn rounded-5 projectButtonNext">
+                             Suivant <span class="img">
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                        </button>
+                    </div>
                 </div>
             </div>
     </div>

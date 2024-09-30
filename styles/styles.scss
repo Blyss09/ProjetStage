@@ -829,29 +829,7 @@ $i: !important;
     font-weight: 600;
   }
 
-  input, textarea {
-    width: 100%$i;
-    padding: 10px$i;
-    border-radius: 5px$i;
-    border: 1px solid rgba(127, 161, 195, 0.5)$i;
-    background-color: rgba(127, 161, 195, 0.1)$i;
-    font-size: 1rem$i;
-    color: $pageBackground$i;
-
-    &::placeholder {
-      color: $sideBar$i;
-    }
-
-    &:focus {
-      border-color: $createButtonProject$i;
-      box-shadow: 0 0 5px rgba(32, 210, 169, 0.3)$i;
-    }
-  }
-
-  textarea {
-    height: 100px$i;
-    resize: none$i;
-  }
+ 
 }
 
 button.btn-primary {
@@ -869,3 +847,53 @@ button.btn-primary {
     background-color: darken($createButtonProject, 10%)$i;
   }
 }
+.projectInput {
+  background-color: #fff !important;
+}
+
+// buttons
+
+.projectBackground {
+
+  background-color: $sideBar;
+}
+.projectButton {
+
+  background-color: $pageBackground;
+}
+.projectButtonCreate {
+
+  background-color: $createButtonProject;
+  color: $white;
+}
+.projectButtonReturn {
+
+  background-color: $returnButton;
+  color: $white;
+}
+.projectButtonNext {
+
+  background-color: $managerColor;
+  color: $white;
+}
+
+.projectButton:hover {
+
+  background-color: $pageBackground;
+}
+.projectButtonCreate:hover {
+
+  background-color: $createButtonProject;
+  color: $white;
+}
+.projectButtonReturn:hover {
+
+  background-color: $returnButton;
+  color: $white;
+}
+.projectButtonNext:hover {
+
+  background-color: $managerColor;
+  color: $white;
+}
+

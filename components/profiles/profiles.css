@@ -20,11 +20,6 @@
 }
 
 @media (max-width: 1400px) {
-  .sidebar {
-    flex: 0 0 20% !important;
-    max-width: 20% !important;
-    background-color: transparent !important;
-  }
   .admin, .manager, .collab {
     background-color: transparent !important;
   }
@@ -34,20 +29,8 @@
   .img_arrow {
     display: none !important;
   }
-  .main {
-    flex: 0 0 80% !important;
-    max-width: 80% !important;
-  }
 }
 @media (max-width: 992px) {
-  .sidebar {
-    flex: 0 0 30% !important;
-    max-width: 30% !important;
-  }
-  .main {
-    flex: 0 0 70% !important;
-    max-width: 70% !important;
-  }
   .sidebar .user__name,
   .sidebar .user__role {
     font-size: 14px !important;
@@ -72,6 +55,9 @@
   }
   .admin .user__name, .manager .user__name, .collab .user__name {
     width: 5rem !important;
+  }
+  .collab {
+    margin-left: 7rem !important;
   }
   .user__icon i {
     font-size: 1.9rem !important;
@@ -103,9 +89,6 @@
   .logout__btn {
     margin-top: 3rem !important;
     margin-bottom: 5.4rem !important;
-  }
-  .main {
-    max-width: 90% !important;
   }
   .notif__bar {
     margin: 0 !important;
@@ -798,29 +781,6 @@
   font-size: 1rem;
   font-weight: 600;
 }
-.newProjectForm input, .newProjectForm textarea {
-  width: 100% !important;
-  padding: 10px !important;
-  border-radius: 5px !important;
-  border: 1px solid rgba(127, 161, 195, 0.5) !important;
-  background-color: rgba(127, 161, 195, 0.1) !important;
-  font-size: 1rem !important;
-  color: rgb(100, 130, 173) !important;
-}
-.newProjectForm input::-moz-placeholder, .newProjectForm textarea::-moz-placeholder {
-  color: rgb(127, 161, 195) !important;
-}
-.newProjectForm input::placeholder, .newProjectForm textarea::placeholder {
-  color: rgb(127, 161, 195) !important;
-}
-.newProjectForm input:focus, .newProjectForm textarea:focus {
-  border-color: rgb(32, 210, 169) !important;
-  box-shadow: 0 0 5px rgba(32, 210, 169, 0.3) !important;
-}
-.newProjectForm textarea {
-  height: 100px !important;
-  resize: none !important;
-}
 
 button.btn-primary {
   background-color: rgb(32, 210, 169) !important;
@@ -836,6 +796,10 @@ button.btn-primary {
 }
 button.btn-primary:hover {
   background-color: #19a685 !important;
+}
+
+.projectInput {
+  background-color: #fff !important;
 }
 
 .admin {
