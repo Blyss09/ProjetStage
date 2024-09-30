@@ -592,6 +592,147 @@
 }
 
 .diagramme {
-  color: white;
   background-color: rgb(100, 130, 173);
-}/*# sourceMappingURL=styles.css.map */
+}
+
+body {
+  background-color: rgb(100, 130, 173);
+}
+
+span {
+  color: white;
+}
+
+.main {
+  text-align: center;
+}
+
+.waiting {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.finished {
+  width: 15px;
+  height: 15px;
+  background-color: green;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.doing {
+  width: 15px;
+  height: 15px;
+  background-color: orange;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.test {
+  width: 15px;
+  height: 15px;
+  background-color: cyan;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.prod {
+  width: 15px;
+  height: 15px;
+  background-color: yellowgreen;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.stage {
+  width: 15px;
+  height: 15px;
+  background-color: yellow;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.dev {
+  width: 15px;
+  height: 15px;
+  background-color: orange;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.doing {
+  width: 15px;
+  height: 15px;
+  background-color: orange;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.cdc {
+  width: 15px;
+  height: 15px;
+  background-color: purple;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.container {
+  margin-top: 10px;
+}
+
+.table {
+  padding: 0;
+  width: 1200px;
+  font-size: 14px;
+  border-collapse: separate;
+  border-spacing: 0px;
+}
+.table .statut {
+  display: flex;
+  align-items: center;
+  padding-top: 11px;
+  padding-bottom: 16px;
+}
+.table th, .table td {
+  padding: 10px;
+}
+.table th {
+  color: rgb(100, 130, 173);
+  background-color: white;
+  font-weight: 600;
+  border: 0;
+}
+.table th:first-child {
+  border-top-left-radius: 10px;
+}
+.table th:last-child {
+  border-top-right-radius: 10px;
+}
+.table td {
+  background-color: rgb(127, 161, 195);
+  color: white;
+}
+.table td:first-child {
+  border-left: 1px solid white;
+}
+.table td:last-child {
+  border-right: 1px solid white;
+}
+.table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+.table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}/*# sourceMappingURL=table.css.map */

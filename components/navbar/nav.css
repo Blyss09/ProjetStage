@@ -592,6 +592,46 @@
 }
 
 .diagramme {
-  color: white;
   background-color: rgb(100, 130, 173);
-}/*# sourceMappingURL=styles.css.map */
+}
+
+.container {
+  width: 400px;
+  background-color: rgb(127, 161, 195);
+}
+
+.img {
+  width: 14px;
+  height: 23px;
+}
+
+.nav-item .nav-link {
+  flex: 1 1 auto;
+  color: white;
+}
+.nav-item .nav-link::before {
+  content: "•";
+  font-size: 24px;
+  margin-right: 30px;
+  line-height: 1;
+  position: relative;
+  top: 2px;
+}
+.nav-item .nav-link:hover {
+  color: rgb(32, 210, 169);
+}
+.nav-item .nav-link.active {
+  font-weight: bold;
+}
+.nav-item .nav-link.active + .img i {
+  font-size: 34px;
+  position: relative;
+  right: 3px;
+  bottom: 8px;
+}
+.nav-item .nav-link.active:hover {
+  color: white;
+}
+.nav-item .bi-chevron-right {
+  color: white;
+}/*# sourceMappingURL=nav.css.map */

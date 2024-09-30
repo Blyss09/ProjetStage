@@ -592,6 +592,44 @@
 }
 
 .diagramme {
-  color: white;
   background-color: rgb(100, 130, 173);
-}/*# sourceMappingURL=styles.css.map */
+}
+
+.search-bar input {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  background-color: rgb(127, 161, 195);
+  border-color: rgb(127, 161, 195);
+}
+
+.search-bar .input-group-text {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: rgb(127, 161, 195);
+  border-color: rgb(127, 161, 195);
+}
+
+.btn-custom {
+  margin-left: 20px;
+  border-radius: 50px;
+  background-color: rgb(76, 146, 137);
+  color: white;
+}
+
+.btn-custom:hover {
+  background-color: rgb(76, 146, 137);
+  color: white;
+}
+
+.search-bar input:focus {
+  background-color: rgb(127, 161, 195);
+  border-color: rgb(127, 161, 195);
+}
+
+.bi-search {
+  color: white;
+}
+
+body {
+  background-color: rgb(100, 130, 173);
+}/*# sourceMappingURL=searchBar.css.map */
