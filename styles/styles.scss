@@ -418,6 +418,10 @@ $rowCollor: rgba(127, 161, 195);
   border-color: rgb(127, 161, 195);
 }
 
+.upper_table {
+  color: white;
+}
+
 .btn-custom {
   margin-left: 20px;
   border-radius: 50px;
@@ -827,6 +831,7 @@ $i: !important;
   }
 }
 
+
 .newProjectForm {
   display: flex;
   flex-direction: column;
@@ -905,4 +910,5 @@ button.btn-primary {
   background-color: $managerColor;
   color: $white;
 }
+
 

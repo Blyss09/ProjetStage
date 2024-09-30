@@ -415,6 +415,10 @@
   border-color: rgb(127, 161, 195);
 }
 
+.upper_table {
+  color: white;
+}
+
 .btn-custom {
   margin-left: 20px;
   border-radius: 50px;
