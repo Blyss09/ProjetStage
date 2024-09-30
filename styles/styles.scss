@@ -610,3 +610,29 @@ $passiveFolder : rgb(76, 146, 137);
   width: 125px;
   padding: 5px;
 }
+
+//Page paramètres
+.front-icons {
+  color:$white;
+}
+
+.card-text {
+  color:$white;
+}
+
+.title-card {
+  color:$pageBackground;
+}
+
+.card-body {
+  background-color:$pageBackground;
+  height: 50vh;
+}
+
+.button-text {
+  color:$white;
+}
+
+.button-icon {
+  color:$white;
+}

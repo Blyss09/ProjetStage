@@ -589,4 +589,29 @@
   border-radius: 20px;
   width: 125px;
   padding: 5px;
+}
+
+.front-icons {
+  color: rgb(255, 255, 255);
+}
+
+.card-text {
+  color: rgb(255, 255, 255);
+}
+
+.title-card {
+  color: rgb(100, 130, 173);
+}
+
+.card-body {
+  background-color: rgb(100, 130, 173);
+  height: 50vh;
+}
+
+.button-text {
+  color: rgb(255, 255, 255);
+}
+
+.button-icon {
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=styles.css.map */
