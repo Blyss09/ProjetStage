@@ -36,10 +36,12 @@
                         <div class="dashboard__title ms-4 align-self-center">DASHBOARD</div>
                     </div>
                     <div class="d-flex justify-content-center my-4">
-                        <button type="button" class="btn btn_newproj text-white px-4 p-0">
-                            <i class="bi bi-plus-square-fill mt-2 mx-3 h4"></i>
-                          Nouveau Projet
-                        </button>
+                        <a href="./newProjectScreen.html">
+                            <button type="button" class="btn btn_newproj text-white px-4 p-0">
+                                <i class="bi bi-plus-square-fill mt-2 mx-3 h4"></i>
+                              Nouveau Projet
+                            </button>
+                        </a>
                     </div>
                     <ul class="nav row flex-lg-row mt-4">
                         <li class="nav-item">
@@ -76,12 +78,14 @@
                         </li>
                     </ul>
                     <div class="d-flex justify-content-center">
-                        <button type="button" class="btn logout__btn text-white pe-4">
-                          <svg preserveAspectRatio="none" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="logout__img mx-3">
-                            <path d="M5.50812 4.59244C3.56384 5.74479 2.0867 7.42565 1.29538 9.38619C0.504069 11.3467 0.440639 13.4827 1.11448 15.478C1.78833 17.4732 3.16363 19.2216 5.03679 20.4644C6.90994 21.7072 9.18139 22.3782 11.5148 22.3782C13.8483 22.3782 16.1197 21.7072 17.9929 20.4644C19.8661 19.2216 21.2414 17.4732 21.9152 15.478C22.5891 13.4827 22.5256 11.3467 21.7343 9.38619C20.943 7.42565 19.4659 5.74479 17.5216 4.59244M11.5154 0.819458V9.44342" stroke="#F8F8F8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                          </svg>
-                          Déconnexion
-                        </button>
+                        <a href="../logInScreens/logIn.html">
+                            <button type="button" class="btn logout__btn text-white pe-4">
+                              <svg preserveAspectRatio="none" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="logout__img mx-3">
+                                <path d="M5.50812 4.59244C3.56384 5.74479 2.0867 7.42565 1.29538 9.38619C0.504069 11.3467 0.440639 13.4827 1.11448 15.478C1.78833 17.4732 3.16363 19.2216 5.03679 20.4644C6.90994 21.7072 9.18139 22.3782 11.5148 22.3782C13.8483 22.3782 16.1197 21.7072 17.9929 20.4644C19.8661 19.2216 21.2414 17.4732 21.9152 15.478C22.5891 13.4827 22.5256 11.3467 21.7343 9.38619C20.943 7.42565 19.4659 5.74479 17.5216 4.59244M11.5154 0.819458V9.44342" stroke="#F8F8F8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg>
+                              Déconnexion
+                            </button>
+                        </a>
                     </div>
                 </div>
             </nav>
@@ -114,22 +118,20 @@
                   </div>
             </div>
             <div class="search__body row mt-5 pb-5 mx-0 align-items-center">
-                <h5 class="col-6 col-md-7 p-0">Mes tâches</h5>
-                <div class="col p-0">
-                    <div class="justify-content-center">
-                        <div class="d-flex">
-                            <div class="input-group search-bar flex-fill">
-                                <span class="input-group-text">
-                                    <i class="bi bi-search"></i>
-                                </span>
-                                <input type="text" class="form-control" placeholder="Rechercher...">
-                            </div>
-                            <button class="btn btn-custom">Rechercher</button>
+                <h5 class="col-12 col-md-7 p-0">Mes taches</h5>
+                <div class="col-12 col-md-5 p-0">
+                    <div class="d-flex justify-content-end">
+                        <div class="input-group search-bar flex-fill">
+                            <span class="input-group-text">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Rechercher...">
                         </div>
+                        <button class="btn btn-custom ms-2">Rechercher</button>
                     </div>
                 </div>
             </div>
-            <div class="table-responsive ms-4">
+            <div class="table-responsive table_resp_pos ms-4">
                 <table class="table proj-table mt-5 text-center">
                     <thead>
                         <tr class="">

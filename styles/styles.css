@@ -19,6 +19,132 @@
   color: rgb(255, 255, 255);
 }
 
+@media (max-width: 1400px) {
+  .admin, .manager, .collab {
+    background-color: transparent !important;
+  }
+  .nav-item .nav-link::before {
+    display: none !important;
+  }
+  .img_arrow {
+    display: none !important;
+  }
+}
+@media (max-width: 992px) {
+  .sidebar .user__name,
+  .sidebar .user__role {
+    font-size: 14px !important;
+  }
+  .btn_newproj {
+    font-size: 14px !important;
+    padding: 10px !important;
+  }
+}
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 0 !important;
+  }
+  .sidebar {
+    width: 5% !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    font-size: 0.7rem !important;
+  }
+  .admin, .manager, .collab {
+    margin-left: 11rem !important;
+  }
+  .admin .user__name, .manager .user__name, .collab .user__name {
+    width: 5rem !important;
+  }
+  .collab {
+    margin-left: 7rem !important;
+  }
+  .user__icon i {
+    font-size: 1.9rem !important;
+  }
+  .navbar {
+    position: relative !important;
+    bottom: 3.3rem !important;
+  }
+  .navbar-collapse {
+    background-color: rgb(23, 81, 87);
+    margin-top: 0.5rem !important;
+    z-index: 100 !important;
+  }
+  .dashboard__body {
+    margin: 0 !important;
+    padding: 1rem 0 !important;
+  }
+  .btn_newproj {
+    width: 11rem !important;
+    height: 3rem !important;
+  }
+  .newproj__content {
+    margin-bottom: 0 !important;
+  }
+  .navbar-toggler {
+    display: block !important;
+    margin-left: 0.5rem !important;
+  }
+  .logout__btn {
+    margin-top: 3rem !important;
+    margin-bottom: 5.4rem !important;
+  }
+  .notif__bar {
+    margin: 0 !important;
+    background-color: transparent !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    padding: 0.5rem !important;
+    font-size: 0.8rem !important;
+  }
+  .search__body {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    padding-bottom: 1rem !important;
+    margin-top: 1.5rem !important;
+    margin-left: -5rem !important;
+    margin-right: 0rem !important;
+    border-bottom: 0 !important;
+  }
+  .search__body .title__text {
+    margin-left: 0 !important;
+  }
+  .search__body .input-group {
+    height: 2rem !important;
+    flex-wrap: nowrap !important;
+  }
+  .search__body .input-group-text {
+    padding: 0 0 0 0.5rem !important;
+  }
+  .search__body .input-group .form-control {
+    width: 12rem !important;
+  }
+  .search__body .btn-custom {
+    margin: 0 0 0 1rem !important;
+    height: 2rem !important;
+    line-height: 1rem !important;
+  }
+  .search__items input {
+    font-size: 14px !important;
+    width: 100% !important;
+  }
+  .btn-custom {
+    margin-top: 1rem !important;
+  }
+  .table_resp_pos {
+    margin-left: -6rem !important;
+  }
+  .proj-table {
+    margin-top: 1rem !important;
+    margin-right: 0 !important;
+    font-size: 0.8rem !important;
+  }
+  .table_resp_pos {
+    border-top: 1px solid white !important;
+  }
+}
 .mainLogIn {
   display: flex;
   justify-content: center;
@@ -594,4 +720,126 @@
 .diagramme {
   color: white;
   background-color: rgb(100, 130, 173);
+}
+
+.newProjectNav {
+  background-color: rgb(127, 161, 195);
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  font-weight: 600;
+  font-size: 16px;
+}
+.newProjectNav .nav-link {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: 1rem !important;
+  position: relative !important;
+}
+.newProjectNav .nav-link::before {
+  content: "•" !important;
+  position: absolute !important;
+  top: -15px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  font-size: 24px !important;
+  color: transparent !important;
+}
+.newProjectNav .nav-link.active {
+  color: rgb(32, 210, 169) !important;
+  font-weight: bold !important;
+}
+.newProjectNav .nav-link.active::before {
+  color: rgb(32, 210, 169) !important;
+}
+.newProjectNav .nav-link:hover {
+  color: #43e2be !important;
+}
+
+.newProjectCard {
+  background-color: rgb(127, 161, 195);
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.newProjectCard h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.newProjectForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.newProjectForm label {
+  color: rgb(127, 161, 195);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+button.btn-primary {
+  background-color: rgb(32, 210, 169) !important;
+  border: none !important;
+  padding: 10px 25px !important;
+  font-size: 1rem !important;
+  border-radius: 30px !important;
+  color: rgb(255, 255, 255) !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  align-self: flex-start !important;
+  transition: background-color 0.3s ease !important;
+}
+button.btn-primary:hover {
+  background-color: #19a685 !important;
+}
+
+.projectInput {
+  background-color: #fff !important;
+}
+
+.projectBackground {
+  background-color: rgb(127, 161, 195);
+}
+
+.projectButton {
+  background-color: rgb(100, 130, 173);
+}
+
+.projectButtonCreate {
+  background-color: rgb(32, 210, 169);
+  color: rgb(255, 255, 255);
+}
+
+.projectButtonReturn {
+  background-color: rgb(35, 28, 138);
+  color: rgb(255, 255, 255);
+}
+
+.projectButtonNext {
+  background-color: rgb(55, 24, 94);
+  color: rgb(255, 255, 255);
+}
+
+.projectButton:hover {
+  background-color: rgb(100, 130, 173);
+}
+
+.projectButtonCreate:hover {
+  background-color: rgb(32, 210, 169);
+  color: rgb(255, 255, 255);
+}
+
+.projectButtonReturn:hover {
+  background-color: rgb(35, 28, 138);
+  color: rgb(255, 255, 255);
+}
+
+.projectButtonNext:hover {
+  background-color: rgb(55, 24, 94);
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=styles.css.map */

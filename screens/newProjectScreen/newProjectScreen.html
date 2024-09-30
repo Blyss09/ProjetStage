@@ -137,46 +137,68 @@
                     </div>
                   </div>
             </div>
-            <div class="container mt-5">
-                <div class="row justify-content-center">
-                    <div class="col-md-6 d-flex align-items-center">
-                        <div class="input-group search-bar flex-fill">
-                            <span class="input-group-text">
-                                <i class="bi bi-search"></i>
-                            </span>
-                            <input type="text" class="form-control" placeholder="Rechercher...">
+            <div class="step-container d-flex flex-column align-items-center"></div>
+            <div class="btn-group d-flex justify-content-center" role="group">
+                <button type="button" class="activeF btn btn-lg rounded-top-4 ">
+                    Étape 1
+                </button>
+                <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    Étape 2
+                </button>
+                <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    Étape 3
+                </button>
+                <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    Étape 4
+                </button>
+                <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    Étape 5
+                </button>
+                <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    Étape 6
+                </button>
+                <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    Étape 7
+                </button>
+                <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                    Étape 8
+                </button>
+            </div>
+        
+               
+                <div class="card mt-3 p-4 newProjectCard">
+                    <h4 class="text-light">Définir le nom du projet :</h4>
+                    <form>
+                        <div class="mb-3 newProjectForm">
+                            <label for="projectName" class="form-label text-light">Nom du projet :</label>
+                            <input type="text" class="form-control projectInput " id="projectName" placeholder="Nom du projet">
                         </div>
-                        <button class="btn btn-custom">Rechercher</button>
+                        <div class="mb-3 newProjectForm">
+                            <label for="projectType" class="form-label text-light">Type de projet :</label>
+                            <input type="text" class="form-control projectInput" id="projectType" placeholder="Type de projet">
+                        </div>
+                        <div class="mb-7 newProjectForm newProjectComment">
+                            <label for="comment" class="form-label text-light">Ajouter un commentaire :</label>
+                            <textarea class="form-control projectInput" id="comment" rows="3" placeholder="Ajouter un commentaire"></textarea>
+                        </div>
+                        
+                    </form>
+                    <div class="d-flex justify-content-start invisible">
+                        <button type="button" class="btn btn-lg rounded-4 projectButtonReturn">
+                             <span class="img"></span>
+                                <i class="bi bi-chevron-left"></i>
+                            </span>Retour
+                        </button>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn rounded-5 projectButtonNext">
+                             Suivant <span class="img">
+                                <i class="bi bi-chevron-right"></i>
+                            </span>
+                        </button>
                     </div>
                 </div>
             </div>
-            
-            <div class="container newProject d-flex flex-column justify-content-center">
-                <h4 class="text-light fw-semibold">Définir le nom du projet :</h4>
-        
-                <div class="row mb-3 ">
-                    <div class="col-6 offset-3">
-                        <label class="text-white fs-5 mb-2" for="floatingInput1">Nom du projet :</label>
-                        <input type="text" class="form-control rounded" id="floatingInput1" >
-                    </div>
-                </div>
-        
-                <div class="row mb-3">
-                    <div class="col-6 offset-3">
-                        <label class="text-white fs-5 mb-2" for="floatingInput2">Type de projet :</label>
-                        <input type="text" class="form-control rounded" id="floatingInput2" >
-                    </div>
-                </div>
-        
-                <div class="row mb-3">
-                    <div class="col-6 offset-3">
-                        <label class="text-white fs-5 mb-2" for="floatingInput3">Ajouter un commentaire :</label>
-                        <input type="text" class="form-control rounded" id="floatingInput3" >
-                    </div>
-                </div>
-            </div>
-            
-        </main>
     </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

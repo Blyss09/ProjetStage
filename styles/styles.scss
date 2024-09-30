@@ -28,6 +28,149 @@ $rowCollor: rgba(127, 161, 195);
   color: $white
 }
 
+//Media Queries
+
+@media (max-width:1400px){
+  .admin,.manager,.collab {
+    background-color: transparent !important;
+  }
+  .nav-item .nav-link::before {
+    display: none !important;
+  }
+  .img_arrow{
+    display: none !important;
+  }
+
+}
+@media (max-width: 992px) {
+
+  .sidebar .user__name,
+  .sidebar .user__role {
+    font-size: 14px !important;
+  }
+  .btn_newproj {
+    font-size: 14px !important;
+    padding: 10px !important;
+  }
+}
+@media (max-width: 768px) {
+  .container-fluid{
+    padding: 0 !important;
+  }
+  .sidebar {
+    width: 5% !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+    font-size: 0.7rem !important;
+  }
+  .admin,.manager,.collab {
+    margin-left: 11rem !important;
+    
+    .user__name{
+      width: 5rem !important;
+    }
+  }
+  .collab{
+    margin-left: 7rem !important;
+    
+  }
+  .user__icon i{
+    font-size: 1.9rem !important; 
+  }
+  .navbar {
+    position: relative !important;
+    bottom: 3.3rem !important;
+  }
+
+  .navbar-collapse{
+    background-color: rgb(23, 81, 87);
+    margin-top: 0.5rem !important;
+    z-index: 100 !important;
+  }
+
+  .dashboard__body{
+    margin: 0 !important;
+    padding: 1rem 0 !important;
+  }
+  .btn_newproj{
+    width: 11rem !important;
+    height: 3rem !important;
+  }
+  .newproj__content{
+    margin-bottom: 0 !important;
+  }
+
+  .navbar-toggler {
+    display: block !important;
+    margin-left: 0.5rem !important;
+  }
+  .logout__btn{
+    margin-top: 3rem !important;
+    margin-bottom: 5.4rem !important;
+  }
+
+  .notif__bar {
+    margin: 0 !important;
+    background-color: transparent !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    padding: 0.5rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  .search__body {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    padding-bottom: 1rem !important;
+    margin-top: 1.5rem !important;
+    margin-left: -5rem !important;
+    margin-right: 0rem !important;
+    border-bottom: 0 !important;
+
+    .title__text{
+      // margin-bottom: 1rem !important;
+      margin-left: 0 !important;
+    }
+  
+    .input-group {
+      height: 2rem !important;
+      flex-wrap: nowrap !important;
+    }
+
+    .input-group-text {
+      padding: 0 0 0 0.5rem !important;
+    }
+    .input-group .form-control{
+      width: 12rem !important;
+    }
+
+    .btn-custom{
+      margin: 0 0 0 1rem !important;
+      height: 2rem !important;
+      line-height: 1rem !important;
+    }
+  }
+  .search__items input {
+    font-size: 14px !important;
+    width: 100% !important;
+  }
+
+  .btn-custom {
+    margin-top: 1rem !important;
+  } 
+  .table_resp_pos{
+    margin-left: -6rem !important;
+  }
+  .proj-table {
+    margin-top: 1rem !important;
+    margin-right: 0 !important;
+    font-size: 0.8rem !important;
+  }
+  .table_resp_pos{
+    border-top: 1px solid white !important;
+  }
+}
 
 
 //Page de connexion
@@ -616,3 +759,141 @@ $passiveFolder : rgb(76, 146, 137);
   color: white;
   background-color: rgba(100, 130, 173, 1);
 }
+
+// projet
+
+$i: !important;
+.newProjectNav {
+  background-color: $sideBar; // Same background color as other navigational elements
+  color: $white;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  font-weight: 600;
+  font-size: 16px;
+  
+  .nav-link {
+    color: inherit$i;
+    text-decoration: none$i;
+    font-size: 1rem$i;
+    position: relative$i;
+    
+    &::before {
+      content: '•'$i;
+      position: absolute$i;
+      top: -15px$i;
+      left: 50%$i;
+      transform: translateX(-50%)$i;
+      font-size: 24px$i;
+      color: transparent$i;
+    }
+
+    &.active {
+      color: $createButtonProject$i;
+      font-weight: bold$i;
+      
+      &::before {
+        color: $createButtonProject$i; // Highlight the active step
+      }
+    }
+
+    &:hover {
+      color: lighten($createButtonProject, 10%)$i;
+    }
+  }
+}
+
+.newProjectCard {
+  background-color: $sideBar;
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+  h2 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+}
+
+.newProjectForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  label {
+    color: $sideBar;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+ 
+}
+
+button.btn-primary {
+  background-color: $createButtonProject$i;
+  border: none$i;
+  padding: 10px 25px$i;
+  font-size: 1rem$i;
+  border-radius: 30px$i;
+  color: $white$i;
+  width: fit-content$i;
+  align-self: flex-start$i;
+  transition: background-color 0.3s ease$i;
+  
+  &:hover {
+    background-color: darken($createButtonProject, 10%)$i;
+  }
+}
+.projectInput {
+  background-color: #fff !important;
+}
+
+// buttons
+
+.projectBackground {
+
+  background-color: $sideBar;
+}
+.projectButton {
+
+  background-color: $pageBackground;
+}
+.projectButtonCreate {
+
+  background-color: $createButtonProject;
+  color: $white;
+}
+.projectButtonReturn {
+
+  background-color: $returnButton;
+  color: $white;
+}
+.projectButtonNext {
+
+  background-color: $managerColor;
+  color: $white;
+}
+
+.projectButton:hover {
+
+  background-color: $pageBackground;
+}
+.projectButtonCreate:hover {
+
+  background-color: $createButtonProject;
+  color: $white;
+}
+.projectButtonReturn:hover {
+
+  background-color: $returnButton;
+  color: $white;
+}
+.projectButtonNext:hover {
+
+  background-color: $managerColor;
+  color: $white;
+}
+

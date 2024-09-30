@@ -20,7 +20,7 @@
                 </div>
                 <div class="user__body align-self-center">
                     <div class="user__name">Adam Smith</div>
-                    <div class="user__role">Admin</div>
+                    <div class="user__role">Manager</div>
                 </div>
             </div>
             <nav class="navbar navbar-expand-xxl navbar-light">
@@ -52,7 +52,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4" aria-current="page" href="#">Mes tâches</a>
+                                <a class="nav-link ms-4" aria-current="page" href="./managerTasks.html">Mes tâches</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -68,31 +68,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4" aria-current="page" href="#">Collaborateurs</a>
-                                <span class="img_arrow">
-                                    <i class="bi bi-chevron-right h4"></i>
-                                </span>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="d-flex align-items-center">
                                 <a class="nav-link ms-4" aria-current="page" href="#">Statistiques collaborateurs</a>
-                                <span class="img_arrow">
-                                    <i class="bi bi-chevron-right h4"></i>
-                                </span>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4" aria-current="page" href="#">Trançabilité</a>
-                                <span class="img_arrow">
-                                    <i class="bi bi-chevron-right h4"></i>
-                                </span>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4" aria-current="page" href="#">Paramètres</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -100,14 +76,16 @@
                         </li>
                     </ul>
                     <div class="d-flex justify-content-center">
-                        <button type="button" class="btn logout__btn text-white pe-4">
-                          <svg preserveAspectRatio="none" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="logout__img mx-3">
-                            <path d="M5.50812 4.59244C3.56384 5.74479 2.0867 7.42565 1.29538 9.38619C0.504069 11.3467 0.440639 13.4827 1.11448 15.478C1.78833 17.4732 3.16363 19.2216 5.03679 20.4644C6.90994 21.7072 9.18139 22.3782 11.5148 22.3782C13.8483 22.3782 16.1197 21.7072 17.9929 20.4644C19.8661 19.2216 21.2414 17.4732 21.9152 15.478C22.5891 13.4827 22.5256 11.3467 21.7343 9.38619C20.943 7.42565 19.4659 5.74479 17.5216 4.59244M11.5154 0.819458V9.44342" stroke="#F8F8F8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                          </svg>
-                          Déconnexion
-                        </button>
+                        <a href="../logInScreens/logIn.html">
+                            <button type="button" class="btn logout__btn text-white pe-4">
+                              <svg preserveAspectRatio="none" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" class="logout__img mx-3">
+                                <path d="M5.50812 4.59244C3.56384 5.74479 2.0867 7.42565 1.29538 9.38619C0.504069 11.3467 0.440639 13.4827 1.11448 15.478C1.78833 17.4732 3.16363 19.2216 5.03679 20.4644C6.90994 21.7072 9.18139 22.3782 11.5148 22.3782C13.8483 22.3782 16.1197 21.7072 17.9929 20.4644C19.8661 19.2216 21.2414 17.4732 21.9152 15.478C22.5891 13.4827 22.5256 11.3467 21.7343 9.38619C20.943 7.42565 19.4659 5.74479 17.5216 4.59244M11.5154 0.819458V9.44342" stroke="#F8F8F8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </svg>
+                              Déconnexion
+                            </button>
+                        </a>
                     </div>
-                
+                </div>
             </nav>
         </sidebar>
         <main class="main col-6 col-md-9">
@@ -138,7 +116,7 @@
                   </div>
             </div>
             <div class="search__body row mt-5 pb-5 mx-0 align-items-center">
-                <h5 class="col-12 col-md-7 p-0">Traçabilité</h5>
+                <h5 class="col-12 col-md-7 p-0">Mes taches</h5>
                 <div class="col-12 col-md-5 p-0">
                     <div class="d-flex justify-content-end">
                         <div class="input-group search-bar flex-fill">
@@ -151,90 +129,63 @@
                     </div>
                 </div>
             </div>
-            <div class="table-responsive table_resp_pos ms-4">
-                <table class="table proj-table mt-5 text-center">
-                    <thead>
-                        <tr class="">
-                            <th scope="col">N°</th>
-                            <th scope="col">Référence</th>
-                            <th scope="col">Action</th>
-                            <th scope="col">Auteur</th>
-                            <th scope="col">Date</th>
-                            
-                            
-                           
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="col">Projet 1</td>
-                            
-                            <td class="col">x</td>
-                            <td class="col">Création Projet</td>
-                            <td class="col">John D</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            
-                            
-                            
-                            
-                        </tr>
-                        <tr>
-                            <td>Projet 2</td>
-                            
-                            <td>x</td>
-                            <td>Archivage projet</td>
-                            <td>Paul B</td>
-                            <td>jj/mm/YYYY</td>
-                           
-                            
-                            
-                        </tr>
-                        <tr>
-                            <td>Projet 3</td>
-                            
-                            <td>x</td>
-                            <td>Archivage projet</td>
-                            <td>Paul B</td>
-                            <td>jj/mm/YYYY</td>
-                           
-                            
-                            
-                        </tr>
-                        <tr>
-                            <td>Projet 4</td>
-                            
-                            <td>x</td>
-                            <td>Archivage projet</td>
-                            <td>Paul B</td>
-                            <td>jj/mm/YYYY</td>
-                            
-                            
-                            
-                        </tr>
-                        <tr>
-                            <td>Projet 5</td>
-                            
-                            <td>x</td>
-                            <td>Archivage projet</td>
-                            <td>Paul B</td>
-                            <td>jj/mm/YYYY</td>
-                           
-                            
-                            
-                        </tr>
-                        <tr>
-                            <td>Projet 6</td>
-                            
-                            <td>x</td>
-                            <td>Archivage projet</td>
-                            <td>Paul B</td>
-                            <td>jj/mm/YYYY</td>
-                            
-                            
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="step-container d-flex flex-column align-items-center"></div>
+                <div class="btn-group d-flex justify-content-center" role="group">
+                    <button type="button" class="activeF btn btn-lg rounded-top-4 ">
+                        Étape 1
+                    </button>
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                        Étape 2
+                    </button>
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                        Étape 3
+                    </button>
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                        Étape 4
+                    </button>
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                        Étape 5
+                    </button>
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                        Étape 6
+                    </button>
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                        Étape 7
+                    </button>
+                    <button type="button" class="passiveF btn btn-lg rounded-top-4 ">
+                        Étape 8
+                    </button>
+                </div>
+                <hr class="custom-hr"/> <div class="container newProject d-flex flex-column justify-content-center"></div>
+                <h4 class="text-light fw-semibold">Définir le nom du projet :</h4>
+        
+                <div class="row mb-3 ">
+                    <div class="col-6 offset-3">
+                        <label class="text-white fs-5 mb-2" for="floatingInput1">Nom du projet :</label>
+                        <input type="text" class="form-control rounded" id="floatingInput1" >
+                    </div>
+                </div>
+        
+                <div class="row mb-3">
+                    <div class="col-6 offset-3">
+                        <label class="text-white fs-5 mb-2" for="floatingInput2">Type de projet :</label>
+                        <input type="text" class="form-control rounded" id="floatingInput2" >
+                    </div>
+                </div>
+        
+                <div class="row mb-3">
+                    <div class="col-6 offset-3">
+                        <label class="text-white fs-5 mb-2" for="floatingInput3">Ajouter un commentaire :</label>
+                        <input type="text" class="form-control rounded" id="floatingInput3" >
+                    </div>
+                </div>
             </div>
+            </div>
+            </div>
+        </div>
+           
+            
+            
         </main>
     </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
