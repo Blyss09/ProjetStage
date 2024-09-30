@@ -54,6 +54,7 @@ $rowCollor: rgba(127, 161, 195);
   }
 }
 @media (max-width: 768px) {
+  $i: !important;
   .container-fluid{
     padding: 0 !important;
   }
@@ -170,7 +171,31 @@ $rowCollor: rgba(127, 161, 195);
   .table_resp_pos{
     border-top: 1px solid white !important;
   }
+  // Scrollbar responsive mode
+  /* Webkit */
+.table-responsive::-webkit-scrollbar {
+  width: 12px$i;
+  height: 12px$i; 
 }
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #ffffff$i; 
+  border-radius: 6px$i; 
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1)$i; 
+  border-radius: 6px$i;
+}
+
+/* Firefox */
+.table-responsive {
+  scrollbar-width: thin$i; 
+  scrollbar-color: white rgba(0, 0, 0, 0.1)$i; 
+}
+}
+
+// Scrollbar responsive mode (bonus) delete if it makes issues
 
 
 //Page de connexion

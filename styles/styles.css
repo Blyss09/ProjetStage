@@ -144,6 +144,24 @@
   .table_resp_pos {
     border-top: 1px solid white !important;
   }
+  /* Webkit */
+  .table-responsive::-webkit-scrollbar {
+    width: 12px !important;
+    height: 12px !important;
+  }
+  .table-responsive::-webkit-scrollbar-thumb {
+    background-color: #ffffff !important;
+    border-radius: 6px !important;
+  }
+  .table-responsive::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    border-radius: 6px !important;
+  }
+  /* Firefox */
+  .table-responsive {
+    scrollbar-width: thin !important;
+    scrollbar-color: white rgba(0, 0, 0, 0.1) !important;
+  }
 }
 .mainLogIn {
   display: flex;
