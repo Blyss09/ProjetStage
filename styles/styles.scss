@@ -84,14 +84,12 @@ $rowCollor: rgba(127, 161, 195);
     position: relative !important;
     bottom: 3.3rem !important;
   }
-
   .navbar-collapse{
     background-color: rgb(23, 81, 87);
     margin-top: 0.5rem !important;
     z-index: 100 !important;
     height: 110vh;
   }
-
   .dashboard__body{
     font-size: 14px !important;
     margin: 0 !important;
@@ -118,7 +116,6 @@ $rowCollor: rgba(127, 161, 195);
     position: relative;
     bottom: 2rem;
   }
-
   .navbar-toggler {
     display: block !important;
     margin-left: 0.5rem !important;
@@ -127,7 +124,6 @@ $rowCollor: rgba(127, 161, 195);
     margin-top: 3rem !important;
     margin-bottom: 5.4rem !important;
   }
-
   .notif__bar {
     margin: 0 !important;
     background-color: transparent !important;
@@ -136,7 +132,6 @@ $rowCollor: rgba(127, 161, 195);
     padding: 0.5rem !important;
     font-size: 0.8rem !important;
   }
-
   .search__body {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -170,7 +165,6 @@ $rowCollor: rgba(127, 161, 195);
       line-height: 1rem !important;
     }
   }
-
   .filter__section{
     margin-left: -7.3rem;
     .sp{
@@ -214,9 +208,13 @@ $rowCollor: rgba(127, 161, 195);
   .pagination{
     margin: 1rem 5rem 0 0 !important;
   }
-
+}
   // Scrollbar responsive mode
   /* Webkit */
+  .table-responsive {
+    overflow: scroll !important; 
+  scrollbar-width: auto !important;
+  }
 .table-responsive::-webkit-scrollbar {
   width: 12px !important;
   height: 12px !important; 
@@ -230,6 +228,15 @@ $rowCollor: rgba(127, 161, 195);
 .table-responsive::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.1) !important; 
   border-radius: 6px !important;
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #ffffff!important; 
+  border-radius: 6px!important; 
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1)!important; 
+  border-radius: 6px!important;
 }
 
 /* Firefox */
@@ -823,7 +830,6 @@ $passiveFolder : rgb(76, 146, 137);
   width: 125px;
   padding: 5px;
 }
-
 //Page paramètres
 .front-icons {
   color:$white;
@@ -865,8 +871,6 @@ $passiveFolder : rgb(76, 146, 137);
 }
 
 // projet
-
-// $i: !important;
 .newProjectNav {
   background-color: $sideBar; // Same background color as other navigational elements
   color: $white;
@@ -999,4 +1003,13 @@ button.btn-primary {
 .projectButtonNext:hover {
   background-color: $managerColor;
   color: $white;
+}
+
+//Diagramme des stats des projets
+.projet-diagramme {
+  background-color: #ffffff;
+}
+
+.collab-diagramme {
+  background-color: #ffffff;
 }

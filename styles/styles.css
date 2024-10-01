@@ -184,6 +184,10 @@
     margin: 1rem 5rem 0 0 !important;
   }
   /* Webkit */
+  .table-responsive {
+    overflow: scroll !important;
+    scrollbar-width: auto !important;
+  }
   .table-responsive::-webkit-scrollbar {
     width: 12px !important;
     height: 12px !important;
@@ -940,4 +944,12 @@ button.btn-primary:hover {
 .projectButtonNext:hover {
   background-color: rgb(55, 24, 94);
   color: rgb(255, 255, 255);
+}
+
+.projet-diagramme {
+  background-color: #ffffff;
+}
+
+.collab-diagramme {
+  background-color: #ffffff;
 }/*# sourceMappingURL=styles.css.map */
