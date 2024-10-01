@@ -212,8 +212,8 @@ $rowCollor: rgba(127, 161, 195);
   // Scrollbar responsive mode
   /* Webkit */
   .table-responsive {
-    overflow: scroll !important; 
-  scrollbar-width: auto !important;
+    // overflow: scroll !important; 
+    scrollbar-width: auto !important;
   }
 .table-responsive::-webkit-scrollbar {
   width: 12px !important;
