@@ -74,15 +74,28 @@
     height: 110vh;
   }
   .dashboard__body {
+    font-size: 14px !important;
     margin: 0 !important;
     padding: 1rem 0 !important;
   }
   .btn_newproj {
     width: 11rem !important;
-    height: 3rem !important;
+    height: 2.3rem !important;
   }
   .newproj__content {
-    margin-bottom: 0 !important;
+    margin: -2rem 0 !important;
+  }
+  .nav__ul {
+    margin: 0 !important;
+    font-size: 15px !important;
+  }
+  .nav__ul .nav-item {
+    margin: 0.3rem 6rem 0 -0.5rem !important;
+    text-align: center;
+  }
+  .logout__btn {
+    position: relative;
+    bottom: 2rem;
   }
   .navbar-toggler {
     display: block !important;
@@ -167,25 +180,43 @@
     font-size: 0.8rem !important;
     border: 0 !important;
   }
-  /* Webkit */
-  .table-responsive::-webkit-scrollbar {
-    width: 12px !important;
-    height: 12px !important;
-  }
-  .table-responsive::-webkit-scrollbar-thumb {
-    background-color: #ffffff !important;
-    border-radius: 6px !important;
-  }
-  .table-responsive::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0.1) !important;
-    border-radius: 6px !important;
-  }
-  /* Firefox */
-  .table-responsive {
-    scrollbar-width: thin !important;
-    scrollbar-color: white rgba(0, 0, 0, 0.1) !important;
+  .pagination {
+    margin: 1rem 5rem 0 0 !important;
   }
 }
+/* Webkit */
+.table-responsive {
+  scrollbar-width: auto !important;
+}
+
+.table-responsive::-webkit-scrollbar {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #ffffff !important;
+  border-radius: 6px !important;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  border-radius: 6px !important;
+  /* Firefox */
+}
+.table-responsive::-webkit-scrollbar-track .table-responsive::-webkit-scrollbar-thumb {
+  background-color: #ffffff !important;
+  border-radius: 6px !important;
+}
+.table-responsive::-webkit-scrollbar-track .table-responsive::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  border-radius: 6px !important;
+}
+.table-responsive::-webkit-scrollbar-track .table-responsive {
+  scrollbar-width: thin !important;
+  scrollbar-color: white rgba(0, 0, 0, 0.1) !important;
+}
+
 .mainLogIn {
   display: flex;
   justify-content: center;
@@ -653,6 +684,11 @@
   border-bottom-right-radius: 10px;
 }
 
+.pagination {
+  justify-content: center; /* Centers the pagination items */
+  display: flex;
+}
+
 .waiting {
   width: 15px;
   height: 15px;
@@ -785,4 +821,146 @@
 
 .button-icon {
   color: rgb(255, 255, 255);
+}
+
+.diagramme {
+  color: white;
+  background-color: rgb(100, 130, 173);
+}
+
+.editBtn {
+  color: rgb(127, 161, 195);
+  border-color: white;
+  border-radius: 10px;
+  width: 80px;
+}
+
+.newProjectNav {
+  background-color: rgb(127, 161, 195);
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  font-weight: 600;
+  font-size: 16px;
+}
+.newProjectNav .nav-link {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: 1rem !important;
+  position: relative !important;
+}
+.newProjectNav .nav-link::before {
+  content: "•" !important;
+  position: absolute !important;
+  top: -15px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  font-size: 24px !important;
+  color: transparent !important;
+}
+.newProjectNav .nav-link.active {
+  color: rgb(32, 210, 169) !important;
+  font-weight: bold !important;
+}
+.newProjectNav .nav-link.active::before {
+  color: rgb(32, 210, 169) !important;
+}
+.newProjectNav .nav-link:hover {
+  color: #43e2be !important;
+}
+
+.newProjectCard {
+  background-color: rgb(127, 161, 195);
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.newProjectCard h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.newProjectForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.newProjectForm label {
+  color: rgb(127, 161, 195);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+button.btn-primary {
+  background-color: rgb(32, 210, 169) !important;
+  border: none !important;
+  padding: 10px 25px !important;
+  font-size: 1rem !important;
+  border-radius: 30px !important;
+  color: rgb(255, 255, 255) !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  align-self: flex-start !important;
+  transition: background-color 0.3s ease !important;
+}
+button.btn-primary:hover {
+  background-color: #19a685 !important;
+}
+
+.projectInput {
+  background-color: #fff !important;
+}
+
+.projectBackground {
+  background-color: rgb(127, 161, 195);
+}
+
+.projectButton {
+  background-color: rgb(100, 130, 173);
+}
+
+.projectButtonCreate {
+  background-color: rgb(32, 210, 169);
+  color: rgb(255, 255, 255);
+}
+
+.projectButtonReturn {
+  background-color: rgb(35, 28, 138);
+  color: rgb(255, 255, 255);
+}
+
+.projectButtonNext {
+  background-color: rgb(55, 24, 94);
+  color: rgb(255, 255, 255);
+}
+
+.projectButton:hover {
+  background-color: rgb(100, 130, 173);
+}
+
+.projectButtonCreate:hover {
+  background-color: rgb(32, 210, 169);
+  color: rgb(255, 255, 255);
+}
+
+.projectButtonReturn:hover {
+  background-color: rgb(35, 28, 138);
+  color: rgb(255, 255, 255);
+}
+
+.projectButtonNext:hover {
+  background-color: rgb(55, 24, 94);
+  color: rgb(255, 255, 255);
+}
+
+.projet-diagramme {
+  background-color: #ffffff;
+}
+
+.collab-diagramme {
+  background-color: #ffffff;
 }/*# sourceMappingURL=styles.css.map */
