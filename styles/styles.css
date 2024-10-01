@@ -43,6 +43,7 @@
 @media (max-width: 768px) {
   .container-fluid {
     padding: 0 !important;
+    height: 120vh !important;
   }
   .sidebar {
     width: 5% !important;
@@ -51,8 +52,7 @@
     font-size: 0.7rem !important;
   }
   .admin, .manager, .collab {
-    margin-left: 12rem;
-    margin-right: auto;
+    margin-left: 12rem !important;
   }
   .admin .user__name, .manager .user__name, .collab .user__name {
     width: 5rem !important;
@@ -71,6 +71,7 @@
     background-color: rgb(23, 81, 87);
     margin-top: 0.5rem !important;
     z-index: 100 !important;
+    height: 110vh;
   }
   .dashboard__body {
     margin: 0 !important;
@@ -151,6 +152,10 @@
   }
   .btn-custom {
     margin-top: 1rem !important;
+  }
+  .upper_table {
+    margin: 2rem 0 -0.5rem -5.6rem !important;
+    color: white;
   }
   .table_resp_pos {
     margin-left: -6rem !important;
