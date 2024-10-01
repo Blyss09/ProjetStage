@@ -13,7 +13,7 @@
 
 <body>
     <div class="container-fluid row p-4 m-0">
-        <sidebar class="sidebar rounded-3 col-3 p-5 align-items-center">
+        <sidebar class="sidebar rounded-3 col col-sm-3 col-md-4 col-lg-3 px-5 pt-5 align-items-center">
             <div class="admin rounded-4 d-flex justify-content-center text-center p-1">
                 <div class="user__icon me-3">
                     <i class="bi bi-person-circle"></i>
@@ -23,8 +23,8 @@
                     <div class="user__role">Admin</div>
                 </div>
             </div>
-            <nav class="navbar navbar-expand-xxl navbar-light">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -35,16 +35,16 @@
                         </span>
                         <div class="dashboard__title ms-4 align-self-center">DASHBOARD</div>
                     </div>
-                    <div class="d-flex justify-content-center my-4">
+                    <div class="newproj__content d-flex justify-content-center my-4">
                         <button type="button" class="btn btn_newproj text-white px-4 p-0">
                             <i class="bi bi-plus-square-fill mt-2 mx-3 h4"></i>
                           Nouveau Projet
                         </button>
                     </div>
-                    <ul class="nav row flex-lg-row mt-4">
+                    <ul class="nav row flex-lg-row mt-4 p-0">
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link active ms-4" aria-current="page" href="#">Projets</a>
+                                <a class="nav-link active ms-4 px-0" aria-current="page" href="#">Projets</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -52,7 +52,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4" aria-current="page" href="#">Mes tâches</a>
+                                <a class="nav-link ms-4 px-0" aria-current="page" href="#">Mes tâches</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -60,7 +60,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4" aria-current="page" href="#">Statistiques projets</a>
+                                <a class="nav-link ms-4 px-0" aria-current="page" href="#">Statistiques projets</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -68,7 +68,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4" aria-current="page" href="#">Collaborateurs</a>
+                                <a class="nav-link ms-4 px-0" aria-current="page" href="#">Collaborateurs</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -76,7 +76,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4" aria-current="page" href="#">Statistiques collaborateurs</a>
+                                <a class="nav-link ms-4 px-0" aria-current="page" href="#">Statistiques collaborateurs</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -84,7 +84,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4" aria-current="page" href="#">Trançabilité</a>
+                                <a class="nav-link ms-4 px-0" aria-current="page" href="#">Trançabilité</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -92,7 +92,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4" aria-current="page" href="#">Paramètres</a>
+                                <a class="nav-link ms-4 px-0" aria-current="page" href="#">Paramètres</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -107,11 +107,11 @@
                           Déconnexion
                         </button>
                     </div>
-                
+                </div>
             </nav>
         </sidebar>
-        <main class="main col-6 col-md-9">
-            <div class="notif__bar rounded-2">
+        <main class="container main col-9 col-sm-9 col-md-8 col-lg-9">
+            <div class="notif__bar d-flex justify-content-end rounded-2">
                 <div class="d-flex justify-content-end">
                     <div class="dropdown">
                       <button class="btn dropdown-toggle position-relative bell p-3" type="button" id="notificationBell" data-bs-toggle="dropdown" aria-expanded="false">
@@ -137,35 +137,31 @@
                     </div>
                   </div>
             </div>
-            <div class="search__body row mt-5 pb-5 mx-0 align-items-center">
-                <h5 class="col-6 col-md-7 p-0">Traçabilité</h5>
-                <div class="col p-0">
-                    <div class="justify-content-center">
-                        <div class="d-flex">
-                            <div class="input-group search-bar flex-fill">
-                                <span class="input-group-text">
-                                    <i class="bi bi-search"></i>
-                                </span>
-                                <input type="text" class="form-control" placeholder="Rechercher...">
-                            </div>
-                            <button class="btn btn-custom">Rechercher</button>
-                        </div>
+            <div class="row search__body mt-5 pb-5 mx-0 align-items-center">
+                <h5 class="col-4 col-md-7 title__text p-0">Traçabilité</h5>
+                
+                <div class="col search__items d-flex justify-content-center p-0">
+                    <div class="input-group search-bar flex-fill">
+                        <span class="input-group-text">
+                            <i class="bi bi-search"></i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Rechercher...">
                     </div>
+                    <button class="btn btn-custom">Rechercher</button>
                 </div>
-            </div>
-            <div class="table-responsive ms-4">
-                <table class="table proj-table mt-5 text-center">
-                    <thead>
-                        <tr class="">
-                            <th scope="col">N°</th>
-                            <th scope="col">Référence</th>
-                            <th scope="col">Action</th>
-                            <th scope="col">Auteur</th>
-                            <th scope="col">Date</th>
-                            
-                            
-                           
-                        </tr>
+                <div class="table-responsive">
+                <table class="table proj-table mt-5 text-center"> 
+                        <thead>
+                            <tr class="">
+                                <th scope="col">N°</th>
+                                <th scope="col">Référence</th>
+                                <th scope="col">Action</th>
+                                <th scope="col">Auteur</th>
+                                <th scope="col">Date</th>
+                                
+                                
+                               
+                            </tr>
                     </thead>
                     <tbody>
                         <tr>
@@ -237,7 +233,9 @@
                     </tbody>
                 </table>
             </div>
+                
         </main>
+        
     </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

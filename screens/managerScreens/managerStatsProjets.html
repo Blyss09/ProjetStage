@@ -9,6 +9,8 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../../styles/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -20,7 +22,7 @@
                 </div>
                 <div class="user__body align-self-center">
                     <div class="user__name">Adam Smith</div>
-                    <div class="user__role">Admin</div>
+                    <div class="user__role">Manager</div>
                 </div>
             </div>
             <nav class="navbar navbar-expand-xxl navbar-light">
@@ -44,7 +46,7 @@
                     <ul class="nav row flex-lg-row mt-4">
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link active ms-4" aria-current="page" href="#">Projets</a>
+                                <a class="nav-link ms-4" aria-current="page" href="./managerEnv.html">Projets</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -52,7 +54,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4" aria-current="page" href="#">Mes tâches</a>
+                                <a class="nav-link active ms-4" aria-current="page" href="#">Mes tâches</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -68,31 +70,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4" aria-current="page" href="#">Collaborateurs</a>
-                                <span class="img_arrow">
-                                    <i class="bi bi-chevron-right h4"></i>
-                                </span>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="d-flex align-items-center">
                                 <a class="nav-link ms-4" aria-current="page" href="#">Statistiques collaborateurs</a>
-                                <span class="img_arrow">
-                                    <i class="bi bi-chevron-right h4"></i>
-                                </span>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4" aria-current="page" href="#">Trançabilité</a>
-                                <span class="img_arrow">
-                                    <i class="bi bi-chevron-right h4"></i>
-                                </span>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4" aria-current="page" href="#">Paramètres</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -137,58 +115,98 @@
                     </div>
                   </div>
             </div>
-            <div class="container mt-5">
-                
-                <ul class="nav nav-tabs">
-                    <li class="nav-item newProjectNav">
-                        <a class="nav-link active" href="#">Étape 1</a>
-                    </li>
-                    <li class="nav-item newProjectLi">
-                        <a class="nav-link" href="#">Étape 2</a>
-                    </li>
-                    <li class="nav-item newProjectLi">
-                        <a class="nav-link" href="#">Étape 3</a>
-                    </li>
-                    <li class="nav-item newProjectLi">
-                        <a class="nav-link" href="#">Étape 4</a>
-                    </li>
-                    <li class="nav-item newProjectLi">
-                        <a class="nav-link" href="#">Étape 5</a>
-                    </li>
-                    <li class="nav-item newProjectLi">
-                        <a class="nav-link" href="#">Étape 6</a>
-                    </li>
-                    <li class="nav-item newProjectLi">
-                        <a class="nav-link" href="#">Étape 7</a>
-                    </li>
-                    <li class="nav-item newProjectLi">
-                        <a class="nav-link" href="#">Étape 8</a>
-                    </li>
-                </ul>
-        
-               
-                <div class="card mt-3 p-4 newProjectCard">
-                    <h4 class="text-light">Définir le nom du projet :</h4>
-                    <form>
-                        <div class="mb-3 newProjectForm">
-                            <label for="projectName" class="form-label">Nom du projet :</label>
-                            <input type="text" class="form-control" id="projectName" placeholder="Nom du projet">
+            <div class="search__body row mt-5 pb-5 mx-0 align-items-center">
+                <h5 class="col-6 col-md-7 p-0">Statistiques projets</h5>
+                <div class="col p-0">
+                    <div class="justify-content-center">
+                        <div class="d-flex">
+                            <div class="input-group search-bar flex-fill">
+                                <span class="input-group-text">
+                                    <i class="bi bi-search"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Rechercher...">
+                            </div>
+                            <button class="btn btn-custom">Rechercher</button>
                         </div>
-                        <div class="mb-3 newProjectForm">
-                            <label for="projectType" class="form-label">Type de projet :</label>
-                            <input type="text" class="form-control" id="projectType" placeholder="Type de projet">
-                        </div>
-                        <div class="mb-7 newProjectForm newProjectComment">
-                            <label for="comment" class="form-label">Ajouter un commentaire :</label>
-                            <textarea class="form-control" id="comment" rows="3" placeholder="Ajouter un commentaire"></textarea>
-                        </div>
-                        <button type="button" class="btn btn-primary">Suivant</button>
-                    </form>
+                    </div>
                 </div>
             </div>
+            <div class="container col-10 mt-3">
+
+                <!-- Carte Bootstrap pour styliser le graphique -->
+                <div class="card ">
+                  <div class="card-body">
+                    <canvas id="projectsChart"></canvas>
+                  </div>
+                </div>
+              </div>
+              </div>  
+          </div>
+              
+            
+              
+            </div>
+        </main>
     </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        <!-- Script pour générer le diagramme-->
+        <script>
+            // Sélectionner l'élément canvas
+            const ctx = document.getElementById('projectsChart').getContext('2d');
+            
+            // Création du diagramme avec Chart.js
+            const projectsChart = new Chart(ctx, {
+              type: 'bar', // Type du graphique en bâtons
+              data: {
+                labels: ['Projet 1', 'Projet 2', 'Projet 3', 'Projet 4', 'Projet 5', 'Projet 6'], // Noms des projets
+                datasets: [{
+                  label: 'État des Projets',
+                  data: [1, 2, 3, 6, 2, 1], // Valeurs de progression (correspondant aux étapes)
+                  backgroundColor: [
+                    'rgb(255, 165, 0)',  // Couleur des barres
+                    'rgb(255, 165, 0)',
+                    'rgb(255, 165, 0)',
+                    'rgb(255, 165, 0)',
+                    'rgb(255, 165, 0)',
+                    'rgb(255, 165, 0)'
+                  ],
+                  borderColor: [
+                    'rgb(255, 165, 0)',  // Couleur des bordures des barres
+                    'rgb(255, 165, 0)',
+                    'rgb(255, 165, 0)',
+                    'rgb(255, 165, 0)',
+                    'rgb(255, 165, 0)',
+                    'rgb(255, 165, 0)'
+                  ],
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  
+                  y: {
+                    beginAtZero: true,
+                    ticks: {
+                      // Remplace les valeurs numériques par des mots
+                      callback: function(value, index, values) {
+                        const states = [ '', 'CDC', 'Conception', 'Developpement', 'Test', 'Mise en stage', 'Mise en prod']; // Liste des mots à afficher
+                        return states[value];  // Renvoie le mot correspondant à la valeur
+                      }
+                    }
+                  }
+                },
+                plugins: {
+                  title: {
+                    display: true,
+                    text: 'Evolution des projets par ordre de création'  // Titre du graphique
+                  }
+                }
+              }
+            });
+          </script>
+      
+        <!-- Bootstrap 5 JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
 </body>
 </html>

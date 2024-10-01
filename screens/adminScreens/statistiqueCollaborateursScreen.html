@@ -9,18 +9,20 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../../styles/styles.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
     <div class="container-fluid row p-4 m-0">
         <div class="sidebar rounded-3 col-3 p-5 align-items-center">
-            <div class="admin rounded-4 d-flex justify-content-evenly text-center p-1">
-                <div class="user__icon">
+            <div class="admin rounded-4 d-flex justify-content-center text-center p-1">
+                <div class="user__icon me-3">
                     <i class="bi bi-person-circle"></i>
                 </div>
                 <div class="user__body align-self-center">
                     <div class="user__name">Adam Smith</div>
-                    <div class="user__role">Admin</div>
+                    <div class="user__role">Manager</div>
                 </div>
             </div>
             <nav class="navbar navbar-expand-sm navbar-light">
@@ -142,11 +144,55 @@
                         </div>
                     </div>
                 </div>
-            
-           
+                <div class="container col-10 mt-3">
+                    <h2 class="text-center">nombre de projets</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <canvas id="pieChart"></canvas> <!-- Conteneur du diagramme circulaire -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>        
             </div>
         </div>
             
+
+        <!-- Script pour créer le diagramme circulaire -->
+    <script>
+        const ctx = document.getElementById('pieChart').getContext('2d');
+
+        const pieChart = new Chart(ctx, {
+            type: 'pie',  // Type de diagramme circulaire
+            data: {
+                labels: ['Projets où le collaborateur intervient', 'Tous les projet'],  // Les sections du diagramme
+                datasets: [{
+                    label: 'Répartition des Projets',
+                    data: [3, 9],  // Valeurs des différentes sections
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.7)',  // Couleur pour chaque section
+                        'rgba(75, 192, 192, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',  // Couleur de la bordure
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1  // Largeur des bordures
+                }]
+            },
+            options: {
+                responsive: true,  // Rend le diagramme responsive
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Répartition des Projets'  // Titre du diagramme
+                    }
+                }
+            }
+        });
+    </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

@@ -162,6 +162,24 @@
     font-size: 0.8rem !important;
     border: 0 !important;
   }
+  /* Webkit */
+  .table-responsive::-webkit-scrollbar {
+    width: 12px !important;
+    height: 12px !important;
+  }
+  .table-responsive::-webkit-scrollbar-thumb {
+    background-color: #ffffff !important;
+    border-radius: 6px !important;
+  }
+  .table-responsive::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    border-radius: 6px !important;
+  }
+  /* Firefox */
+  .table-responsive {
+    scrollbar-width: thin !important;
+    scrollbar-color: white rgba(0, 0, 0, 0.1) !important;
+  }
 }
 .mainLogIn {
   display: flex;
@@ -431,6 +449,10 @@
   border-bottom-right-radius: 50px;
   background-color: rgb(127, 161, 195);
   border-color: rgb(127, 161, 195);
+}
+
+.upper_table {
+  color: white;
 }
 
 .btn-custom {
@@ -740,6 +762,13 @@
   background-color: rgb(100, 130, 173);
 }
 
+.editBtn {
+  color: rgb(127, 161, 195);
+  border-color: white;
+  border-radius: 10px;
+  width: 80px;
+}
+
 .newProjectNav {
   background-color: rgb(127, 161, 195);
   color: rgb(255, 255, 255);
@@ -799,29 +828,6 @@
   font-size: 1rem;
   font-weight: 600;
 }
-.newProjectForm input, .newProjectForm textarea {
-  width: 100% !important;
-  padding: 10px !important;
-  border-radius: 5px !important;
-  border: 1px solid rgba(127, 161, 195, 0.5) !important;
-  background-color: rgba(127, 161, 195, 0.1) !important;
-  font-size: 1rem !important;
-  color: rgb(100, 130, 173) !important;
-}
-.newProjectForm input::-moz-placeholder, .newProjectForm textarea::-moz-placeholder {
-  color: rgb(127, 161, 195) !important;
-}
-.newProjectForm input::placeholder, .newProjectForm textarea::placeholder {
-  color: rgb(127, 161, 195) !important;
-}
-.newProjectForm input:focus, .newProjectForm textarea:focus {
-  border-color: rgb(32, 210, 169) !important;
-  box-shadow: 0 0 5px rgba(32, 210, 169, 0.3) !important;
-}
-.newProjectForm textarea {
-  height: 100px !important;
-  resize: none !important;
-}
 
 button.btn-primary {
   background-color: rgb(32, 210, 169) !important;
@@ -837,4 +843,50 @@ button.btn-primary {
 }
 button.btn-primary:hover {
   background-color: #19a685 !important;
+}
+
+.projectInput {
+  background-color: #fff !important;
+}
+
+.projectBackground {
+  background-color: rgb(127, 161, 195);
+}
+
+.projectButton {
+  background-color: rgb(100, 130, 173);
+}
+
+.projectButtonCreate {
+  background-color: rgb(32, 210, 169);
+  color: rgb(255, 255, 255);
+}
+
+.projectButtonReturn {
+  background-color: rgb(35, 28, 138);
+  color: rgb(255, 255, 255);
+}
+
+.projectButtonNext {
+  background-color: rgb(55, 24, 94);
+  color: rgb(255, 255, 255);
+}
+
+.projectButton:hover {
+  background-color: rgb(100, 130, 173);
+}
+
+.projectButtonCreate:hover {
+  background-color: rgb(32, 210, 169);
+  color: rgb(255, 255, 255);
+}
+
+.projectButtonReturn:hover {
+  background-color: rgb(35, 28, 138);
+  color: rgb(255, 255, 255);
+}
+
+.projectButtonNext:hover {
+  background-color: rgb(55, 24, 94);
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=styles.css.map */
