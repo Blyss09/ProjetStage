@@ -14,11 +14,6 @@ $adminColor: rgba(248, 60, 60, 1);
 $rowCollor: rgba(127, 161, 195);
 
 
-
-$base-width: 768px;
-$base-margin: 12rem;
-$increm-factor: 0.1rem;
-
 .bell {
   background-color: $bellColor;
 }
@@ -62,18 +57,18 @@ $increm-factor: 0.1rem;
 @media (max-width: 768px) {
   $i: !important;
   .container-fluid{
-    padding: 0 !important;
+    padding: 0$i;
+    height: 120vh$i;
   }
   .sidebar {
-    width: 5% !important;
-    padding: 0 !important;
+    width: 5%$i;
+    padding: 0$i;
     background-color: transparent !important;
-    font-size: 0.7rem !important;
+    font-size: 0.7rem$i;
   }
   .admin,.manager,.collab {
 
-    margin-left: responsive(.sidebar);
-    margin-right: auto;
+    margin-left: 12rem !important;
 
     .user__name{
       width: 5rem !important;
@@ -95,6 +90,7 @@ $increm-factor: 0.1rem;
     background-color: rgb(23, 81, 87);
     margin-top: 0.5rem !important;
     z-index: 100 !important;
+    height: 110vh;
   }
 
   .dashboard__body{
@@ -187,6 +183,10 @@ $increm-factor: 0.1rem;
   .btn-custom {
     margin-top: 1rem !important;
   } 
+  .upper_table {
+    margin: 2rem 0 -0.5rem -5.6rem !important;
+    color: white;
+  }
   .table_resp_pos{
     margin-left: -6rem !important;
     border-top: none !important;
@@ -198,7 +198,6 @@ $increm-factor: 0.1rem;
     border: 0 !important;
   }
   .table_resp_pos{
-    border-top: 1px solid white !important;
   }
   // Scrollbar responsive mode
   /* Webkit */
@@ -293,7 +292,6 @@ $increm-factor: 0.1rem;
   height: 100vh;
 }
 .sidebar {
-  margin: $base-margin;
   background-color:rgba(127, 161, 195, 1);
   height: 96vh;
   // @media (min-height: 1081px) and (max-height:1201px) {
