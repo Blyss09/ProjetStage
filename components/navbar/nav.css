@@ -19,6 +19,8 @@
   color: rgb(255, 255, 255);
 }
 
+<<<<<<< HEAD
+=======
 @media (max-width: 1400px) {
   .admin, .manager, .collab {
     background-color: transparent !important;
@@ -145,6 +147,7 @@
     border-top: 1px solid white !important;
   }
 }
+>>>>>>> 4700fa470dad407937655310c7a6da2e3d0ea5ef
 .mainLogIn {
   display: flex;
   justify-content: center;
@@ -717,6 +720,8 @@
   padding: 5px;
 }
 
+<<<<<<< HEAD
+=======
 .diagramme {
   color: white;
   background-color: rgb(100, 130, 173);
@@ -851,6 +856,7 @@ button.btn-primary:hover {
   color: rgb(255, 255, 255);
 }
 
+>>>>>>> 4700fa470dad407937655310c7a6da2e3d0ea5ef
 .container {
   width: 400px;
   background-color: rgb(127, 161, 195);

@@ -13,6 +13,7 @@ $adminColor: rgba(248, 60, 60, 1);
 //tableaux
 $rowCollor: rgba(127, 161, 195);
 
+
 .bell {
   background-color: $bellColor;
 }
@@ -54,18 +55,21 @@ $rowCollor: rgba(127, 161, 195);
   }
 }
 @media (max-width: 768px) {
+  $i: !important;
   .container-fluid{
-    padding: 0 !important;
+    padding: 0$i;
+    height: 120vh$i;
   }
   .sidebar {
-    width: 5% !important;
-    padding: 0 !important;
+    width: 5%$i;
+    padding: 0$i;
     background-color: transparent !important;
-    font-size: 0.7rem !important;
+    font-size: 0.7rem$i;
   }
   .admin,.manager,.collab {
-    margin-left: 11rem !important;
-    
+
+    margin-left: 12rem !important;
+
     .user__name{
       width: 5rem !important;
     }
@@ -86,6 +90,7 @@ $rowCollor: rgba(127, 161, 195);
     background-color: rgb(23, 81, 87);
     margin-top: 0.5rem !important;
     z-index: 100 !important;
+    height: 110vh;
   }
 
   .dashboard__body{
@@ -122,8 +127,8 @@ $rowCollor: rgba(127, 161, 195);
     display: flex !important;
     flex-wrap: wrap !important;
     align-items: center !important;
-    padding-bottom: 1rem !important;
-    margin-top: 1.5rem !important;
+    padding-bottom: 0 !important;
+    margin-top: 1rem !important;
     margin-left: -5rem !important;
     margin-right: 0rem !important;
     border-bottom: 0 !important;
@@ -151,26 +156,74 @@ $rowCollor: rgba(127, 161, 195);
       line-height: 1rem !important;
     }
   }
-  .search__items input {
-    font-size: 14px !important;
-    width: 100% !important;
-  }
 
+  .filter__section{
+    margin-left: -7.3rem;
+    .sp{
+      width: 0 !important;
+    }
+    .col-2{
+      margin: 0 4.2rem 0 3rem;
+    }
+    .filterButton{
+      margin-left: 1.6rem;
+      height: 1.6rem ;
+      line-height: 0rem !important;
+    }
+    .dateControl{
+      margin-left: 1.5rem;
+      width: 7rem !important;
+      height: 1.5rem ;
+
+      &#endDate{
+        margin-left: 3rem;
+      }
+    }
+  }
   .btn-custom {
     margin-top: 1rem !important;
   } 
+  .upper_table {
+    margin: 2rem 0 -0.5rem -5.6rem !important;
+    color: white;
+  }
   .table_resp_pos{
     margin-left: -6rem !important;
+    border-top: none !important;
   }
   .proj-table {
     margin-top: 1rem !important;
     margin-right: 0 !important;
     font-size: 0.8rem !important;
+    border: 0 !important;
   }
   .table_resp_pos{
-    border-top: 1px solid white !important;
   }
+  // Scrollbar responsive mode
+  /* Webkit */
+.table-responsive::-webkit-scrollbar {
+  width: 12px$i;
+  height: 12px$i; 
 }
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #ffffff$i; 
+  border-radius: 6px$i; 
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1)$i; 
+  border-radius: 6px$i;
+}
+
+/* Firefox */
+.table-responsive {
+  scrollbar-width: thin$i; 
+  scrollbar-color: white rgba(0, 0, 0, 0.1)$i; 
+}
+}
+
+// Scrollbar responsive mode (bonus) delete if it makes issues
 
 
 //Page de connexion
@@ -444,7 +497,7 @@ $rowCollor: rgba(127, 161, 195);
 }
 
 .filterButton {
-  background-color: rgb(100, 130, 173);
+  background-color: $sideBar;
 }
 
 .dateControl::-moz-placeholder {
@@ -758,6 +811,33 @@ $passiveFolder : rgb(76, 146, 137);
   padding: 5px;
 }
 
+<<<<<<< HEAD
+//Page paramètres
+.front-icons {
+  color:$white;
+}
+
+.card-text {
+  color:$white;
+}
+
+.title-card {
+  color:$pageBackground;
+}
+
+.card-body {
+  background-color:$pageBackground;
+  height: 50vh;
+}
+
+.button-text {
+  color:$white;
+}
+
+.button-icon {
+  color:$white;
+}
+=======
 //Diagramme Statistique
 .diagramme {
   color: white;
@@ -912,3 +992,4 @@ button.btn-primary {
 }
 
 
+>>>>>>> 4700fa470dad407937655310c7a6da2e3d0ea5ef
