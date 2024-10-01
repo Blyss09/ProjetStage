@@ -206,6 +206,9 @@
     position: relative;
     right: 2.5rem;
   }
+  .tables-overflow-scroll .btn-custom {
+    margin-right: 2rem;
+  }
 }
 /* Webkit */
 .table-responsive {
@@ -993,4 +996,13 @@ button.btn-primary:hover {
   flex-direction: row;
   flex-wrap: nowrap;
   margin-left: 4rem;
+}
+
+.bottom_border {
+  border-bottom: 1px solid white !important;
+}
+
+.tables-overflow-scroll {
+  overflow: scroll;
+  height: 75vh;
 }/*# sourceMappingURL=styles.css.map */

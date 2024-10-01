@@ -232,7 +232,9 @@ $rowCollor: rgba(127, 161, 195);
     position: relative;
     right: 2.5rem
   }
-
+  .tables-overflow-scroll .btn-custom{
+    margin-right: 2rem;
+  }
 }
 
   // Scrollbar responsive mode
@@ -1049,4 +1051,12 @@ button.btn-primary {
   flex-direction: row;
   flex-wrap: nowrap;
   margin-left: 4rem;
+}
+
+.bottom_border{
+  border-bottom: 1px solid white !important;
+}
+.tables-overflow-scroll{
+  overflow: scroll;
+  height: 75vh;
 }
