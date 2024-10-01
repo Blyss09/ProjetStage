@@ -13,7 +13,6 @@ $adminColor: rgba(248, 60, 60, 1);
 //tableaux
 $rowCollor: rgba(127, 161, 195);
 
-
 .bell {
   background-color: $bellColor;
 }
@@ -55,16 +54,16 @@ $rowCollor: rgba(127, 161, 195);
   }
 }
 @media (max-width: 768px) {
- 
+  // $i: !important;
   .container-fluid{
-    padding: 0!important;
-    height: 120vh!important;
+    padding: 0 !important;
+    height: 120vh !important;
   }
   .sidebar {
-    width: 5%!important;
-    padding: 0!important;
+    width: 5% !important;
+    padding: 0 !important;
     background-color: transparent !important;
-    font-size: 0.7rem!important;
+    font-size: 0.7rem !important;
   }
   .admin,.manager,.collab {
 
@@ -85,26 +84,38 @@ $rowCollor: rgba(127, 161, 195);
     position: relative !important;
     bottom: 3.3rem !important;
   }
-
   .navbar-collapse{
     background-color: rgb(23, 81, 87);
     margin-top: 0.5rem !important;
     z-index: 100 !important;
     height: 110vh;
   }
-
   .dashboard__body{
+    font-size: 14px !important;
     margin: 0 !important;
     padding: 1rem 0 !important;
   }
   .btn_newproj{
+    // margin: 0 0 !important;
     width: 11rem !important;
-    height: 3rem !important;
+    height: 2.3rem !important;
   }
   .newproj__content{
-    margin-bottom: 0 !important;
+    margin: -2rem 0 !important;
+    // margin-bottom: 0 !important;
   }
-
+  .nav__ul{
+    margin: 0 !important;
+    font-size: 15px !important;
+    .nav-item{
+      margin: 0.3rem 6rem 0 -0.5rem !important;
+      text-align: center;
+    }
+  }
+  .logout__btn{
+    position: relative;
+    bottom: 2rem;
+  }
   .navbar-toggler {
     display: block !important;
     margin-left: 0.5rem !important;
@@ -113,7 +124,6 @@ $rowCollor: rgba(127, 161, 195);
     margin-top: 3rem !important;
     margin-bottom: 5.4rem !important;
   }
-
   .notif__bar {
     margin: 0 !important;
     background-color: transparent !important;
@@ -122,7 +132,6 @@ $rowCollor: rgba(127, 161, 195);
     padding: 0.5rem !important;
     font-size: 0.8rem !important;
   }
-
   .search__body {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -156,7 +165,6 @@ $rowCollor: rgba(127, 161, 195);
       line-height: 1rem !important;
     }
   }
-
   .filter__section{
     margin-left: -7.3rem;
     .sp{
@@ -197,19 +205,29 @@ $rowCollor: rgba(127, 161, 195);
     font-size: 0.8rem !important;
     border: 0 !important;
   }
-
-  .table_resp_pos{
+  .pagination{
+    margin: 1rem 5rem 0 0 !important;
   }
+}
   // Scrollbar responsive mode
   /* Webkit */
   .table-responsive {
-    overflow: scroll !important; 
-  scrollbar-width: auto !important;
+    // overflow: scroll !important; 
+    scrollbar-width: auto !important;
   }
 .table-responsive::-webkit-scrollbar {
-  width: 12px!important;
-  height: 12px!important; 
+  width: 12px !important;
+  height: 12px !important; 
 }
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #ffffff !important; 
+  border-radius: 6px !important; 
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1) !important; 
+  border-radius: 6px !important;
 
 .table-responsive::-webkit-scrollbar-thumb {
   background-color: #ffffff!important; 
@@ -223,9 +241,8 @@ $rowCollor: rgba(127, 161, 195);
 
 /* Firefox */
 .table-responsive {
-  scrollbar-width: thin!important; 
-  scrollbar-color: white rgba(0, 0, 0, 0.1)!important; 
-  
+  scrollbar-width: thin !important; 
+  scrollbar-color: white rgba(0, 0, 0, 0.1) !important; 
 }
 }
 
@@ -595,14 +612,6 @@ $passiveFolder : rgb(76, 146, 137);
     border-right: 3px solid rgb(36, 78, 73)!important;
 }
 
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! A Resoudre !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// .btn {
-//     padding: 10px 20px;
-//     margin-right: -15px;
-//     border-bottom : none;
-//     pointer-events: none;
-// }
-
 //Chevauchement des boutons
 .step-container .btn:nth-child(1) {
     z-index: 8;  
@@ -699,6 +708,11 @@ $passiveFolder : rgb(76, 146, 137);
           }
       }
   }
+}
+
+.pagination{
+  justify-content: center; /* Centers the pagination items */
+  display: flex;
 }
 
 .waiting {
@@ -816,8 +830,6 @@ $passiveFolder : rgb(76, 146, 137);
   width: 125px;
   padding: 5px;
 }
-
-//<<<<<<< HEAD
 //Page paramètres
 .front-icons {
   color:$white;
@@ -843,7 +855,6 @@ $passiveFolder : rgb(76, 146, 137);
 .button-icon {
   color:$white;
 }
-//=======
 //Diagramme Statistique
 .diagramme {
   color: white;
@@ -860,8 +871,6 @@ $passiveFolder : rgb(76, 146, 137);
 }
 
 // projet
-
-
 .newProjectNav {
   background-color: $sideBar; // Same background color as other navigational elements
   color: $white;
@@ -872,32 +881,32 @@ $passiveFolder : rgb(76, 146, 137);
   font-size: 16px;
   
   .nav-link {
-    color: inherit!important;
-    text-decoration: none!important;
-    font-size: 1rem!important;
-    position: relative!important;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: 1rem !important;
+    position: relative !important;
     
     &::before {
-      content: '•'!important;
-      position: absolute!important;
-      top: -15px!important;
-      left: 50%!important;
-      transform: translateX(-50%)!important;
-      font-size: 24px!important;
-      color: transparent!important;
+      content: '•' !important;
+      position: absolute !important;
+      top: -15px !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      font-size: 24px !important;
+      color: transparent !important;
     }
 
     &.active {
-      color: $createButtonProject!important;
-      font-weight: bold!important;
+      color: $createButtonProject !important;
+      font-weight: bold !important;
       
       &::before {
-        color: $createButtonProject!important; // Highlight the active step
+        color: $createButtonProject !important; // Highlight the active step
       }
     }
 
     &:hover {
-      color: lighten($createButtonProject, 10%)!important;
+      color: lighten($createButtonProject, 10%) !important;
     }
   }
 }
@@ -933,18 +942,18 @@ $passiveFolder : rgb(76, 146, 137);
 }
 
 button.btn-primary {
-  background-color: $createButtonProject!important;
-  border: none!important;
-  padding: 10px 25px!important;
-  font-size: 1rem!important;
-  border-radius: 30px!important;
-  color: $white!important;
-  width: fit-content!important;
-  align-self: flex-start!important;
-  transition: background-color 0.3s ease!important;
+  background-color: $createButtonProject !important;
+  border: none !important;
+  padding: 10px 25px !important;
+  font-size: 1rem !important;
+  border-radius: 30px !important;
+  color: $white !important;
+  width: fit-content !important;
+  align-self: flex-start !important;
+  transition: background-color 0.3s ease !important;
   
   &:hover {
-    background-color: darken($createButtonProject, 10%)!important;
+    background-color: darken($createButtonProject, 10%) !important;
   }
 }
 .projectInput {
@@ -992,7 +1001,6 @@ button.btn-primary {
   color: $white;
 }
 .projectButtonNext:hover {
-
   background-color: $managerColor;
   color: $white;
 }
