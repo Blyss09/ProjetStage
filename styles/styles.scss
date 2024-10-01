@@ -197,6 +197,7 @@ $rowCollor: rgba(127, 161, 195);
     font-size: 0.8rem !important;
     border: 0 !important;
   }
+
   .table_resp_pos{
   }
   // Scrollbar responsive mode
@@ -816,7 +817,7 @@ $passiveFolder : rgb(76, 146, 137);
   padding: 5px;
 }
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 //Page paramètres
 .front-icons {
   color:$white;
@@ -842,7 +843,7 @@ $passiveFolder : rgb(76, 146, 137);
 .button-icon {
   color:$white;
 }
-=======
+//=======
 //Diagramme Statistique
 .diagramme {
   color: white;
@@ -994,4 +995,13 @@ button.btn-primary {
 
   background-color: $managerColor;
   color: $white;
+}
+
+//Diagramme des stats des projets
+.projet-diagramme {
+  background-color: #ffffff;
+}
+
+.collab-diagramme {
+  background-color: #ffffff;
 }
