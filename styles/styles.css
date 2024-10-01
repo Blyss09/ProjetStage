@@ -193,10 +193,18 @@
   .params .col {
     display: flex;
   }
-  .card {
+  .params-collab {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .card-param {
     position: relative;
     right: 2.5rem;
     width: 600px !important;
+  }
+  .card-collab {
+    position: relative;
+    right: 2.5rem;
   }
 }
 /* Webkit */
@@ -815,10 +823,6 @@
 
 .front-icons {
   color: rgb(255, 255, 255);
-}
-
-.card {
-  width: 20rem;
 }
 
 .card-text {
