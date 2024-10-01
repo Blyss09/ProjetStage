@@ -55,16 +55,16 @@ $rowCollor: rgba(127, 161, 195);
   }
 }
 @media (max-width: 768px) {
-  $i: !important;
+ 
   .container-fluid{
-    padding: 0$i;
-    height: 120vh$i;
+    padding: 0!important;
+    height: 120vh!important;
   }
   .sidebar {
-    width: 5%$i;
-    padding: 0$i;
+    width: 5%!important;
+    padding: 0!important;
     background-color: transparent !important;
-    font-size: 0.7rem$i;
+    font-size: 0.7rem!important;
   }
   .admin,.manager,.collab {
 
@@ -201,25 +201,30 @@ $rowCollor: rgba(127, 161, 195);
   }
   // Scrollbar responsive mode
   /* Webkit */
+  .table-responsive {
+    overflow: scroll !important; 
+  scrollbar-width: auto !important;
+  }
 .table-responsive::-webkit-scrollbar {
-  width: 12px$i;
-  height: 12px$i; 
+  width: 12px!important;
+  height: 12px!important; 
 }
 
 .table-responsive::-webkit-scrollbar-thumb {
-  background-color: #ffffff$i; 
-  border-radius: 6px$i; 
+  background-color: #ffffff!important; 
+  border-radius: 6px!important; 
 }
 
 .table-responsive::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0.1)$i; 
-  border-radius: 6px$i;
+  background-color: rgba(0, 0, 0, 0.1)!important; 
+  border-radius: 6px!important;
 }
 
 /* Firefox */
 .table-responsive {
-  scrollbar-width: thin$i; 
-  scrollbar-color: white rgba(0, 0, 0, 0.1)$i; 
+  scrollbar-width: thin!important; 
+  scrollbar-color: white rgba(0, 0, 0, 0.1)!important; 
+  
 }
 }
 
@@ -855,7 +860,7 @@ $passiveFolder : rgb(76, 146, 137);
 
 // projet
 
-$i: !important;
+
 .newProjectNav {
   background-color: $sideBar; // Same background color as other navigational elements
   color: $white;
@@ -866,32 +871,32 @@ $i: !important;
   font-size: 16px;
   
   .nav-link {
-    color: inherit$i;
-    text-decoration: none$i;
-    font-size: 1rem$i;
-    position: relative$i;
+    color: inherit!important;
+    text-decoration: none!important;
+    font-size: 1rem!important;
+    position: relative!important;
     
     &::before {
-      content: '•'$i;
-      position: absolute$i;
-      top: -15px$i;
-      left: 50%$i;
-      transform: translateX(-50%)$i;
-      font-size: 24px$i;
-      color: transparent$i;
+      content: '•'!important;
+      position: absolute!important;
+      top: -15px!important;
+      left: 50%!important;
+      transform: translateX(-50%)!important;
+      font-size: 24px!important;
+      color: transparent!important;
     }
 
     &.active {
-      color: $createButtonProject$i;
-      font-weight: bold$i;
+      color: $createButtonProject!important;
+      font-weight: bold!important;
       
       &::before {
-        color: $createButtonProject$i; // Highlight the active step
+        color: $createButtonProject!important; // Highlight the active step
       }
     }
 
     &:hover {
-      color: lighten($createButtonProject, 10%)$i;
+      color: lighten($createButtonProject, 10%)!important;
     }
   }
 }
@@ -927,18 +932,18 @@ $i: !important;
 }
 
 button.btn-primary {
-  background-color: $createButtonProject$i;
-  border: none$i;
-  padding: 10px 25px$i;
-  font-size: 1rem$i;
-  border-radius: 30px$i;
-  color: $white$i;
-  width: fit-content$i;
-  align-self: flex-start$i;
-  transition: background-color 0.3s ease$i;
+  background-color: $createButtonProject!important;
+  border: none!important;
+  padding: 10px 25px!important;
+  font-size: 1rem!important;
+  border-radius: 30px!important;
+  color: $white!important;
+  width: fit-content!important;
+  align-self: flex-start!important;
+  transition: background-color 0.3s ease!important;
   
   &:hover {
-    background-color: darken($createButtonProject, 10%)$i;
+    background-color: darken($createButtonProject, 10%)!important;
   }
 }
 .projectInput {
