@@ -74,15 +74,28 @@
     height: 110vh;
   }
   .dashboard__body {
+    font-size: 14px !important;
     margin: 0 !important;
     padding: 1rem 0 !important;
   }
   .btn_newproj {
     width: 11rem !important;
-    height: 3rem !important;
+    height: 2.3rem !important;
   }
   .newproj__content {
-    margin-bottom: 0 !important;
+    margin: -2rem 0 !important;
+  }
+  .nav__ul {
+    margin: 0 !important;
+    font-size: 15px !important;
+  }
+  .nav__ul .nav-item {
+    margin: 0.3rem 6rem 0 -0.5rem !important;
+    text-align: center;
+  }
+  .logout__btn {
+    position: relative;
+    bottom: 2rem;
   }
   .navbar-toggler {
     display: block !important;
@@ -166,6 +179,9 @@
     margin-right: 0 !important;
     font-size: 0.8rem !important;
     border: 0 !important;
+  }
+  .pagination {
+    margin: 1rem 5rem 0 0 !important;
   }
   /* Webkit */
   .table-responsive::-webkit-scrollbar {
@@ -653,6 +669,11 @@
   border-bottom-right-radius: 10px;
 }
 
+.pagination {
+  justify-content: center; /* Centers the pagination items */
+  display: flex;
+}
+
 .waiting {
   width: 15px;
   height: 15px;
@@ -762,7 +783,6 @@
   padding: 5px;
 }
 
-<<<<<<< HEAD
 .front-icons {
   color: rgb(255, 255, 255);
 }
@@ -785,7 +805,9 @@
 }
 
 .button-icon {
-=======
+  color: rgb(255, 255, 255);
+}
+
 .diagramme {
   color: white;
   background-color: rgb(100, 130, 173);
@@ -917,6 +939,5 @@ button.btn-primary:hover {
 
 .projectButtonNext:hover {
   background-color: rgb(55, 24, 94);
->>>>>>> 4700fa470dad407937655310c7a6da2e3d0ea5ef
   color: rgb(255, 255, 255);
 }/*# sourceMappingURL=styles.css.map */

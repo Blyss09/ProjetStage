@@ -13,7 +13,6 @@ $adminColor: rgba(248, 60, 60, 1);
 //tableaux
 $rowCollor: rgba(127, 161, 195);
 
-
 .bell {
   background-color: $bellColor;
 }
@@ -55,16 +54,16 @@ $rowCollor: rgba(127, 161, 195);
   }
 }
 @media (max-width: 768px) {
-  $i: !important;
+  // $i: !important;
   .container-fluid{
-    padding: 0$i;
-    height: 120vh$i;
+    padding: 0 !important;
+    height: 120vh !important;
   }
   .sidebar {
-    width: 5%$i;
-    padding: 0$i;
+    width: 5% !important;
+    padding: 0 !important;
     background-color: transparent !important;
-    font-size: 0.7rem$i;
+    font-size: 0.7rem !important;
   }
   .admin,.manager,.collab {
 
@@ -94,15 +93,30 @@ $rowCollor: rgba(127, 161, 195);
   }
 
   .dashboard__body{
+    font-size: 14px !important;
     margin: 0 !important;
     padding: 1rem 0 !important;
   }
   .btn_newproj{
+    // margin: 0 0 !important;
     width: 11rem !important;
-    height: 3rem !important;
+    height: 2.3rem !important;
   }
   .newproj__content{
-    margin-bottom: 0 !important;
+    margin: -2rem 0 !important;
+    // margin-bottom: 0 !important;
+  }
+  .nav__ul{
+    margin: 0 !important;
+    font-size: 15px !important;
+    .nav-item{
+      margin: 0.3rem 6rem 0 -0.5rem !important;
+      text-align: center;
+    }
+  }
+  .logout__btn{
+    position: relative;
+    bottom: 2rem;
   }
 
   .navbar-toggler {
@@ -197,29 +211,31 @@ $rowCollor: rgba(127, 161, 195);
     font-size: 0.8rem !important;
     border: 0 !important;
   }
-  .table_resp_pos{
+  .pagination{
+    margin: 1rem 5rem 0 0 !important;
   }
+
   // Scrollbar responsive mode
   /* Webkit */
 .table-responsive::-webkit-scrollbar {
-  width: 12px$i;
-  height: 12px$i; 
+  width: 12px !important;
+  height: 12px !important; 
 }
 
 .table-responsive::-webkit-scrollbar-thumb {
-  background-color: #ffffff$i; 
-  border-radius: 6px$i; 
+  background-color: #ffffff !important; 
+  border-radius: 6px !important; 
 }
 
 .table-responsive::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0.1)$i; 
-  border-radius: 6px$i;
+  background-color: rgba(0, 0, 0, 0.1) !important; 
+  border-radius: 6px !important;
 }
 
 /* Firefox */
 .table-responsive {
-  scrollbar-width: thin$i; 
-  scrollbar-color: white rgba(0, 0, 0, 0.1)$i; 
+  scrollbar-width: thin !important; 
+  scrollbar-color: white rgba(0, 0, 0, 0.1) !important; 
 }
 }
 
@@ -589,14 +605,6 @@ $passiveFolder : rgb(76, 146, 137);
     border-right: 3px solid rgb(36, 78, 73)!important;
 }
 
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! A Resoudre !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// .btn {
-//     padding: 10px 20px;
-//     margin-right: -15px;
-//     border-bottom : none;
-//     pointer-events: none;
-// }
-
 //Chevauchement des boutons
 .step-container .btn:nth-child(1) {
     z-index: 8;  
@@ -693,6 +701,11 @@ $passiveFolder : rgb(76, 146, 137);
           }
       }
   }
+}
+
+.pagination{
+  justify-content: center; /* Centers the pagination items */
+  display: flex;
 }
 
 .waiting {
@@ -811,7 +824,6 @@ $passiveFolder : rgb(76, 146, 137);
   padding: 5px;
 }
 
-<<<<<<< HEAD
 //Page paramètres
 .front-icons {
   color:$white;
@@ -837,7 +849,6 @@ $passiveFolder : rgb(76, 146, 137);
 .button-icon {
   color:$white;
 }
-=======
 //Diagramme Statistique
 .diagramme {
   color: white;
@@ -855,7 +866,7 @@ $passiveFolder : rgb(76, 146, 137);
 
 // projet
 
-$i: !important;
+// $i: !important;
 .newProjectNav {
   background-color: $sideBar; // Same background color as other navigational elements
   color: $white;
@@ -866,32 +877,32 @@ $i: !important;
   font-size: 16px;
   
   .nav-link {
-    color: inherit$i;
-    text-decoration: none$i;
-    font-size: 1rem$i;
-    position: relative$i;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: 1rem !important;
+    position: relative !important;
     
     &::before {
-      content: '•'$i;
-      position: absolute$i;
-      top: -15px$i;
-      left: 50%$i;
-      transform: translateX(-50%)$i;
-      font-size: 24px$i;
-      color: transparent$i;
+      content: '•' !important;
+      position: absolute !important;
+      top: -15px !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      font-size: 24px !important;
+      color: transparent !important;
     }
 
     &.active {
-      color: $createButtonProject$i;
-      font-weight: bold$i;
+      color: $createButtonProject !important;
+      font-weight: bold !important;
       
       &::before {
-        color: $createButtonProject$i; // Highlight the active step
+        color: $createButtonProject !important; // Highlight the active step
       }
     }
 
     &:hover {
-      color: lighten($createButtonProject, 10%)$i;
+      color: lighten($createButtonProject, 10%) !important;
     }
   }
 }
@@ -927,18 +938,18 @@ $i: !important;
 }
 
 button.btn-primary {
-  background-color: $createButtonProject$i;
-  border: none$i;
-  padding: 10px 25px$i;
-  font-size: 1rem$i;
-  border-radius: 30px$i;
-  color: $white$i;
-  width: fit-content$i;
-  align-self: flex-start$i;
-  transition: background-color 0.3s ease$i;
+  background-color: $createButtonProject !important;
+  border: none !important;
+  padding: 10px 25px !important;
+  font-size: 1rem !important;
+  border-radius: 30px !important;
+  color: $white !important;
+  width: fit-content !important;
+  align-self: flex-start !important;
+  transition: background-color 0.3s ease !important;
   
   &:hover {
-    background-color: darken($createButtonProject, 10%)$i;
+    background-color: darken($createButtonProject, 10%) !important;
   }
 }
 .projectInput {
@@ -986,10 +997,6 @@ button.btn-primary {
   color: $white;
 }
 .projectButtonNext:hover {
-
   background-color: $managerColor;
   color: $white;
 }
-
-
->>>>>>> 4700fa470dad407937655310c7a6da2e3d0ea5ef
