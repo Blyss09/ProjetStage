@@ -15,18 +15,18 @@
 
 <body>
   <div class="container-fluid row p-4 m-0">
-    <sidebar class="sidebar rounded-3 col col-sm-3 col-md-4 col-lg-3 px-5 pt-5 align-items-center">
-      <div class="manager rounded-4 d-flex justify-content-center text-center p-1">
+    <sidebar class="sidebar rounded-3 col-3 p-5 align-items-center">
+      <div class="admin rounded-4 d-flex justify-content-center text-center p-1">
         <div class="user__icon me-3">
           <i class="bi bi-person-circle"></i>
         </div>
         <div class="user__body align-self-center">
           <div class="user__name">Adam Smith</div>
-          <div class="user__role">Manager</div>
+          <div class="user__role">Admin</div>
         </div>
       </div>
-      <nav class="navbar navbar-expand-md navbar-dark">
-        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      <nav class="navbar navbar-expand-xxl navbar-light">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -37,18 +37,10 @@
             </span>
             <div class="dashboard__title ms-4 align-self-center">DASHBOARD</div>
           </div>
-          <div class="newproj__content d-flex justify-content-center my-4">
-            <a href="./newProjectScreen.html">
-              <button type="button" class="btn btn_newproj text-white px-4 p-0">
-                <i class="bi bi-plus-square-fill mt-2 mx-3 h4"></i>
-                Nouveau Projet
-              </button>
-            </a>
-          </div>
-          <ul class="nav row flex-lg-row mt-4 p-0">
+          <ul class="nav flex-column flex-lg-row mt-4">
             <li class="nav-item">
               <div class="d-flex align-items-center">
-                <a class="nav-link ms-4 px-0" aria-current="page" href="./managerEnv.html">Projets</a>
+                <a class="nav-link ms-5" aria-current="page" href="#">Projets</a>
                 <span class="img_arrow">
                   <i class="bi bi-chevron-right h4"></i>
                 </span>
@@ -56,7 +48,7 @@
             </li>
             <li class="nav-item">
               <div class="d-flex align-items-center">
-                <a class="nav-link ms-4 px-0" aria-current="page" href="./managerTasks.html">Mes tâches</a>
+                <a class="nav-link ms-5" aria-current="page" href="#">Mes tâches</a>
                 <span class="img_arrow">
                   <i class="bi bi-chevron-right h4"></i>
                 </span>
@@ -64,7 +56,7 @@
             </li>
             <li class="nav-item">
               <div class="d-flex align-items-center">
-                <a class="nav-link ms-4 active px-0" aria-current="page" href="#">Statistiques projets</a>
+                <a class="nav-link ms-5" aria-current="page" href="#">Statistiques projets</a>
                 <span class="img_arrow">
                   <i class="bi bi-chevron-right h4"></i>
                 </span>
@@ -72,7 +64,31 @@
             </li>
             <li class="nav-item">
               <div class="d-flex align-items-center">
-                <a class="nav-link ms-4 px-0" aria-current="page" href="./managerStatCollab.html">Statistiques collaborateurs</a>
+                <a class="nav-link active ms-5" aria-current="page" href="#">Collaborateurs</a>
+                <span class="img_arrow">
+                  <i class="bi bi-chevron-right h4"></i>
+                </span>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="d-flex align-items-center">
+                <a class="nav-link ms-5" aria-current="page" href="#">Statistiques collaborateurs</a>
+                <span class="img_arrow">
+                  <i class="bi bi-chevron-right h4"></i>
+                </span>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="d-flex align-items-center">
+                <a class="nav-link ms-5" aria-current="page" href="#">Trançabilité</a>
+                <span class="img_arrow">
+                  <i class="bi bi-chevron-right h4"></i>
+                </span>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="d-flex align-items-center">
+                <a class="nav-link ms-5" aria-current="page" href="#">Paramètres</a>
                 <span class="img_arrow">
                   <i class="bi bi-chevron-right h4"></i>
                 </span>
@@ -80,17 +96,15 @@
             </li>
           </ul>
           <div class="d-flex justify-content-center">
-            <a href="../logInScreens/logIn.html">
-              <button type="button" class="btn logout__btn text-white pe-4">
-                <svg preserveAspectRatio="none" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"
-                  class="logout__img mx-3">
-                  <path
-                    d="M5.50812 4.59244C3.56384 5.74479 2.0867 7.42565 1.29538 9.38619C0.504069 11.3467 0.440639 13.4827 1.11448 15.478C1.78833 17.4732 3.16363 19.2216 5.03679 20.4644C6.90994 21.7072 9.18139 22.3782 11.5148 22.3782C13.8483 22.3782 16.1197 21.7072 17.9929 20.4644C19.8661 19.2216 21.2414 17.4732 21.9152 15.478C22.5891 13.4827 22.5256 11.3467 21.7343 9.38619C20.943 7.42565 19.4659 5.74479 17.5216 4.59244M11.5154 0.819458V9.44342"
-                    stroke="#F8F8F8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-                Déconnexion
-              </button>
-            </a>
+            <button type="button" class="btn logout__btn text-white pe-4">
+              <svg preserveAspectRatio="none" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="logout__img mx-3">
+                <path
+                  d="M5.50812 4.59244C3.56384 5.74479 2.0867 7.42565 1.29538 9.38619C0.504069 11.3467 0.440639 13.4827 1.11448 15.478C1.78833 17.4732 3.16363 19.2216 5.03679 20.4644C6.90994 21.7072 9.18139 22.3782 11.5148 22.3782C13.8483 22.3782 16.1197 21.7072 17.9929 20.4644C19.8661 19.2216 21.2414 17.4732 21.9152 15.478C22.5891 13.4827 22.5256 11.3467 21.7343 9.38619C20.943 7.42565 19.4659 5.74479 17.5216 4.59244M11.5154 0.819458V9.44342"
+                  stroke="#F8F8F8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              Déconnexion
+            </button>
           </div>
         </div>
       </nav>
@@ -146,6 +160,7 @@
           </div>
         </div>
       </div>
+
       <div class="container mt-3">
         <div class="row justify-content-center ">
           <div class="col-12 col-sm-10 col-md-8 col-lg-6 ">
@@ -159,13 +174,13 @@
         </div>
       </div>
   </div>
-  </div>
 
 
 
   </div>
   </main>
   </div>
+  <!-- Script pour générer le diagramme-->
   <!-- Script pour générer le diagramme-->
   <script>
     // Sélectionner l'élément canvas
@@ -175,10 +190,10 @@
     const projectsChart = new Chart(ctx, {
       type: 'bar', // Type du graphique en bâtons
       data: {
-        labels: ['Projet 1', 'Projet 2', 'Projet 3', 'Projet 4', 'Projet 5', 'Projet 6'], // Noms des projets
+        labels: ['Collaborateur 1', 'Collaborateur 2', 'Collaborateur 3', 'Collaborateur 4', 'Collaborateur 5', 'Collaborateur 6'], // Noms des projets
         datasets: [{
-          label: 'État des Projets',
-          data: [1, 2, 3, 6, 2, 1], // Valeurs de progression (correspondant aux étapes)
+          label: 'Disponibilité',
+          data: [1, 2, 3, 6, 2, 10], // Valeurs de progression (correspondant aux étapes)
           backgroundColor: [
             'rgb(255, 165, 0)',  // Couleur des barres
             'rgb(255, 165, 0)',
@@ -206,7 +221,7 @@
             ticks: {
               // Remplace les valeurs numériques par des mots
               callback: function (value, index, values) {
-                const states = ['', 'CDC', 'Conception', 'Developpement', 'Test', 'Mise en stage', 'Mise en prod']; // Liste des mots à afficher
+                const states = ['0%', '10%', '20%', '30%', '40%', '50%', '60%', '70%', '80%', '90%', '100%',]; // Liste des mots à afficher
                 return states[value];  // Renvoie le mot correspondant à la valeur
               }
             }
@@ -215,7 +230,7 @@
         plugins: {
           title: {
             display: true,
-            text: 'Evolution des projets par ordre de création'  // Titre du graphique
+            text: 'Disponibilité des collaborateurs'  // Titre du graphique
           }
         }
       }
