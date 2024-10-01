@@ -43,7 +43,6 @@
 @media (max-width: 768px) {
   .container-fluid {
     padding: 0 !important;
-    height: 120vh !important;
   }
   .sidebar {
     width: 5% !important;
@@ -68,6 +67,9 @@
     bottom: 3.3rem !important;
   }
   .navbar-collapse {
+    position: fixed;
+    top: 50px;
+    right: 10rem;
     background-color: rgb(23, 81, 87);
     margin-top: 0.5rem !important;
     z-index: 100 !important;
@@ -76,7 +78,7 @@
   .dashboard__body {
     font-size: 14px !important;
     margin: 0 !important;
-    padding: 1rem 0 !important;
+    padding: 0.3rem 0 1rem 0 !important;
   }
   .btn_newproj {
     width: 11rem !important;
@@ -183,6 +185,19 @@
   .pagination {
     margin: 1rem 5rem 0 0 !important;
   }
+  .params {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-left: 0 !important;
+  }
+  .params .col {
+    display: flex;
+  }
+  .card {
+    position: relative;
+    right: 2.5rem;
+    width: 600px !important;
+  }
 }
 /* Webkit */
 .table-responsive {
@@ -272,8 +287,8 @@
 }
 
 .container-fluid {
+  overflow: hidden;
   background-color: rgb(100, 130, 173);
-  height: 100vh;
 }
 
 .sidebar {
@@ -802,6 +817,10 @@
   color: rgb(255, 255, 255);
 }
 
+.card {
+  width: 20rem;
+}
+
 .card-text {
   color: rgb(255, 255, 255);
 }
@@ -963,4 +982,11 @@ button.btn-primary:hover {
 
 .collab-diagramme {
   background-color: #ffffff;
+}
+
+.params {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-left: 4rem;
 }/*# sourceMappingURL=styles.css.map */

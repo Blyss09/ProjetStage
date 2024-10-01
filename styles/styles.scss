@@ -57,7 +57,7 @@ $rowCollor: rgba(127, 161, 195);
   // $i: !important;
   .container-fluid{
     padding: 0 !important;
-    height: 120vh !important;
+    // height: 120vh !important;
   }
   .sidebar {
     width: 5% !important;
@@ -85,6 +85,9 @@ $rowCollor: rgba(127, 161, 195);
     bottom: 3.3rem !important;
   }
   .navbar-collapse{
+    position: fixed;
+    top: 50px;
+    right: 10rem;
     background-color: rgb(23, 81, 87);
     margin-top: 0.5rem !important;
     z-index: 100 !important;
@@ -93,7 +96,7 @@ $rowCollor: rgba(127, 161, 195);
   .dashboard__body{
     font-size: 14px !important;
     margin: 0 !important;
-    padding: 1rem 0 !important;
+    padding: 0.3rem 0 1rem 0 !important;
   }
   .btn_newproj{
     // margin: 0 0 !important;
@@ -208,7 +211,21 @@ $rowCollor: rgba(127, 161, 195);
   .pagination{
     margin: 1rem 5rem 0 0 !important;
   }
+  .params {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-left: 0 !important;
+  }
+  .params .col {
+    display: flex;
+  }
+  .card{
+    position: relative;
+    right: 2.5rem;
+    width: 600px !important;
+  }
 }
+
   // Scrollbar responsive mode
   /* Webkit */
   .table-responsive {
@@ -247,7 +264,6 @@ $rowCollor: rgba(127, 161, 195);
 }
 
 // Scrollbar responsive mode (bonus) delete if it makes issues
-
 
 //Page de connexion
 
@@ -306,8 +322,9 @@ $rowCollor: rgba(127, 161, 195);
 }
 
 .container-fluid {
+  overflow: hidden;
   background-color: rgba(100, 130, 173, 1);
-  height: 100vh;
+  // height: 100vh;
 }
 .sidebar {
   background-color:rgba(127, 161, 195, 1);
@@ -835,6 +852,9 @@ $passiveFolder : rgb(76, 146, 137);
   color:$white;
 }
 
+.card{
+  width: 20rem;
+}
 .card-text {
   color:$white;
 }
@@ -1012,4 +1032,13 @@ button.btn-primary {
 
 .collab-diagramme {
   background-color: #ffffff;
+}
+
+
+//ParamScreen
+.params {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-left: 4rem;
 }
