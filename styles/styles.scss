@@ -248,9 +248,13 @@ $rowCollor: rgba(127, 161, 195);
     right: 2.5rem;
     width: 600px !important;
   }
+  .diag-param{
+    // right: 1.0rem;
+    width: 600px !important;
+  }
   .card-collab{
     position: relative;
-    right: 2.5rem
+    right: 2.5rem;
   }
   .tables-overflow-scroll .btn-custom{
     margin-right: 2rem;
@@ -272,6 +276,10 @@ $rowCollor: rgba(127, 161, 195);
     
 
 
+  .diag{
+    // margin-right: -10rem !important;
+    margin-left: -2rem !important;
+    overflow: scroll;
   }
 }
 
@@ -901,9 +909,9 @@ $passiveFolder : rgb(76, 146, 137);
   color:$white;
 }
 
-.card{
+//.card{
   // width: 20rem;
-}
+//}
 .card-text {
   color:$white;
 }
@@ -1097,4 +1105,22 @@ button.btn-primary {
 .tables-overflow-scroll{
   overflow: scroll;
   height: 75vh;
+}
+
+//Liste des collaborateurs
+.myCustom-table tr th{
+  background-color: #fff;
+  color : $sideBar;
+}
+
+.myCustom-table tr td{
+  background-color: $sideBar;
+  color : white;
+}
+
+.add-collaborator {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: $pageBackground;
 }

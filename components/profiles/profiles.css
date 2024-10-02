@@ -47,6 +47,7 @@
 @media (max-width: 768px) {
   .container-fluid {
     padding: 0 !important;
+    height: 120vh !important;
   }
   .sidebar {
     width: 5% !important;
