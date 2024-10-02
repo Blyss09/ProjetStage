@@ -68,6 +68,9 @@
     bottom: 3.3rem !important;
   }
   .navbar-collapse {
+    position: fixed;
+    top: 50px;
+    right: 10rem;
     background-color: rgb(23, 81, 87);
     margin-top: 0.5rem !important;
     z-index: 100 !important;
@@ -76,7 +79,7 @@
   .dashboard__body {
     font-size: 14px !important;
     margin: 0 !important;
-    padding: 1rem 0 !important;
+    padding: 0.3rem 0 1rem 0 !important;
   }
   .btn_newproj {
     width: 11rem !important;
@@ -183,6 +186,30 @@
   .pagination {
     margin: 1rem 5rem 0 0 !important;
   }
+  .params {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-left: 0 !important;
+  }
+  .params .col {
+    display: flex;
+  }
+  .params-collab {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .card-param {
+    position: relative;
+    right: 2.5rem;
+    width: 600px !important;
+  }
+  .card-collab {
+    position: relative;
+    right: 2.5rem;
+  }
+  .tables-overflow-scroll .btn-custom {
+    margin-right: 2rem;
+  }
 }
 /* Webkit */
 .table-responsive {
@@ -272,8 +299,8 @@
 }
 
 .container-fluid {
+  overflow: hidden;
   background-color: rgb(100, 130, 173);
-  height: 100vh;
 }
 
 .sidebar {
@@ -965,17 +992,22 @@ button.btn-primary:hover {
   background-color: #ffffff;
 }
 
-@media (max-width: 768px) {
-  /* Assurez-vous que la carte occupe toute la largeur */
-  .card {
-    width: 100%;
-  }
-  /* Redimensionner le canvas pour s'adapter à la taille de l'écran */
-  #projectsChart {
-    width: 100% !important;
-    height: 300px !important; /* Vous pouvez ajuster cette valeur si nécessaire */
-  }
+.params {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-left: 4rem;
 }
+
+.bottom_border {
+  border-bottom: 1px solid white !important;
+}
+
+.tables-overflow-scroll {
+  overflow: scroll;
+  height: 75vh;
+}
+
 .container {
   width: 400px;
   background-color: rgb(127, 161, 195);
