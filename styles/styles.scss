@@ -231,12 +231,21 @@ $rowCollor: rgba(127, 161, 195);
     right: 2.5rem;
     width: 600px !important;
   }
+  .diag-param{
+    // right: 1.0rem;
+    width: 600px !important;
+  }
   .card-collab{
     position: relative;
-    right: 2.5rem
+    right: 2.5rem;
   }
   .tables-overflow-scroll .btn-custom{
     margin-right: 2rem;
+  }
+  .diag{
+    // margin-right: -10rem !important;
+    margin-left: -2rem !important;
+    overflow: scroll;
   }
 }
 
