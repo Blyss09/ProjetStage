@@ -13,9 +13,10 @@ $adminColor: rgba(248, 60, 60, 1);
 //tableaux
 $rowCollor: rgba(127, 161, 195);
 
-:root{
+.page {
   background-color: $pageBackground;
 }
+
 .bell {
   background-color: $bellColor;
 }
@@ -323,13 +324,8 @@ $rowCollor: rgba(127, 161, 195);
 
 //Page de connexion
 
-.mainLogIn {
-  display: flex;
-  justify-content: center;
-  flex-direction: column; 
-  align-items: center;     
-  min-height: 70vh; 
-  text-align: center;
+.mainLogIn input {
+    width: 25rem;
 }
 
 .inputLogIn {

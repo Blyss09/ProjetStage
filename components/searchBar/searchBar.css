@@ -1,8 +1,4 @@
 @charset "UTF-8";
-:root {
-  background-color: rgb(100, 130, 173);
-}
-
 .bell {
   background-color: rgb(37, 150, 190);
 }
@@ -43,11 +39,19 @@
     font-size: 14px !important;
     padding: 10px !important;
   }
+  .newProjectCard {
+    position: relative !important;
+    width: 600px !important;
+    left: 4% !important;
+    max-width: 95vw !important;
+  }
+  .step-container {
+    display: none !important;
+  }
 }
 @media (max-width: 768px) {
   .container-fluid {
     padding: 0 !important;
-    height: 120vh !important;
   }
   .sidebar {
     width: 5% !important;
@@ -207,6 +211,9 @@
     right: 2.5rem;
     width: 600px !important;
   }
+  .diag-param {
+    width: 600px !important;
+  }
   .card-collab {
     position: relative;
     right: 2.5rem;
@@ -215,44 +222,48 @@
     margin-right: 2rem;
   }
   .newProjectCard {
-    position: relative;
-    right: 2.5rem;
+    position: absolute !important;
     width: 600px !important;
+    left: 4% !important;
+    max-width: 95vw !important;
+  }
+  .step-container {
+    display: none !important;
+  }
+  .diag {
+    margin-left: -2rem !important;
+    overflow: scroll;
+  }
+  /* Webkit */
+  .table-responsive {
+    scrollbar-width: auto !important;
+  }
+  .table-responsive::-webkit-scrollbar {
+    width: 12px !important;
+    height: 12px !important;
+  }
+  .table-responsive::-webkit-scrollbar-thumb {
+    background-color: #ffffff !important;
+    border-radius: 6px !important;
+  }
+  .table-responsive::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    border-radius: 6px !important;
+    /* Firefox */
+  }
+  .table-responsive::-webkit-scrollbar-track .table-responsive::-webkit-scrollbar-thumb {
+    background-color: #ffffff !important;
+    border-radius: 6px !important;
+  }
+  .table-responsive::-webkit-scrollbar-track .table-responsive::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    border-radius: 6px !important;
+  }
+  .table-responsive::-webkit-scrollbar-track .table-responsive {
+    scrollbar-width: thin !important;
+    scrollbar-color: white rgba(0, 0, 0, 0.1) !important;
   }
 }
-/* Webkit */
-.table-responsive {
-  scrollbar-width: auto !important;
-}
-
-.table-responsive::-webkit-scrollbar {
-  width: 12px !important;
-  height: 12px !important;
-}
-
-.table-responsive::-webkit-scrollbar-thumb {
-  background-color: #ffffff !important;
-  border-radius: 6px !important;
-}
-
-.table-responsive::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0.1) !important;
-  border-radius: 6px !important;
-  /* Firefox */
-}
-.table-responsive::-webkit-scrollbar-track .table-responsive::-webkit-scrollbar-thumb {
-  background-color: #ffffff !important;
-  border-radius: 6px !important;
-}
-.table-responsive::-webkit-scrollbar-track .table-responsive::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0.1) !important;
-  border-radius: 6px !important;
-}
-.table-responsive::-webkit-scrollbar-track .table-responsive {
-  scrollbar-width: thin !important;
-  scrollbar-color: white rgba(0, 0, 0, 0.1) !important;
-}
-
 .mainLogIn {
   display: flex;
   justify-content: center;
@@ -373,16 +384,19 @@
 
 /*admin*/
 .admin {
+  margin: 0 4rem;
   background-color: rgb(248, 60, 60);
 }
 
 /*manager*/
 .manager {
+  margin: 0 4rem;
   background-color: rgb(55, 24, 94);
 }
 
 /*collaborateur*/
 .collab {
+  margin: 0 4rem;
   background-color: rgb(100, 130, 173);
 }
 
@@ -422,7 +436,6 @@
 .nav-item .nav-link {
   flex: 1 1 auto;
   color: white;
-  font-weight: bold;
 }
 @media (min-height: 1200px) {
   .nav-item .nav-link {
@@ -441,13 +454,11 @@
 }
 
 .nav-item .nav-link:hover {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  color: rgb(32, 210, 169);
+  font-weight: bold;
 }
 
 .nav-item .nav-link.active {
-  color: rgb(239, 243, 3);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
 }
 
 .nav-item .nav-link.active + .img_arrow i {
@@ -455,16 +466,11 @@
   position: relative;
   right: 3px;
   bottom: 8px;
-  color: rgb(239, 243, 3);
 }
 @media (min-height: 1199px) {
   .nav-item .nav-link.active + .img_arrow i {
     font-size: 40px;
   }
-}
-
-.nav-item .nav-link.active:hover {
-  color: rgb(239, 243, 3);
 }
 
 .nav-item .bi-chevron-right {
@@ -535,7 +541,6 @@
 }
 
 .btn-custom:hover {
-  background-color: rgb(76, 146, 137);
   color: white;
 }
 
@@ -816,6 +821,7 @@
   border-radius: 20px;
   padding: 5px;
   width: 125px;
+  color: white;
 }
 
 .finishedTask {
@@ -824,6 +830,7 @@
   border-radius: 20px;
   width: 125px;
   padding: 5px;
+  color: white;
 }
 
 .endingTask {
@@ -832,6 +839,7 @@
   border-radius: 20px;
   width: 125px;
   padding: 5px;
+  color: white;
 }
 
 .front-icons {
@@ -1015,6 +1023,29 @@ button.btn-primary:hover {
 .tables-overflow-scroll {
   overflow: scroll;
   height: 75vh;
+}
+
+.myCustom-table tr th {
+  background-color: #fff;
+  color: rgb(127, 161, 195);
+}
+
+.myCustom-table tr td {
+  background-color: rgb(127, 161, 195);
+  color: white;
+}
+
+button.add-collaborator {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .search-bar input {
