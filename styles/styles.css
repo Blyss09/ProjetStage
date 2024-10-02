@@ -1,8 +1,4 @@
 @charset "UTF-8";
-:root {
-  background-color: rgb(100, 130, 173);
-}
-
 .bell {
   background-color: rgb(37, 150, 190);
 }
@@ -43,19 +39,11 @@
     font-size: 14px !important;
     padding: 10px !important;
   }
-  .newProjectCard {
-    position: relative !important;
-    width: 600px !important;
-    left: 4% !important;
-    max-width: 95vw !important;
-  }
-  .step-container {
-    display: none !important;
-  }
 }
 @media (max-width: 768px) {
   .container-fluid {
     padding: 0 !important;
+    height: 120vh !important;
   }
   .sidebar {
     width: 5% !important;
@@ -80,9 +68,6 @@
     bottom: 3.3rem !important;
   }
   .navbar-collapse {
-    position: fixed;
-    top: 50px;
-    right: 10rem;
     background-color: rgb(23, 81, 87);
     margin-top: 0.5rem !important;
     z-index: 100 !important;
@@ -91,7 +76,7 @@
   .dashboard__body {
     font-size: 14px !important;
     margin: 0 !important;
-    padding: 0.3rem 0 1rem 0 !important;
+    padding: 1rem 0 !important;
   }
   .btn_newproj {
     width: 11rem !important;
@@ -198,47 +183,45 @@
   .pagination {
     margin: 1rem 5rem 0 0 !important;
   }
-  .params {
-    display: flex !important;
-    flex-direction: column !important;
-    margin-left: 0 !important;
-  }
-  .params .col {
-    display: flex;
-  }
-  .params-collab {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-  .card-param {
-    position: relative;
-    right: 2.5rem;
-    width: 600px !important;
-  }
-  .diag-param {
-    width: 600px !important;
-  }
-  .card-collab {
-    position: relative;
-    right: 2.5rem;
-  }
-  .tables-overflow-scroll .btn-custom {
-    margin-right: 2rem;
-  }
-  .diag {
-    margin-left: -2rem !important;
-    overflow: scroll;
-  }
-  .newProjectCard {
-    position: absolute !important;
-    width: 600px !important;
-    left: 4% !important;
-    max-width: 95vw !important;
-  }
-  .step-container {
-    display: none !important;
-  }
 }
+.tables-overflow-scroll .btn-custom {
+  margin-right: 2rem;
+}
+
+.newProjectCard {
+  position: absolute !important;
+  width: 600px !important;
+  left: 4% !important;
+  max-width: 95vw !important;
+}
+
+.step-container {
+  display: none !important;
+}
+.step-container .diag {
+  margin-left: -2rem !important;
+  overflow: scroll;
+}
+
+.tables-overflow-scroll .btn-custom {
+  margin-right: 2rem;
+}
+
+.newProjectCard {
+  position: absolute !important;
+  width: 600px !important;
+  left: 4% !important;
+  max-width: 95vw !important;
+}
+
+.step-container {
+  display: none !important;
+}
+.step-container .diag {
+  margin-left: -2rem !important;
+  overflow: scroll;
+}
+
 /* Webkit */
 .table-responsive {
   scrollbar-width: auto !important;
@@ -327,8 +310,8 @@
 }
 
 .container-fluid {
-  overflow: hidden;
   background-color: rgb(100, 130, 173);
+  height: 100vh;
 }
 
 .sidebar {
@@ -833,6 +816,7 @@
   border-radius: 20px;
   padding: 5px;
   width: 125px;
+  color: white;
 }
 
 .finishedTask {
@@ -841,6 +825,7 @@
   border-radius: 20px;
   width: 125px;
   padding: 5px;
+  color: white;
 }
 
 .endingTask {
@@ -849,6 +834,7 @@
   border-radius: 20px;
   width: 125px;
   padding: 5px;
+  color: white;
 }
 
 .front-icons {
