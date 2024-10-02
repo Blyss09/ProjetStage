@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="container-fluid row p-4 m-0 overflow-hidden">
+    <div class="container-fluid row p-4 m-0">
         <sidebar class="sidebar rounded-3 col col-sm-3 col-md-4 col-lg-3 px-5 pt-5 align-items-center">
             <div class="admin rounded-4 d-flex justify-content-center text-center p-1">
                 <div class="user__icon me-3">
@@ -44,7 +44,7 @@
                     <ul class="nav nav__ul row mt-4 p-0">
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4 px-0" aria-current="page" href="adminEnv.html">Projets</a>
+                                <a class="nav-link active ms-4 px-0" aria-current="page" href="adminEnv.html">Projets</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -52,7 +52,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link active ms-4 px-0" aria-current="page" href="adminTasks.html">Mes tâches</a>
+                                <a class="nav-link ms-4 px-0" aria-current="page" href="adminTasks.html">Mes tâches</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -167,134 +167,113 @@
                 <input type="text" class="form-control dateControl" id="endDate" placeholder="Date">
               </div>
             </div>
+            <div id="dataDisplay" class="">
+              <!-- Ici on montre les données, le target du script étant l'id datadisplay.
+               Voir dans le script :
+               data.forEach(item => {
+              dataDisplay.append(`<p>${item.name} - ${item.date}</p>`);-->
+            </div>
+            <div class="upper_table ms-4">
+                <i class="bi bi-pencil-square fs-4"></i>
+                <span class="edit_table">Modifier le tableau</span>
+            </div>
             <div class="table-responsive table_resp_pos ms-4">
-                <table class="table proj-table mt-5 text-center">
+                <table class="table proj-table mt-2 text-center">
                     <thead>
                         <tr class="">
-                            <th scope="col">Nom</th>
+                            <th scope="col">Libellés</th>
+                            <th scope="col">Date de début</th>
+                            <th scope="col">Heure de début</th>
+                            <th scope="col">Date Fin</th>
+                            <th scope="col">Heure Fin</th>
                             <th scope="col">Statut</th>
-                            <th scope="col">Durée</th>
-                            <th scope="col">Date début</th>
-                            <th scope="col">Date fin prévue</th>
-                            <th scope="col">Client</th>
-                            <th scope="col">Développeur</th>
-                            <th scope="col">Testeur</th>
-                            <th scope="col">Stageur</th>
-                            <th scope="col">Commentaire</th>
-                            <th scope="col">Technologies</th>
+                            <th scope="col">Technologie</th>
                             <th scope="col">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="col">Projet 1</td>
-                            <td class="col statut">
-                                <div class="test"></div>
-                                <span>Test</span>
-                            </td>
-                            <td class="col">x</td>
+                            <td class="col">Libellé de la tâche</td>
                             <td class="col">jj/mm/aaaa</td>
+                            <td class="col">09:00</td>
                             <td class="col">jj/mm/aaaa</td>
-                            <td class="col">Nom Prénom</td>
-                            <td class="col">vigs1</td>
-                            <td class="col">vigs2</td>
-                            <td class="col">vigs3</td>
-                            <td class="col">Commentaire</td>
+                            <td class="col">18:00</td>
+                            <td class="col"><div class="waiting"></div>Attente</td>
                             <td class="col">WEB</td>
-                            <td class="col"><button>Voir</button></td>
+                            <td class="col"><button class="endingTask">Terminer la tâche</button></td>
                         </tr>
                         <tr>
-                            <td>Projet 2</td>
-                            <td class="statut">
-                                <div class="prod"></div>
-                                <span>Prod</span>
-                            </td>
-                            <td>x</td>
-                            <td>jj/mm/aaaa</td>
-                            <td>jj/mm/aaaa</td>
-                            <td>Nom Prénom</td>
-                            <td>vigs1</td>
-                            <td>vigs2</td>
-                            <td>vigs3</td>
-                            <td>Commentaire</td>
-                            <td>Mobile</td>
-                            <td><button>Voir</button></td>
+                            <td class="col">Libellé de la tâche</td>
+                            <td class="col">jj/mm/aaaa</td>
+                            <td class="col">09:00</td>
+                            <td class="col">jj/mm/aaaa</td>
+                            <td class="col">18:00</td>
+                            <td class="col"><div class="waiting"></div>Attente</td>
+                            <td class="col">WEB</td>
+                            <td class="col"><button class="finishedTask">Terminé</button></td>
                         </tr>
                         <tr>
-                            <td>Projet 3</td>
-                            <td class="statut">
-                                <div class="dev"></div>
-                                <span>Dev</span>
-                            </td>
-                            <td>x</td>
-                            <td>jj/mm/aaaa</td>
-                            <td>jj/mm/aaaa</td>
-                            <td>Nom Prénom</td>
-                            <td>vigs1</td>
-                            <td>vigs2</td>
-                            <td>vigs3</td>
-                            <td>Commentaire</td>
-                            <td>Java</td>
-                            <td><button>Voir</button></td>
+                            <td class="col">Libellé de la tâche</td>
+                            <td class="col">jj/mm/aaaa</td>
+                            <td class="col">09:00</td>
+                            <td class="col">jj/mm/aaaa</td>
+                            <td class="col">18:00</td>
+                            <td class="col"><div class="waiting"></div>Attente</td>
+                            <td class="col">WEB</td>
+                            <td class="col"><button class="endingTask">Terminer la tâche</button></td>
                         </tr>
                         <tr>
-                            <td>Projet 4</td>
-                            <td class="statut">
-                                <div class="stage"></div>
-                                <span>Stage</span>
-                            </td>
-                            <td>x</td>
-                            <td>jj/mm/aaaa</td>
-                            <td>jj/mm/aaaa</td>
-                            <td>Nom Prénom</td>
-                            <td>vigs1</td>
-                            <td>vigs2</td>
-                            <td>vigs3</td>
-                            <td>Commentaire</td>
-                            <td>WEB</td>
-                            <td><button>Voir</button></td>
+                            <td class="col">Libellé de la tâche</td>
+                            <td class="col">jj/mm/aaaa</td>
+                            <td class="col">09:00</td>
+                            <td class="col">jj/mm/aaaa</td>
+                            <td class="col">18:00</td>
+                            <td class="col"><div class="finished"></div>Terminé</td>
+                            <td class="col">WEB</td>
+                            <td class="col"><button class="startingTask">Démarrer la tâche</button></td>
                         </tr>
                         <tr>
-                            <td>Projet 5</td>
-                            <td class="statut">
-                                <div class="prod"></div>
-                                <span>Prod</span>
-                            </td>
-                            <td>x</td>
-                            <td>jj/mm/aaaa</td>
-                            <td>jj/mm/aaaa</td>
-                            <td>Nom Prénom</td>
-                            <td>vigs1</td>
-                            <td>vigs2</td>
-                            <td>vigs3</td>
-                            <td>Commentaire</td>
-                            <td>Mobile</td>
-                            <td><button>Voir</button></td>
-                        </tr>
-                        <tr>
-                            <td>Projet 6</td>
-                            <td class="statut">
-                                <div class="cdc"></div>
-                                <span>CDC</span>
-                            </td>
-                            <td>x</td>
-                            <td>jj/mm/aaaa</td>
-                            <td>jj/mm/aaaa</td>
-                            <td>Nom Prénom</td>
-                            <td>vigs1</td>
-                            <td>vigs2</td>
-                            <td>vigs3</td>
-                            <td>Commentaire</td>
-                            <td>WEB</td>
-                            <td><button>Voir</button></td>
+                            <td class="col">Libellé de la tâche</td>
+                            <td class="col">jj/mm/aaaa</td>
+                            <td class="col">09:00</td>
+                            <td class="col">jj/mm/aaaa</td>
+                            <td class="col">18:00</td>
+                            <td class="col"><div class="doing"></div>En cours</td>
+                            <td class="col">WEB</td>
+                            <td class="col"><button class="finishedTask">Terminé</button></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            <nav aria-label="Page navigation example"></nav>
+                <ul class="pagination mt-3">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </main>
     </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+        <script type="module">
+            import DateFilter from '../../scripts/Classes/DateFilter.js'; 
+      
+            
+            const dateFilter = new DateFilter('#startDate', '#endDate', '#filterBtn', '#dataDisplay');
+        </script>
 </body>
 </html>
