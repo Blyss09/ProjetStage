@@ -13,6 +13,9 @@ $adminColor: rgba(248, 60, 60, 1);
 //tableaux
 $rowCollor: rgba(127, 161, 195);
 
+:root{
+  background-color: $pageBackground;
+}
 .bell {
   background-color: $bellColor;
 }
@@ -219,10 +222,21 @@ $rowCollor: rgba(127, 161, 195);
   .params .col {
     display: flex;
   }
-  .card{
+  .params-collab{
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .card-param{
     position: relative;
     right: 2.5rem;
     width: 600px !important;
+  }
+  .card-collab{
+    position: relative;
+    right: 2.5rem
+  }
+  .tables-overflow-scroll .btn-custom{
+    margin-right: 2rem;
   }
 }
 
@@ -853,7 +867,7 @@ $passiveFolder : rgb(76, 146, 137);
 }
 
 .card{
-  width: 20rem;
+  // width: 20rem;
 }
 .card-text {
   color:$white;
@@ -1040,4 +1054,12 @@ button.btn-primary {
   flex-direction: row;
   flex-wrap: nowrap;
   margin-left: 4rem;
+}
+
+.bottom_border{
+  border-bottom: 1px solid white !important;
+}
+.tables-overflow-scroll{
+  overflow: scroll;
+  height: 75vh;
 }
