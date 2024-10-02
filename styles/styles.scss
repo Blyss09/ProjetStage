@@ -273,15 +273,14 @@ $rowCollor: rgba(127, 161, 195);
   .step-container {
 
     display:none!important;
-    
-
+  }
 
   .diag{
     // margin-right: -10rem !important;
     margin-left: -2rem !important;
     overflow: scroll;
   }
-}
+
 
   // Scrollbar responsive mode
   /* Webkit */
@@ -319,7 +318,7 @@ $rowCollor: rgba(127, 161, 195);
   scrollbar-color: white rgba(0, 0, 0, 0.1) !important; 
 }
 }
-
+}
 // Scrollbar responsive mode (bonus) delete if it makes issues
 
 //Page de connexion
