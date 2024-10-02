@@ -1009,4 +1009,21 @@ button.btn-primary:hover {
 .tables-overflow-scroll {
   overflow: scroll;
   height: 75vh;
+}
+
+.myCustom-table tr th {
+  background-color: #fff;
+  color: rgb(127, 161, 195);
+}
+
+.myCustom-table tr td {
+  background-color: rgb(127, 161, 195);
+  color: white;
+}
+
+.add-collaborator {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: rgb(100, 130, 173);
 }/*# sourceMappingURL=styles.css.map */

@@ -866,9 +866,9 @@ $passiveFolder : rgb(76, 146, 137);
   color:$white;
 }
 
-.card{
+//.card{
   // width: 20rem;
-}
+//}
 .card-text {
   color:$white;
 }
@@ -1062,4 +1062,22 @@ button.btn-primary {
 .tables-overflow-scroll{
   overflow: scroll;
   height: 75vh;
+}
+
+//Liste des collaborateurs
+.myCustom-table tr th{
+  background-color: #fff;
+  color : $sideBar;
+}
+
+.myCustom-table tr td{
+  background-color: $sideBar;
+  color : white;
+}
+
+.add-collaborator {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: $pageBackground;
 }

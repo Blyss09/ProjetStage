@@ -1,4 +1,8 @@
 @charset "UTF-8";
+:root {
+  background-color: rgb(100, 130, 173);
+}
+
 .bell {
   background-color: rgb(37, 150, 190);
 }
