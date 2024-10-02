@@ -19,8 +19,6 @@
   color: rgb(255, 255, 255);
 }
 
-<<<<<<< HEAD
-=======
 @media (max-width: 1400px) {
   .admin, .manager, .collab {
     background-color: transparent !important;
@@ -45,6 +43,7 @@
 @media (max-width: 768px) {
   .container-fluid {
     padding: 0 !important;
+    height: 120vh !important;
   }
   .sidebar {
     width: 5% !important;
@@ -53,7 +52,7 @@
     font-size: 0.7rem !important;
   }
   .admin, .manager, .collab {
-    margin-left: 11rem !important;
+    margin-left: 12rem !important;
   }
   .admin .user__name, .manager .user__name, .collab .user__name {
     width: 5rem !important;
@@ -72,17 +71,31 @@
     background-color: rgb(23, 81, 87);
     margin-top: 0.5rem !important;
     z-index: 100 !important;
+    height: 110vh;
   }
   .dashboard__body {
+    font-size: 14px !important;
     margin: 0 !important;
     padding: 1rem 0 !important;
   }
   .btn_newproj {
     width: 11rem !important;
-    height: 3rem !important;
+    height: 2.3rem !important;
   }
   .newproj__content {
-    margin-bottom: 0 !important;
+    margin: -2rem 0 !important;
+  }
+  .nav__ul {
+    margin: 0 !important;
+    font-size: 15px !important;
+  }
+  .nav__ul .nav-item {
+    margin: 0.3rem 6rem 0 -0.5rem !important;
+    text-align: center;
+  }
+  .logout__btn {
+    position: relative;
+    bottom: 2rem;
   }
   .navbar-toggler {
     display: block !important;
@@ -104,8 +117,8 @@
     display: flex !important;
     flex-wrap: wrap !important;
     align-items: center !important;
-    padding-bottom: 1rem !important;
-    margin-top: 1.5rem !important;
+    padding-bottom: 0 !important;
+    margin-top: 1rem !important;
     margin-left: -5rem !important;
     margin-right: 0rem !important;
     border-bottom: 0 !important;
@@ -128,26 +141,82 @@
     height: 2rem !important;
     line-height: 1rem !important;
   }
-  .search__items input {
-    font-size: 14px !important;
-    width: 100% !important;
+  .filter__section {
+    margin-left: -7.3rem;
+  }
+  .filter__section .sp {
+    width: 0 !important;
+  }
+  .filter__section .col-2 {
+    margin: 0 4.2rem 0 3rem;
+  }
+  .filter__section .filterButton {
+    margin-left: 1.6rem;
+    height: 1.6rem;
+    line-height: 0rem !important;
+  }
+  .filter__section .dateControl {
+    margin-left: 1.5rem;
+    width: 7rem !important;
+    height: 1.5rem;
+  }
+  .filter__section .dateControl#endDate {
+    margin-left: 3rem;
   }
   .btn-custom {
     margin-top: 1rem !important;
   }
+  .upper_table {
+    margin: 2rem 0 -0.5rem -5.6rem !important;
+    color: white;
+  }
   .table_resp_pos {
     margin-left: -6rem !important;
+    border-top: none !important;
   }
   .proj-table {
     margin-top: 1rem !important;
     margin-right: 0 !important;
     font-size: 0.8rem !important;
+    border: 0 !important;
   }
-  .table_resp_pos {
-    border-top: 1px solid white !important;
+  .pagination {
+    margin: 1rem 5rem 0 0 !important;
   }
 }
->>>>>>> 4700fa470dad407937655310c7a6da2e3d0ea5ef
+/* Webkit */
+.table-responsive {
+  scrollbar-width: auto !important;
+}
+
+.table-responsive::-webkit-scrollbar {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #ffffff !important;
+  border-radius: 6px !important;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  border-radius: 6px !important;
+  /* Firefox */
+}
+.table-responsive::-webkit-scrollbar-track .table-responsive::-webkit-scrollbar-thumb {
+  background-color: #ffffff !important;
+  border-radius: 6px !important;
+}
+.table-responsive::-webkit-scrollbar-track .table-responsive::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  border-radius: 6px !important;
+}
+.table-responsive::-webkit-scrollbar-track .table-responsive {
+  scrollbar-width: thin !important;
+  scrollbar-color: white rgba(0, 0, 0, 0.1) !important;
+}
+
 .mainLogIn {
   display: flex;
   justify-content: center;
@@ -418,6 +487,10 @@
   border-color: rgb(127, 161, 195);
 }
 
+.upper_table {
+  color: white;
+}
+
 .btn-custom {
   margin-left: 20px;
   border-radius: 50px;
@@ -440,7 +513,7 @@
 }
 
 .filterButton {
-  background-color: rgb(100, 130, 173);
+  background-color: rgb(127, 161, 195);
 }
 
 .dateControl::-moz-placeholder {
@@ -611,6 +684,11 @@
   border-bottom-right-radius: 10px;
 }
 
+.pagination {
+  justify-content: center; /* Centers the pagination items */
+  display: flex;
+}
+
 .waiting {
   width: 15px;
   height: 15px;
@@ -720,8 +798,31 @@
   padding: 5px;
 }
 
-<<<<<<< HEAD
-=======
+.front-icons {
+  color: rgb(255, 255, 255);
+}
+
+.card-text {
+  color: rgb(255, 255, 255);
+}
+
+.title-card {
+  color: rgb(100, 130, 173);
+}
+
+.card-body {
+  background-color: rgb(100, 130, 173);
+  height: 50vh;
+}
+
+.button-text {
+  color: rgb(255, 255, 255);
+}
+
+.button-icon {
+  color: rgb(255, 255, 255);
+}
+
 .diagramme {
   color: white;
   background-color: rgb(100, 130, 173);
@@ -856,7 +957,25 @@ button.btn-primary:hover {
   color: rgb(255, 255, 255);
 }
 
->>>>>>> 4700fa470dad407937655310c7a6da2e3d0ea5ef
+.projet-diagramme {
+  background-color: #ffffff;
+}
+
+.collab-diagramme {
+  background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  /* Assurez-vous que la carte occupe toute la largeur */
+  .card {
+    width: 100%;
+  }
+  /* Redimensionner le canvas pour s'adapter à la taille de l'écran */
+  #projectsChart {
+    width: 100% !important;
+    height: 300px !important; /* Vous pouvez ajuster cette valeur si nécessaire */
+  }
+}
 .container {
   width: 400px;
   background-color: rgb(127, 161, 195);
