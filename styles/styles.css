@@ -43,6 +43,15 @@
     font-size: 14px !important;
     padding: 10px !important;
   }
+  .newProjectCard {
+    position: relative !important;
+    width: 600px !important;
+    left: 4% !important;
+    max-width: 95vw !important;
+  }
+  .step-container {
+    display: none !important;
+  }
 }
 @media (max-width: 768px) {
   .container-fluid {
@@ -212,6 +221,15 @@
   }
   .tables-overflow-scroll .btn-custom {
     margin-right: 2rem;
+  }
+  .newProjectCard {
+    position: absolute !important;
+    width: 600px !important;
+    left: 4% !important;
+    max-width: 95vw !important;
+  }
+  .step-container {
+    display: none !important;
   }
 }
 /* Webkit */

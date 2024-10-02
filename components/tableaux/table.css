@@ -1,4 +1,8 @@
 @charset "UTF-8";
+:root {
+  background-color: rgb(100, 130, 173);
+}
+
 .bell {
   background-color: rgb(37, 150, 190);
 }
@@ -208,6 +212,11 @@
   }
   .tables-overflow-scroll .btn-custom {
     margin-right: 2rem;
+  }
+  .newProjectCard {
+    position: relative;
+    right: 2.5rem;
+    width: 600px !important;
   }
 }
 /* Webkit */
