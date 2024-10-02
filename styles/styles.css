@@ -24,7 +24,9 @@
 }
 
 @media (max-width: 1400px) {
-  .admin, .manager, .collab {
+  .admin,
+  .manager,
+  .collab {
     background-color: transparent !important;
   }
   .nav-item .nav-link::before {
@@ -63,10 +65,14 @@
     background-color: transparent !important;
     font-size: 0.7rem !important;
   }
-  .admin, .manager, .collab {
+  .admin,
+  .manager,
+  .collab {
     margin-left: 12rem !important;
   }
-  .admin .user__name, .manager .user__name, .collab .user__name {
+  .admin .user__name,
+  .manager .user__name,
+  .collab .user__name {
     width: 5rem !important;
   }
   .collab {
@@ -1021,7 +1027,7 @@ button.btn-primary:hover {
 
 .tables-overflow-scroll {
   overflow: scroll;
-  height: 75vh;
+  height: 78vh;
 }
 
 .myCustom-table tr th {
