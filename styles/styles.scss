@@ -13,6 +13,9 @@ $adminColor: rgba(248, 60, 60, 1);
 //tableaux
 $rowCollor: rgba(127, 161, 195);
 
+:root{
+  background-color: $pageBackground;
+}
 .bell {
   background-color: $bellColor;
 }
@@ -52,12 +55,29 @@ $rowCollor: rgba(127, 161, 195);
     font-size: 14px !important;
     padding: 10px !important;
   }
+  .newProjectCard {
+
+    position: relative!important;
+    
+    width: 600px !important;
+    left: 4%!important;
+    max-width: 95vw!important;
+    
+
+
+  }
+
+  .step-container {
+
+    display: none!important;
+  }
+  
 }
 @media (max-width: 768px) {
   // $i: !important;
   .container-fluid{
     padding: 0 !important;
-    height: 120vh !important;
+    // height: 120vh !important;
   }
   .sidebar {
     width: 5% !important;
@@ -85,6 +105,9 @@ $rowCollor: rgba(127, 161, 195);
     bottom: 3.3rem !important;
   }
   .navbar-collapse{
+    position: fixed;
+    top: 50px;
+    right: 10rem;
     background-color: rgb(23, 81, 87);
     margin-top: 0.5rem !important;
     z-index: 100 !important;
@@ -93,7 +116,7 @@ $rowCollor: rgba(127, 161, 195);
   .dashboard__body{
     font-size: 14px !important;
     margin: 0 !important;
-    padding: 1rem 0 !important;
+    padding: 0.3rem 0 1rem 0 !important;
   }
   .btn_newproj{
     // margin: 0 0 !important;
@@ -208,34 +231,31 @@ $rowCollor: rgba(127, 161, 195);
   .pagination{
     margin: 1rem 5rem 0 0 !important;
   }
+  .params {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-left: 0 !important;
   }
-  .tables-overflow-scroll .btn-custom{
-    margin-right: 2rem;
+  .params .col {
+    display: flex;
   }
-  .newProjectCard {
-
-    position: absolute!important;
-    
+  .params-collab{
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .card-param{
+    position: relative;
+    right: 2.5rem;
     width: 600px !important;
-    left: 4%!important;
-    max-width: 95vw!important;
-    
-
-
   }
-  .step-container {
-
-    display:none!important;
-    
-
-
-  .diag{
-    // margin-right: -10rem !important;
-    margin-left: -2rem !important;
-    overflow: scroll;
+  .diag-param{
+    // right: 1.0rem;
+    width: 600px !important;
   }
-}
-
+  .card-collab{
+    position: relative;
+    right: 2.5rem;
+  }
   .tables-overflow-scroll .btn-custom{
     margin-right: 2rem;
   }
@@ -302,7 +322,6 @@ $rowCollor: rgba(127, 161, 195);
 
 // Scrollbar responsive mode (bonus) delete if it makes issues
 
-
 //Page de connexion
 
 .mainLogIn {
@@ -360,8 +379,9 @@ $rowCollor: rgba(127, 161, 195);
 }
 
 .container-fluid {
+  overflow: hidden;
   background-color: rgba(100, 130, 173, 1);
-  height: 100vh;
+  // height: 100vh;
 }
 .sidebar {
   background-color:rgba(127, 161, 195, 1);
@@ -462,6 +482,7 @@ $rowCollor: rgba(127, 161, 195);
 .nav-item .nav-link {
   flex: 1 1 auto;
   color: white;
+  font-weight: bold;
 
   @media (min-height:1200px){
     font-size: 22px;
@@ -477,11 +498,12 @@ $rowCollor: rgba(127, 161, 195);
   top: 2px;
 }
 .nav-item .nav-link:hover {
-  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: rgb(32, 210, 169);
 }
 .nav-item .nav-link.active {
   color: rgb(239, 243, 3);
-  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .nav-item .nav-link.active + .img_arrow i {
   font-size: 34px;
@@ -865,7 +887,6 @@ $passiveFolder : rgb(76, 146, 137);
   border-radius: 20px;
   padding: 5px;
   width: 125px;
-  color: white;
 }
 
 .finishedTask {
@@ -874,7 +895,6 @@ $passiveFolder : rgb(76, 146, 137);
   border-radius: 20px;
   width: 125px;
   padding: 5px;
-  color: white;
 }
 
 .endingTask {
@@ -883,13 +903,15 @@ $passiveFolder : rgb(76, 146, 137);
   border-radius: 20px;
   width: 125px;
   padding: 5px;
-  color: white;
 }
 //Page paramètres
 .front-icons {
   color:$white;
 }
 
+//.card{
+  // width: 20rem;
+//}
 .card-text {
   color:$white;
 }
