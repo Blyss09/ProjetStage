@@ -441,7 +441,6 @@
 .nav-item .nav-link {
   flex: 1 1 auto;
   color: white;
-  font-weight: bold;
 }
 @media (min-height: 1200px) {
   .nav-item .nav-link {
@@ -460,13 +459,12 @@
 }
 
 .nav-item .nav-link:hover {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  color: rgb(32, 210, 169);
+  font-weight: bold;
 }
 
 .nav-item .nav-link.active {
   color: rgb(239, 243, 3);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
 }
 
 .nav-item .nav-link.active + .img_arrow i {

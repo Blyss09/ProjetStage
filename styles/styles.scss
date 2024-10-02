@@ -498,8 +498,7 @@ $rowCollor: rgba(127, 161, 195);
   top: 2px;
 }
 .nav-item .nav-link:hover {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  color: rgb(32, 210, 169);
+  font-weight: bold;
 }
 .nav-item .nav-link.active {
   color: rgb(239, 243, 3);
@@ -983,7 +982,7 @@ $passiveFolder : rgb(76, 146, 137);
     }
 
     &:hover {
-      color: lighten($createButtonProject, 10%) !important;
+      font-weight: bold;
     }
   }
 }
