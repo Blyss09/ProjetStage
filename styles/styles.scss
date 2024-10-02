@@ -13,12 +13,6 @@ $adminColor: rgba(248, 60, 60, 1);
 //tableaux
 $rowCollor: rgba(127, 161, 195);
 
-
-
-$base-width: 768px;
-$base-margin: 12rem;
-$increm-factor: 0.1rem;
-
 .bell {
   background-color: $bellColor;
 }
@@ -60,9 +54,10 @@ $increm-factor: 0.1rem;
   }
 }
 @media (max-width: 768px) {
-  $i: !important;
+  // $i: !important;
   .container-fluid{
     padding: 0 !important;
+    // height: 120vh !important;
   }
   .sidebar {
     width: 5% !important;
@@ -72,8 +67,7 @@ $increm-factor: 0.1rem;
   }
   .admin,.manager,.collab {
 
-    margin-left: responsive(.sidebar);
-    margin-right: auto;
+    margin-left: 12rem !important;
 
     .user__name{
       width: 5rem !important;
@@ -90,25 +84,41 @@ $increm-factor: 0.1rem;
     position: relative !important;
     bottom: 3.3rem !important;
   }
-
   .navbar-collapse{
+    position: fixed;
+    top: 50px;
+    right: 10rem;
     background-color: rgb(23, 81, 87);
     margin-top: 0.5rem !important;
     z-index: 100 !important;
+    height: 110vh;
   }
-
   .dashboard__body{
+    font-size: 14px !important;
     margin: 0 !important;
-    padding: 1rem 0 !important;
+    padding: 0.3rem 0 1rem 0 !important;
   }
   .btn_newproj{
+    // margin: 0 0 !important;
     width: 11rem !important;
-    height: 3rem !important;
+    height: 2.3rem !important;
   }
   .newproj__content{
-    margin-bottom: 0 !important;
+    margin: -2rem 0 !important;
+    // margin-bottom: 0 !important;
   }
-
+  .nav__ul{
+    margin: 0 !important;
+    font-size: 15px !important;
+    .nav-item{
+      margin: 0.3rem 6rem 0 -0.5rem !important;
+      text-align: center;
+    }
+  }
+  .logout__btn{
+    position: relative;
+    bottom: 2rem;
+  }
   .navbar-toggler {
     display: block !important;
     margin-left: 0.5rem !important;
@@ -117,7 +127,6 @@ $increm-factor: 0.1rem;
     margin-top: 3rem !important;
     margin-bottom: 5.4rem !important;
   }
-
   .notif__bar {
     margin: 0 !important;
     background-color: transparent !important;
@@ -126,7 +135,6 @@ $increm-factor: 0.1rem;
     padding: 0.5rem !important;
     font-size: 0.8rem !important;
   }
-
   .search__body {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -160,7 +168,6 @@ $increm-factor: 0.1rem;
       line-height: 1rem !important;
     }
   }
-
   .filter__section{
     margin-left: -7.3rem;
     .sp{
@@ -187,6 +194,10 @@ $increm-factor: 0.1rem;
   .btn-custom {
     margin-top: 1rem !important;
   } 
+  .upper_table {
+    margin: 2rem 0 -0.5rem -5.6rem !important;
+    color: white;
+  }
   .table_resp_pos{
     margin-left: -6rem !important;
     border-top: none !important;
@@ -197,35 +208,62 @@ $increm-factor: 0.1rem;
     font-size: 0.8rem !important;
     border: 0 !important;
   }
-  .table_resp_pos{
-    border-top: 1px solid white !important;
+  .pagination{
+    margin: 1rem 5rem 0 0 !important;
   }
+  .params {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-left: 0 !important;
+  }
+  .params .col {
+    display: flex;
+  }
+  .card{
+    position: relative;
+    right: 2.5rem;
+    width: 600px !important;
+  }
+}
+
   // Scrollbar responsive mode
   /* Webkit */
+  .table-responsive {
+    // overflow: scroll !important; 
+    scrollbar-width: auto !important;
+  }
 .table-responsive::-webkit-scrollbar {
-  width: 12px$i;
-  height: 12px$i; 
+  width: 12px !important;
+  height: 12px !important; 
 }
 
 .table-responsive::-webkit-scrollbar-thumb {
-  background-color: #ffffff$i; 
-  border-radius: 6px$i; 
+  background-color: #ffffff !important; 
+  border-radius: 6px !important; 
 }
 
 .table-responsive::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0.1)$i; 
-  border-radius: 6px$i;
+  background-color: rgba(0, 0, 0, 0.1) !important; 
+  border-radius: 6px !important;
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #ffffff!important; 
+  border-radius: 6px!important; 
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1)!important; 
+  border-radius: 6px!important;
 }
 
 /* Firefox */
 .table-responsive {
-  scrollbar-width: thin$i; 
-  scrollbar-color: white rgba(0, 0, 0, 0.1)$i; 
+  scrollbar-width: thin !important; 
+  scrollbar-color: white rgba(0, 0, 0, 0.1) !important; 
 }
 }
 
 // Scrollbar responsive mode (bonus) delete if it makes issues
-
 
 //Page de connexion
 
@@ -284,11 +322,11 @@ $increm-factor: 0.1rem;
 }
 
 .container-fluid {
+  overflow: hidden;
   background-color: rgba(100, 130, 173, 1);
-  height: 100vh;
+  // height: 100vh;
 }
 .sidebar {
-  margin: $base-margin;
   background-color:rgba(127, 161, 195, 1);
   height: 96vh;
   // @media (min-height: 1081px) and (max-height:1201px) {
@@ -591,14 +629,6 @@ $passiveFolder : rgb(76, 146, 137);
     border-right: 3px solid rgb(36, 78, 73)!important;
 }
 
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! A Resoudre !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// .btn {
-//     padding: 10px 20px;
-//     margin-right: -15px;
-//     border-bottom : none;
-//     pointer-events: none;
-// }
-
 //Chevauchement des boutons
 .step-container .btn:nth-child(1) {
     z-index: 8;  
@@ -695,6 +725,11 @@ $passiveFolder : rgb(76, 146, 137);
           }
       }
   }
+}
+
+.pagination{
+  justify-content: center; /* Centers the pagination items */
+  display: flex;
 }
 
 .waiting {
@@ -812,13 +847,14 @@ $passiveFolder : rgb(76, 146, 137);
   width: 125px;
   padding: 5px;
 }
-
-<<<<<<< HEAD
 //Page paramètres
 .front-icons {
   color:$white;
 }
 
+.card{
+  width: 20rem;
+}
 .card-text {
   color:$white;
 }
@@ -839,7 +875,6 @@ $passiveFolder : rgb(76, 146, 137);
 .button-icon {
   color:$white;
 }
-=======
 //Diagramme Statistique
 .diagramme {
   color: white;
@@ -856,8 +891,6 @@ $passiveFolder : rgb(76, 146, 137);
 }
 
 // projet
-
-$i: !important;
 .newProjectNav {
   background-color: $sideBar; // Same background color as other navigational elements
   color: $white;
@@ -868,32 +901,32 @@ $i: !important;
   font-size: 16px;
   
   .nav-link {
-    color: inherit$i;
-    text-decoration: none$i;
-    font-size: 1rem$i;
-    position: relative$i;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: 1rem !important;
+    position: relative !important;
     
     &::before {
-      content: '•'$i;
-      position: absolute$i;
-      top: -15px$i;
-      left: 50%$i;
-      transform: translateX(-50%)$i;
-      font-size: 24px$i;
-      color: transparent$i;
+      content: '•' !important;
+      position: absolute !important;
+      top: -15px !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      font-size: 24px !important;
+      color: transparent !important;
     }
 
     &.active {
-      color: $createButtonProject$i;
-      font-weight: bold$i;
+      color: $createButtonProject !important;
+      font-weight: bold !important;
       
       &::before {
-        color: $createButtonProject$i; // Highlight the active step
+        color: $createButtonProject !important; // Highlight the active step
       }
     }
 
     &:hover {
-      color: lighten($createButtonProject, 10%)$i;
+      color: lighten($createButtonProject, 10%) !important;
     }
   }
 }
@@ -929,18 +962,18 @@ $i: !important;
 }
 
 button.btn-primary {
-  background-color: $createButtonProject$i;
-  border: none$i;
-  padding: 10px 25px$i;
-  font-size: 1rem$i;
-  border-radius: 30px$i;
-  color: $white$i;
-  width: fit-content$i;
-  align-self: flex-start$i;
-  transition: background-color 0.3s ease$i;
+  background-color: $createButtonProject !important;
+  border: none !important;
+  padding: 10px 25px !important;
+  font-size: 1rem !important;
+  border-radius: 30px !important;
+  color: $white !important;
+  width: fit-content !important;
+  align-self: flex-start !important;
+  transition: background-color 0.3s ease !important;
   
   &:hover {
-    background-color: darken($createButtonProject, 10%)$i;
+    background-color: darken($createButtonProject, 10%) !important;
   }
 }
 .projectInput {
@@ -988,10 +1021,23 @@ button.btn-primary {
   color: $white;
 }
 .projectButtonNext:hover {
-
   background-color: $managerColor;
   color: $white;
 }
 
+//Diagramme des stats des projets
+.projet-diagramme {
+  background-color: #ffffff;
+}
 
->>>>>>> 4700fa470dad407937655310c7a6da2e3d0ea5ef
+.collab-diagramme {
+  background-color: #ffffff;
+}
+
+//ParamScreen
+.params {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-left: 4rem;
+}

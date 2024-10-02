@@ -51,8 +51,7 @@
     font-size: 0.7rem !important;
   }
   .admin, .manager, .collab {
-    margin-left: 12rem;
-    margin-right: auto;
+    margin-left: 12rem !important;
   }
   .admin .user__name, .manager .user__name, .collab .user__name {
     width: 5rem !important;
@@ -68,20 +67,37 @@
     bottom: 3.3rem !important;
   }
   .navbar-collapse {
+    position: fixed;
+    top: 50px;
+    right: 10rem;
     background-color: rgb(23, 81, 87);
     margin-top: 0.5rem !important;
     z-index: 100 !important;
+    height: 110vh;
   }
   .dashboard__body {
+    font-size: 14px !important;
     margin: 0 !important;
-    padding: 1rem 0 !important;
+    padding: 0.3rem 0 1rem 0 !important;
   }
   .btn_newproj {
     width: 11rem !important;
-    height: 3rem !important;
+    height: 2.3rem !important;
   }
   .newproj__content {
-    margin-bottom: 0 !important;
+    margin: -2rem 0 !important;
+  }
+  .nav__ul {
+    margin: 0 !important;
+    font-size: 15px !important;
+  }
+  .nav__ul .nav-item {
+    margin: 0.3rem 6rem 0 -0.5rem !important;
+    text-align: center;
+  }
+  .logout__btn {
+    position: relative;
+    bottom: 2rem;
   }
   .navbar-toggler {
     display: block !important;
@@ -152,6 +168,10 @@
   .btn-custom {
     margin-top: 1rem !important;
   }
+  .upper_table {
+    margin: 2rem 0 -0.5rem -5.6rem !important;
+    color: white;
+  }
   .table_resp_pos {
     margin-left: -6rem !important;
     border-top: none !important;
@@ -162,25 +182,56 @@
     font-size: 0.8rem !important;
     border: 0 !important;
   }
-  /* Webkit */
-  .table-responsive::-webkit-scrollbar {
-    width: 12px !important;
-    height: 12px !important;
+  .pagination {
+    margin: 1rem 5rem 0 0 !important;
   }
-  .table-responsive::-webkit-scrollbar-thumb {
-    background-color: #ffffff !important;
-    border-radius: 6px !important;
+  .params {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-left: 0 !important;
   }
-  .table-responsive::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0.1) !important;
-    border-radius: 6px !important;
+  .params .col {
+    display: flex;
   }
-  /* Firefox */
-  .table-responsive {
-    scrollbar-width: thin !important;
-    scrollbar-color: white rgba(0, 0, 0, 0.1) !important;
+  .card {
+    position: relative;
+    right: 2.5rem;
+    width: 600px !important;
   }
 }
+/* Webkit */
+.table-responsive {
+  scrollbar-width: auto !important;
+}
+
+.table-responsive::-webkit-scrollbar {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #ffffff !important;
+  border-radius: 6px !important;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  border-radius: 6px !important;
+  /* Firefox */
+}
+.table-responsive::-webkit-scrollbar-track .table-responsive::-webkit-scrollbar-thumb {
+  background-color: #ffffff !important;
+  border-radius: 6px !important;
+}
+.table-responsive::-webkit-scrollbar-track .table-responsive::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  border-radius: 6px !important;
+}
+.table-responsive::-webkit-scrollbar-track .table-responsive {
+  scrollbar-width: thin !important;
+  scrollbar-color: white rgba(0, 0, 0, 0.1) !important;
+}
+
 .mainLogIn {
   display: flex;
   justify-content: center;
@@ -236,8 +287,8 @@
 }
 
 .container-fluid {
+  overflow: hidden;
   background-color: rgb(100, 130, 173);
-  height: 100vh;
 }
 
 .sidebar {
@@ -648,6 +699,11 @@
   border-bottom-right-radius: 10px;
 }
 
+.pagination {
+  justify-content: center; /* Centers the pagination items */
+  display: flex;
+}
+
 .waiting {
   width: 15px;
   height: 15px;
@@ -757,9 +813,12 @@
   padding: 5px;
 }
 
-<<<<<<< HEAD
 .front-icons {
   color: rgb(255, 255, 255);
+}
+
+.card {
+  width: 20rem;
 }
 
 .card-text {
@@ -780,7 +839,9 @@
 }
 
 .button-icon {
-=======
+  color: rgb(255, 255, 255);
+}
+
 .diagramme {
   color: white;
   background-color: rgb(100, 130, 173);
@@ -912,6 +973,20 @@ button.btn-primary:hover {
 
 .projectButtonNext:hover {
   background-color: rgb(55, 24, 94);
->>>>>>> 4700fa470dad407937655310c7a6da2e3d0ea5ef
   color: rgb(255, 255, 255);
+}
+
+.projet-diagramme {
+  background-color: #ffffff;
+}
+
+.collab-diagramme {
+  background-color: #ffffff;
+}
+
+.params {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-left: 4rem;
 }/*# sourceMappingURL=styles.css.map */
