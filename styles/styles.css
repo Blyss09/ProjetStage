@@ -437,7 +437,6 @@
 .nav-item .nav-link {
   flex: 1 1 auto;
   color: white;
-  font-weight: bold;
 }
 @media (min-height: 1200px) {
   .nav-item .nav-link {
@@ -456,13 +455,11 @@
 }
 
 .nav-item .nav-link:hover {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  color: rgb(32, 210, 169);
+  font-weight: bold;
 }
 
 .nav-item .nav-link.active {
-  color: rgb(239, 243, 3);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
 }
 
 .nav-item .nav-link.active + .img_arrow i {
@@ -470,16 +467,11 @@
   position: relative;
   right: 3px;
   bottom: 8px;
-  color: rgb(239, 243, 3);
 }
 @media (min-height: 1199px) {
   .nav-item .nav-link.active + .img_arrow i {
     font-size: 40px;
   }
-}
-
-.nav-item .nav-link.active:hover {
-  color: rgb(239, 243, 3);
 }
 
 .nav-item .bi-chevron-right {
@@ -550,7 +542,6 @@
 }
 
 .btn-custom:hover {
-  background-color: rgb(76, 146, 137);
   color: white;
 }
 
@@ -831,6 +822,7 @@
   border-radius: 20px;
   padding: 5px;
   width: 125px;
+  color: white;
 }
 
 .finishedTask {
@@ -839,6 +831,7 @@
   border-radius: 20px;
   width: 125px;
   padding: 5px;
+  color: white;
 }
 
 .endingTask {
@@ -847,6 +840,7 @@
   border-radius: 20px;
   width: 125px;
   padding: 5px;
+  color: white;
 }
 
 .front-icons {
@@ -1049,4 +1043,8 @@ button.add-collaborator {
   color: white;
   font: inherit;
   cursor: pointer;
+}
+
+.bold {
+  font-weight: bold;
 }/*# sourceMappingURL=styles.css.map */
