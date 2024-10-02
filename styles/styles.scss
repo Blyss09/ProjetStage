@@ -1084,9 +1084,11 @@ button.btn-primary {
   color : white;
 }
 
-.add-collaborator {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  background-color: $pageBackground;
+button.add-collaborator {
+  background-color: transparent; 
+  border: none; 
+  padding: 0; 
+  color: white; 
+  font: inherit; 
+  cursor: pointer; 
 }

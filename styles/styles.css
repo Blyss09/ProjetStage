@@ -1028,9 +1028,11 @@ button.btn-primary:hover {
   color: white;
 }
 
-.add-collaborator {
+button.add-collaborator {
+  background-color: transparent;
+  border: none;
+  padding: 0;
   color: white;
-  text-decoration: none;
-  font-weight: bold;
-  background-color: rgb(100, 130, 173);
+  font: inherit;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */
