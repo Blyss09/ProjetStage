@@ -13,6 +13,9 @@ $adminColor: rgba(248, 60, 60, 1);
 //tableaux
 $rowCollor: rgba(127, 161, 195);
 
+:root{
+  background-color: $pageBackground;
+}
 .bell {
   background-color: $bellColor;
 }
