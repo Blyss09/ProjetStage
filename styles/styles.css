@@ -206,12 +206,19 @@
     right: 2.5rem;
     width: 600px !important;
   }
+  .diag-param {
+    width: 600px !important;
+  }
   .card-collab {
     position: relative;
     right: 2.5rem;
   }
   .tables-overflow-scroll .btn-custom {
     margin-right: 2rem;
+  }
+  .diag {
+    margin-left: -2rem !important;
+    overflow: scroll;
   }
 }
 /* Webkit */
