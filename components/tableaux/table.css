@@ -214,6 +214,11 @@
   .tables-overflow-scroll .btn-custom {
     margin-right: 2rem;
   }
+  .newProjectCard {
+    position: relative;
+    right: 2.5rem;
+    width: 600px !important;
+  }
 }
 /* Webkit */
 .table-responsive {
