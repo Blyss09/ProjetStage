@@ -13,7 +13,7 @@
 
 <body class="page">
     <div class="container-fluid row p-4 m-0">
-        <sidebar class="sidebar rounded-3 col col-sm-3 col-md-4 col-lg-3 px-5 pt-5 align-items-center">
+        <sidebar class="sidebar rounded-3 col-1 col-sm-1 col-md-4 col-lg-3 px-5 pt-5 align-items-center">
             <div class="admin rounded-4 d-flex justify-content-center text-center p-1">
                 <div class="user__icon me-3">
                     <i class="bi bi-person-circle"></i>
@@ -36,15 +36,17 @@
                         <div class="dashboard__title ms-4 align-self-center">DASHBOARD</div>
                     </div>
                     <div class="newproj__content d-flex justify-content-center my-4">
-                        <button type="button" class="btn btn_newproj text-white px-4 p-0">
-                            <i class="bi bi-plus-square-fill mt-2 mx-3 h4"></i>
-                          Nouveau Projet
-                        </button>
+                        <a href="./newProjectScreen.html">
+                            <button type="button" class="btn btn_newproj text-white px-4 p-0">
+                                <i class="bi bi-plus-square-fill mt-2 mx-3 h4"></i>
+                              Nouveau Projet
+                            </button>
+                        </a>
                     </div>
                     <ul class="nav nav__ul row mt-4 p-0">
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4 px-0" aria-current="page" href="adminEnv.html">Projets</a>
+                                <a class="nav-link active ms-4 px-0" aria-current="page" href="./adminEnv.html">Projets</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -52,7 +54,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link active ms-4 px-0" aria-current="page" href="adminTasks.html">Mes tâches</a>
+                                <a class="nav-link ms-4 px-0" aria-current="page" href="./adminTasks.html">Mes tâches</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -60,7 +62,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4 px-0" aria-current="page" href="statistiqueProjet.html">Statistiques projets</a>
+                                <a class="nav-link ms-4 px-0" aria-current="page" href="./statistiqueProjet.html">Statistiques projets</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -76,7 +78,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4 px-0" aria-current="page" href="StatCollab.html">Statistiques collaborateurs</a>
+                                <a class="nav-link ms-4 px-0" aria-current="page" href="./StatCollab.html">Statistiques collaborateurs</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -84,7 +86,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4 px-0" aria-current="page" href="traçabilitéScreen.html">Trançabilité</a>
+                                <a class="nav-link ms-4 px-0" aria-current="page" href="./traçabilitéScreen.html">Trançabilité</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -92,7 +94,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4 px-0" aria-current="page" href="paramScreen.html">Paramètres</a>
+                                <a class="nav-link ms-4 px-0" aria-current="page" href="./paramScreen.html">Paramètres</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -110,112 +112,115 @@
                 </div>
             </nav>
         </sidebar>
-        <main class="main col-6 col-md-8 col-sm-9">
-            <div class="notif__bar rounded-2">
-                <div class="d-flex justify-content-end">
+        <div class="col-11 col-md-8 col-lg-9">
+            <header class="header col">
+                <div class="notif__bar d-flex justify-content-end rounded-2">
                     <div class="dropdown">
-                      <button class="btn dropdown-toggle position-relative bell p-3" type="button" id="notificationBell" data-bs-toggle="dropdown" aria-expanded="false">
-                        
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
-                          <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.104-14a5.02 5.02 0 0 1 4.002 2.5c.262.415.495.885.66 1.398.17.527.234 1.08.234 1.602v2.011l.77 2.707a1 1 0 0 1-.97 1.282H3.201a1 1 0 0 1-.97-1.282l.77-2.707V7.5c0-.522.064-1.075.234-1.602.165-.513.398-.983.66-1.398A5.02 5.02 0 0 1 7.896 2zM8 1a6 6 0 0 0-6 6v2.086l-.97 3.423A2 2 0 0 0 3.2 15h9.6a2 2 0 0 0 1.937-2.491L13.77 9.086V7a6 6 0 0 0-5.77-6z"/>
-                        </svg>
-                       
-                        <span id="notificationCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                          3
-                          <span class="visually-hidden">Messages non lus</span>
-                        </span>
-                      </button>
-                     
-                      <ul class="dropdown-menu dropdown-menu-end" >
-                        <li><h6 class="dropdown-header">Notifications</h6></li>
-                        <li><a class="dropdown-item" href="#">Nouvelle notification</a></li>
-                        <li><a class="dropdown-item" href="#">Nouvelle notification</a></li>
-                        <li><a class="dropdown-item" href="#">Nouvelle notification</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item text-center" href="#">Voir toutes les notifications</a></li>
-                      </ul>
+                        <button class="btn dropdown-toggle position-relative bell" type="button" id="notificationBell"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+            
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bell"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.104-14a5.02 5.02 0 0 1 4.002 2.5c.262.415.495.885.66 1.398.17.527.234 1.08.234 1.602v2.011l.77 2.707a1 1 0 0 1-.97 1.282H3.201a1 1 0 0 1-.97-1.282l.77-2.707V7.5c0-.522.064-1.075.234-1.602.165-.513.398-.983.66-1.398A5.02 5.02 0 0 1 7.896 2zM8 1a6 6 0 0 0-6 6v2.086l-.97 3.423A2 2 0 0 0 3.2 15h9.6a2 2 0 0 0 1.937-2.491L13.77 9.086V7a6 6 0 0 0-5.77-6z" />
+                            </svg>
+            
+                            <span id="notificationCount"
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                3
+                                <span class="visually-hidden">Messages non lus</span>
+                            </span>
+                        </button>
+            
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <h6 class="dropdown-header">Notifications</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Nouvelle notification</a></li>
+                            <li><a class="dropdown-item" href="#">Nouvelle notification</a></li>
+                            <li><a class="dropdown-item" href="#">Nouvelle notification</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-center" href="#">Voir toutes les notifications</a></li>
+                        </ul>
                     </div>
-                  </div>
-            </div>
-            <div class="search__body row mt-5 pb-5 mx-0 align-items-center">
-                <h5 class="col-12 col-md-7 p-0">Nouveau Projet</h5>
-                <div class="col-12 col-md-5 p-0">
-                    <div class="d-flex justify-content-end">
+                </div>
+                <div class="row search__body mt-5 pb-5 mx-0 align-items-center">
+                    <h5 class="col col-md-7 title__text p-0">Nouveau Projet</h5>
+                    <div class="col search__items d-flex justify-content-center p-0">
                         <div class="input-group search-bar flex-fill">
                             <span class="input-group-text">
                                 <i class="bi bi-search"></i>
                             </span>
                             <input type="text" class="form-control" placeholder="Rechercher...">
                         </div>
-                        <button class="btn btn-custom ms-2">Rechercher</button>
+                        <button class="btn btn-custom">Rechercher</button>
                     </div>
                 </div>
-            </div>
-            <div class="step-container d-flex flex-column align-items-center col-12 mt-4 mb-4 responsive col-sm-12 col-md-12 ">
-                <div class="btn-group d-flex justify-content-center " role="group">
-                    <button type="button" class="activeF btn btn-lg rounded-top-4">
-                        Étape 1
-                    </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4">
-                        Étape 2
-                    </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4">
-                        Étape 3
-                    </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4">
-                        Étape 4
-                    </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4">
-                        Étape 5
-                    </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4">
-                        Étape 6
-                    </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4">
-                        Étape 7
-                    </button>
-                    <button type="button" class="passiveF btn btn-lg rounded-top-4">
-                        Étape 8
-                    </button>
-                </div>
-            </div>
-
-           
-            <div class="mt-3 p-4 newProjectCard col-sm-12 ">
-                <h4 class="text-light">Définir le nom du projet :</h4>
-                <form>
-                    <div class="mb-3 newProjectForm">
-                        <label for="projectName" class="form-label text-light">Nom du projet* :</label>
-                        <input type="text" class="form-control projectInput" id="projectName" placeholder="Nom du projet">
+            </header>
+            <main class="col">
+                <div class="step-container d-flex flex-column align-items-center col-12 mt-4 mb-4 responsive col-sm-12 col-md-12 ">
+                    <div class="btn-group d-flex justify-content-center " role="group">
+                        <button type="button" class="activeF btn btn-lg rounded-top-4">
+                            Étape 1
+                        </button>
+                        <button type="button" class="passiveF btn btn-lg rounded-top-4">
+                            Étape 2
+                        </button>
+                        <button type="button" class="passiveF btn btn-lg rounded-top-4">
+                            Étape 3
+                        </button>
+                        <button type="button" class="passiveF btn btn-lg rounded-top-4">
+                            Étape 4
+                        </button>
+                        <button type="button" class="passiveF btn btn-lg rounded-top-4">
+                            Étape 5
+                        </button>
+                        <button type="button" class="passiveF btn btn-lg rounded-top-4">
+                            Étape 6
+                        </button>
+                        <button type="button" class="passiveF btn btn-lg rounded-top-4">
+                            Étape 7
+                        </button>
+                        <button type="button" class="passiveF btn btn-lg rounded-top-4">
+                            Étape 8
+                        </button>
                     </div>
-                    <div class="mb-3 newProjectForm">
-                        <label for="projectType" class="form-label text-light">Type de projet* :</label>
-                        <input type="text" class="form-control projectInput" id="projectType" placeholder="Type de projet">
-                    </div>
-                    <div class="mb-7 newProjectForm newProjectComment">
-                        <label for="comment" class="form-label text-light">Ajouter un commentaire* :</label>
-                        <textarea class="form-control projectInput" id="comment" rows="3"
-                            placeholder="Ajouter un commentaire"></textarea>
-                    </div>
-                </form>
-
-                <div class="d-flex justify-content-start invisible">
-                    <button type="button" class="btn btn-lg rounded-4 projectButtonReturn">
-                        <i class="bi bi-chevron-left"></i> Retour
-                    </button>
                 </div>
-                <div class="d-flex justify-content-end">
-                    <button type="button" class="btn btn rounded-5 projectButtonNext">
-                        Suivant <i class="bi bi-chevron-right"></i>
-                    </button>
+    
+               
+                <div class="mt-3 p-4 newProjectCard col-sm-12 ">
+                    <h4 class="text-light">Définir le nom du projet :</h4>
+                    <form>
+                        <div class="mb-3 newProjectForm">
+                            <label for="projectName" class="form-label text-light">Nom du projet* :</label>
+                            <input type="text" class="form-control projectInput" id="projectName" placeholder="Nom du projet">
+                        </div>
+                        <div class="mb-3 newProjectForm">
+                            <label for="projectType" class="form-label text-light">Type de projet* :</label>
+                            <input type="text" class="form-control projectInput" id="projectType" placeholder="Type de projet">
+                        </div>
+                        <div class="mb-7 newProjectForm newProjectComment">
+                            <label for="comment" class="form-label text-light">Ajouter un commentaire* :</label>
+                            <textarea class="form-control projectInput" id="comment" rows="3"
+                                placeholder="Ajouter un commentaire"></textarea>
+                        </div>
+                    </form>
+    
+                    <div class="d-flex justify-content-start invisible">
+                        <button type="button" class="btn btn-lg rounded-4 projectButtonReturn">
+                            <i class="bi bi-chevron-left"></i> Retour
+                        </button>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn rounded-5 projectButtonNext">
+                            Suivant <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </main>
-    </div>
-           
-            
-            
-        </main>
+            </main>
+        </div>
     </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

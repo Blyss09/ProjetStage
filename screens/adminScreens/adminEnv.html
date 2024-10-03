@@ -13,7 +13,7 @@
 
 <body class="page">
     <div class="container-fluid row p-4 m-0">
-        <sidebar class="sidebar rounded-3 col col-sm-3 col-md-4 col-lg-3 px-5 pt-5 align-items-center">
+        <sidebar class="sidebar rounded-3 col-1 col-sm-1 col-md-4 col-lg-3 px-5 pt-5 align-items-center">
             <div class="admin rounded-4 d-flex justify-content-center text-center p-1">
                 <div class="user__icon me-3">
                     <i class="bi bi-person-circle"></i>
@@ -112,25 +112,26 @@
                 </div>
             </nav>
         </sidebar>
-        <main class="container main col-9 col-sm-9 col-md-8 col-lg-9">
-            <div class="notif__bar d-flex justify-content-end rounded-2">
+        <div class="col-11 col-md-8 col-lg-9">
+            <header class="header col">
+                <div class="notif__bar d-flex justify-content-end rounded-2">
                     <div class="dropdown">
                         <button class="btn dropdown-toggle position-relative bell" type="button" id="notificationBell"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                    
+            
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bell"
                                 viewBox="0 0 16 16">
                                 <path
                                     d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.104-14a5.02 5.02 0 0 1 4.002 2.5c.262.415.495.885.66 1.398.17.527.234 1.08.234 1.602v2.011l.77 2.707a1 1 0 0 1-.97 1.282H3.201a1 1 0 0 1-.97-1.282l.77-2.707V7.5c0-.522.064-1.075.234-1.602.165-.513.398-.983.66-1.398A5.02 5.02 0 0 1 7.896 2zM8 1a6 6 0 0 0-6 6v2.086l-.97 3.423A2 2 0 0 0 3.2 15h9.6a2 2 0 0 0 1.937-2.491L13.77 9.086V7a6 6 0 0 0-5.77-6z" />
                             </svg>
-                    
+            
                             <span id="notificationCount"
                                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 3
                                 <span class="visually-hidden">Messages non lus</span>
                             </span>
                         </button>
-                    
+            
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
                                 <h6 class="dropdown-header">Notifications</h6>
@@ -144,190 +145,193 @@
                             <li><a class="dropdown-item text-center" href="#">Voir toutes les notifications</a></li>
                         </ul>
                     </div>
-            </div>
-            <div class="row search__body mt-5 pb-5 mx-0 align-items-center">
-                <h5 class="col-4 col-md-7 title__text p-0">Projets</h5>
-                <div class="col search__items d-flex justify-content-center p-0">
-                    <div class="input-group search-bar flex-fill">
-                        <span class="input-group-text">
-                            <i class="bi bi-search"></i>
-                        </span>
-                        <input type="text" class="form-control" placeholder="Rechercher...">
+                </div>
+                <div class="row search__body mt-5 pb-5 mx-0 align-items-center">
+                    <h5 class="col col-md-7 title__text p-0">Projets</h5>
+                    <div class="col search__items d-flex justify-content-center p-0">
+                        <div class="input-group search-bar flex-fill">
+                            <span class="input-group-text">
+                                <i class="bi bi-search"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Rechercher...">
+                        </div>
+                        <button class="btn btn-custom">Rechercher</button>
                     </div>
-                    <button class="btn btn-custom">Rechercher</button>
                 </div>
-            </div>
-            <div class="row filter__section align-items-center mt-4">
-                <div class="sp col-lg-7 col-xl-6"></div>
-                <div class="col-1 col-lg-1 me-1">
-                    <button id="filterBtn" class="btn filterButton fontWhite">Filtrer</button>
+            </header>
+            <main class="col">
+                <div class="row filter__section mt-4">
+                    <div class="col-0 col-lg-5 col-md-4 col-1"></div>
+                    <div class="col-1 col-lg-1 col-md-2 col">
+                        <button id="filterBtn" class="btn filterButton fontWhite">Filtrer</button>
+                    </div>
+                  <div class="col-2 col-lg-3 col-md-3 col">
+                    <input type="text" class="form-control dateControl" id="startDate" placeholder="Date">
+                  </div>
+                  <div class="col-1 col-lg-3 col-md-3 col">
+                    <input type="text" class="form-control dateControl" id="endDate" placeholder="Date">
+                  </div>
                 </div>
-              <div class="col-2 me-4">
-                <input type="text" class="form-control dateControl" id="startDate" placeholder="Date">
-              </div>
-              <div class="col-1 col-lg-1 ms-2">
-                <input type="text" class="form-control dateControl" id="endDate" placeholder="Date">
-              </div>
-            </div>
-            <div id="dataDisplay" class="">
-              <!-- Ici on montre les données, le target du script étant l'id datadisplay.
-               Voir dans le script :
-               data.forEach(item => {
-              dataDisplay.append(`<p>${item.name} - ${item.date}</p>`);-->
-            </div>
-            <div class="upper_table ms-4">
-                <i class="bi bi-pencil-square fs-4"></i>
-                <span class="edit_table">Modifier le tableau</span>
-            </div>
-            <div class="table-responsive table_resp_pos ms-4">
-                <table class="table proj-table mt-2 text-center">
-                    <thead>
-                        <tr class="">
-                            <th scope="col">Nom</th>
-                            <th scope="col">Statut</th>
-                            <th scope="col">Durée</th>
-                            <th scope="col">Date début</th>
-                            <th scope="col">Date fin prévue</th>
-                            <th scope="col">Client</th>
-                            <th scope="col">Développeur</th>
-                            <th scope="col">Testeur</th>
-                            <th scope="col">Stageur</th>
-                            <th scope="col">Commentaire</th>
-                            <th scope="col">Technologies</th>
-                            <th scope="col">Progression</th>
-                            <th scope="col">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="col">Projet 1</td>
-                            <td class="col statut">
-                                <div class="test"></div>
-                                <span>Test</span>
-                            </td>
-                            <td class="col">x</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">Nom Prénom</td>
-                            <td class="col">vigs1</td>
-                            <td class="col">vigs2</td>
-                            <td class="col">vigs3</td>
-                            <td class="col">Commentaire</td>
-                            <td class="col">WEB</td>
-                            <td class="col"><span class="end_progress">90%</span></td>
-                            <td class="col"><a href="./tasksFollowup.html"><button class="editBtn">Voir</button></a></td>
-                        </tr>
-                        <tr>
-                            <td>Projet 2</td>
-                            <td class="statut">
-                                <div class="prod"></div>
-                                <span>Prod</span>
-                            </td>
-                            <td class="col">x</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">Nom Prénom</td>
-                            <td class="col">vigs1</td>
-                            <td class="col">vigs2</td>
-                            <td class="col">vigs3</td>
-                            <td class="col">Commentaire</td>
-                            <td class="col">WEB</td>
-                            <td class="col"><span class="mid_progress">60%</span></td>
-                            <td class="col"><a href="./tasksFollowup.html"><button class="editBtn">Voir</button></a></td>
-                        </tr>
-                        <tr>
-                            <td>Projet 3</td>
-                            <td class="statut">
-                                <div class="dev"></div>
-                                <span>Dev</span>
-                            </td>
-                            <td class="col">x</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">Nom Prénom</td>
-                            <td class="col">vigs1</td>
-                            <td class="col">vigs2</td>
-                            <td class="col">vigs3</td>
-                            <td class="col">Commentaire</td>
-                            <td class="col">WEB</td>
-                            <td class="col"><span class="mid_progress">50%</span></td>
-                            <td class="col"><a href="./tasksFollowup.html"><button class="editBtn">Voir</button></a></td>
-                        </tr>
-                        <tr>
-                            <td>Projet 4</td>
-                            <td class="statut">
-                                <div class="stage"></div>
-                                <span>Stage</span>
-                            </td>
-                            <td class="col">x</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">Nom Prénom</td>
-                            <td class="col">vigs1</td>
-                            <td class="col">vigs2</td>
-                            <td class="col">vigs3</td>
-                            <td class="col">Commentaire</td>
-                            <td class="col">WEB</td>
-                            <td class="col"><span class="low_progress">25%</span></td>
-                            <td class="col"><a href="./tasksFollowup.html"><button class="editBtn">Voir</button></a></td>
-                        </tr>
-                        <tr>
-                            <td>Projet 5</td>
-                            <td class="statut">
-                                <div class="prod"></div>
-                                <span>Prod</span>
-                            </td>
-                            <td class="col">x</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">Nom Prénom</td>
-                            <td class="col">vigs1</td>
-                            <td class="col">vigs2</td>
-                            <td class="col">vigs3</td>
-                            <td class="col">Commentaire</td>
-                            <td class="col">WEB</td>
-                            <td class="col"><span class="low_progress">5%</span></td>
-                            <td class="col"><a href="./tasksFollowup.html"><button class="editBtn">Voir</button></a></td>
-                        </tr>
-                        <tr>
-                            <td>Projet 6</td>
-                            <td class="statut">
-                                <div class="cdc"></div>
-                                <span>CDC</span>
-                            </td>
-                            <td class="col">x</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">jj/mm/aaaa</td>
-                            <td class="col">Nom Prénom</td>
-                            <td class="col">vigs1</td>
-                            <td class="col">vigs2</td>
-                            <td class="col">vigs3</td>
-                            <td class="col">Commentaire</td>
-                            <td class="col">WEB</td>
-                            <td class="col"><span class="end_progress">100%</span></td>
-                            <td class="col"><a href="./tasksFollowup.html"><button class="editBtn">Voir</button></a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <nav aria-label="Page navigation example">
-                <ul class="pagination mt-3">
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </main>
+                <div id="dataDisplay" class="">
+                  <!-- Ici on montre les données, le target du script étant l'id datadisplay.
+                   Voir dans le script :
+                   data.forEach(item => {
+                  dataDisplay.append(`<p>${item.name} - ${item.date}</p>`);-->
+                </div>
+                <div class="upper_table ms-4">
+                    <i class="bi bi-pencil-square fs-4"></i>
+                    <span class="edit_table">Modifier le tableau</span>
+                </div>
+                <div class="table-responsive table_resp_pos ms-4">
+                    <table class="table proj-table mt-2 text-center">
+                        <thead>
+                            <tr class="">
+                                <th scope="col">Nom</th>
+                                <th scope="col">Statut</th>
+                                <th scope="col">Durée</th>
+                                <th scope="col">Date début</th>
+                                <th scope="col">Date fin prévue</th>
+                                <th scope="col">Client</th>
+                                <th scope="col">Développeur</th>
+                                <th scope="col">Testeur</th>
+                                <th scope="col">Stageur</th>
+                                <th scope="col">Commentaire</th>
+                                <th scope="col">Technologies</th>
+                                <th scope="col">Progression</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col">Projet 1</td>
+                                <td class="col statut">
+                                    <div class="test"></div>
+                                    <span>Test</span>
+                                </td>
+                                <td class="col">x</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">Nom Prénom</td>
+                                <td class="col">vigs1</td>
+                                <td class="col">vigs2</td>
+                                <td class="col">vigs3</td>
+                                <td class="col">Commentaire</td>
+                                <td class="col">WEB</td>
+                                <td class="col"><span class="end_progress">90%</span></td>
+                                <td class="col"><a href="./tasksFollowup.html"><button class="editBtn">Voir</button></a></td>
+                            </tr>
+                            <tr>
+                                <td>Projet 2</td>
+                                <td class="statut">
+                                    <div class="prod"></div>
+                                    <span>Prod</span>
+                                </td>
+                                <td class="col">x</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">Nom Prénom</td>
+                                <td class="col">vigs1</td>
+                                <td class="col">vigs2</td>
+                                <td class="col">vigs3</td>
+                                <td class="col">Commentaire</td>
+                                <td class="col">WEB</td>
+                                <td class="col"><span class="mid_progress">60%</span></td>
+                                <td class="col"><a href="./tasksFollowup.html"><button class="editBtn">Voir</button></a></td>
+                            </tr>
+                            <tr>
+                                <td>Projet 3</td>
+                                <td class="statut">
+                                    <div class="dev"></div>
+                                    <span>Dev</span>
+                                </td>
+                                <td class="col">x</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">Nom Prénom</td>
+                                <td class="col">vigs1</td>
+                                <td class="col">vigs2</td>
+                                <td class="col">vigs3</td>
+                                <td class="col">Commentaire</td>
+                                <td class="col">WEB</td>
+                                <td class="col"><span class="mid_progress">50%</span></td>
+                                <td class="col"><a href="./tasksFollowup.html"><button class="editBtn">Voir</button></a></td>
+                            </tr>
+                            <tr>
+                                <td>Projet 4</td>
+                                <td class="statut">
+                                    <div class="stage"></div>
+                                    <span>Stage</span>
+                                </td>
+                                <td class="col">x</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">Nom Prénom</td>
+                                <td class="col">vigs1</td>
+                                <td class="col">vigs2</td>
+                                <td class="col">vigs3</td>
+                                <td class="col">Commentaire</td>
+                                <td class="col">WEB</td>
+                                <td class="col"><span class="low_progress">25%</span></td>
+                                <td class="col"><a href="./tasksFollowup.html"><button class="editBtn">Voir</button></a></td>
+                            </tr>
+                            <tr>
+                                <td>Projet 5</td>
+                                <td class="statut">
+                                    <div class="prod"></div>
+                                    <span>Prod</span>
+                                </td>
+                                <td class="col">x</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">Nom Prénom</td>
+                                <td class="col">vigs1</td>
+                                <td class="col">vigs2</td>
+                                <td class="col">vigs3</td>
+                                <td class="col">Commentaire</td>
+                                <td class="col">WEB</td>
+                                <td class="col"><span class="low_progress">5%</span></td>
+                                <td class="col"><a href="./tasksFollowup.html"><button class="editBtn">Voir</button></a></td>
+                            </tr>
+                            <tr>
+                                <td>Projet 6</td>
+                                <td class="statut">
+                                    <div class="cdc"></div>
+                                    <span>CDC</span>
+                                </td>
+                                <td class="col">x</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">Nom Prénom</td>
+                                <td class="col">vigs1</td>
+                                <td class="col">vigs2</td>
+                                <td class="col">vigs3</td>
+                                <td class="col">Commentaire</td>
+                                <td class="col">WEB</td>
+                                <td class="col"><span class="end_progress">100%</span></td>
+                                <td class="col"><a href="./tasksFollowup.html"><button class="editBtn">Voir</button></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination mt-3">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </main>
+        </div>
     </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

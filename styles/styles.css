@@ -8,7 +8,7 @@
 }
 
 .filterButton {
-  background-color: rgb(100, 130, 173);
+  background-color: rgb(127, 161, 195);
 }
 
 .dateControl::-moz-placeholder {
@@ -63,33 +63,6 @@
     margin-bottom: 2rem !important;
   }
 }
-@media (max-width: 992px) {
-  .sidebar .user__name,
-  .sidebar .user__role {
-    font-size: 14px !important;
-  }
-  .btn_newproj {
-    font-size: 14px !important;
-    padding: 10px !important;
-  }
-  .newProjectCard {
-    position: relative !important;
-    width: 600px !important;
-    left: 4% !important;
-    max-width: 95vw !important;
-  }
-  .step-container {
-    display: none !important;
-  }
-  .midtable {
-    border: white solid 1px;
-    border-radius: 12px !important;
-    caption-side: bottom;
-    border-collapse: collapse !important;
-    margin-left: auto !important;
-    margin-top: 1rem !important;
-  }
-}
 @media (max-width: 768px) {
   .midtable {
     border: white solid 1px;
@@ -131,9 +104,6 @@
   .collab .user__name {
     width: 5rem !important;
   }
-  .collab {
-    margin-left: 7rem !important;
-  }
   .user__icon i {
     font-size: 1.9rem !important;
   }
@@ -144,7 +114,7 @@
   .navbar-collapse {
     position: fixed;
     top: 50px;
-    right: 10rem;
+    right: 20rem;
     background-color: rgb(23, 81, 87);
     margin-top: 0.5rem !important;
     z-index: 100 !important;
@@ -156,8 +126,9 @@
     padding: 0.3rem 0 1rem 0 !important;
   }
   .btn_newproj {
-    width: 11rem !important;
-    height: 2.3rem !important;
+    width: 13rem !important;
+    height: 2.8rem !important;
+    font-size: 15px;
   }
   .newproj__content {
     margin: -2rem 0 !important;
@@ -183,7 +154,7 @@
     margin-bottom: 5.4rem !important;
   }
   .notif__bar {
-    margin: 0 !important;
+    margin: 0 -1rem 0 0 !important;
     background-color: transparent !important;
     flex-direction: column !important;
     align-items: flex-end !important;
@@ -196,7 +167,6 @@
     align-items: center !important;
     padding-bottom: 0 !important;
     margin-top: 1rem !important;
-    margin-left: -5rem !important;
     margin-right: 0rem !important;
     border-bottom: 0 !important;
   }
@@ -218,37 +188,33 @@
     height: 2rem !important;
     line-height: 1rem !important;
   }
-  .filter__section {
-    margin-left: -7.3rem;
-  }
   .filter__section .sp {
     width: 0 !important;
   }
-  .filter__section .col-2 {
-    margin: 0 4.2rem 0 3rem;
-  }
   .filter__section .filterButton {
-    margin-left: 1.6rem;
-    height: 1.6rem;
+    margin: 0 4.2rem 0 3rem !important;
+    height: 1.7rem;
     line-height: 0rem !important;
   }
   .filter__section .dateControl {
-    margin-left: 1.5rem;
-    width: 7rem !important;
-    height: 1.5rem;
+    width: 7rem;
+    height: 1.8rem;
+  }
+  .filter__section .dateControl#startDate {
+    margin-left: 5rem;
   }
   .filter__section .dateControl#endDate {
-    margin-left: 3rem;
+    margin-left: 8rem;
   }
   .btn-custom {
     margin-top: 1rem !important;
   }
   .upper_table {
-    margin: 2rem 0 -0.5rem -5.6rem !important;
+    margin: 2rem 2rem -0.5rem 0 !important;
     color: white;
   }
   .table_resp_pos {
-    margin-left: -6rem !important;
+    margin-left: -1rem !important;
     border-top: none !important;
   }
   .proj-table {
@@ -256,9 +222,6 @@
     margin-right: 0 !important;
     font-size: 0.8rem !important;
     border: 0 !important;
-  }
-  .pagination {
-    margin: 1rem 5rem 0 0 !important;
   }
   .params {
     display: flex !important;
@@ -274,7 +237,6 @@
   }
   .card-param {
     position: relative;
-    right: 2.5rem;
     width: 600px !important;
   }
   .diag-param {
@@ -297,8 +259,10 @@
     display: none !important;
   }
   .diag {
-    margin-left: -2rem !important;
     overflow: scroll;
+  }
+  .btn_delete {
+    margin-top: 5rem !important;
   }
   /* Webkit */
   .table-responsive {
@@ -330,16 +294,37 @@
     scrollbar-color: white rgba(0, 0, 0, 0.1) !important;
   }
 }
+@media (max-width: 450px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 50px;
+    right: 10rem;
+  }
+  .btn_delete {
+    margin-top: 1rem !important;
+  }
+  .filterButton {
+    margin: 0 4.2rem 0 3rem !important;
+    height: 1.8rem !important;
+    line-height: 0rem !important;
+  }
+  .dateControl {
+    width: 5.5rem !important;
+    height: 1.8rem;
+  }
+  .dateControl#startDate {
+    margin-left: 5.8rem !important;
+  }
+  .dateControl#endDate {
+    margin-left: 8rem;
+  }
+}
 .mainLogIn input {
   width: 25rem;
 }
 
 .inputLogIn {
   margin: 30px 0;
-}
-
-.form-control {
-  width: auto;
 }
 
 .forgottenPass {
@@ -612,10 +597,6 @@
 
 .bi-search {
   color: white;
-}
-
-.filterButton {
-  background-color: rgb(127, 161, 195);
 }
 
 .dateControl::-moz-placeholder {
@@ -1179,11 +1160,69 @@ button.add-collaborator {
 }
 
 .collabInfo {
+  padding: 1rem 0 0 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(127, 161, 195);
+  color: #ffffff;
 }
 
-.collabInfo i {
-  color: #ffffff;
+.btn_delete {
+  margin: 3rem 0 0 0;
+}
+
+.table-taches {
+  border-collapse: separate;
+  border-spacing: 0px;
+}
+.table-taches th {
+  color: rgb(100, 130, 173);
+  background-color: white;
+  border: 0;
+}
+.table-taches th:first-child {
+  border-top-left-radius: 10px;
+}
+.table-taches th:last-child {
+  border-top-right-radius: 10px;
+}
+.table-taches td {
+  background-color: rgb(127, 161, 195);
+  color: white;
+  font-weight: 700;
+}
+.table-taches td:first-child {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+.table-taches td:last-child {
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+}
+.table-taches tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+.table-taches tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.pieChart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 27rem;
+}
+
+.btn_voirTache {
+  background-color: rgb(127, 161, 195);
+  color: white;
+}
+.btn_voirTache:hover {
+  color: white;
+  background-color: rgb(95, 147, 196);
 }
 
 .collab-diagram {

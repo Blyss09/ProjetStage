@@ -14,7 +14,7 @@
 <body class="page"> 
     <div class="container-fluid row p-4 m-0">
             <!-- Sidebar -->
-            <sidebar class="sidebar rounded-3 col col-sm-3 col-md-4 col-lg-3 px-5 pt-5 align-items-center">
+            <sidebar class="sidebar rounded-3 col-1 col-sm-1 col-md-4 col-lg-3 px-5 pt-5 align-items-center">
                 <div class="admin rounded-4 d-flex justify-content-center text-center p-1">
                     <div class="user__icon me-3">
                         <i class="bi bi-person-circle"></i>
@@ -47,7 +47,7 @@
                         <ul class="nav nav__ul row mt-4 p-0">
                             <li class="nav-item">
                                 <div class="d-flex align-items-center">
-                                    <a class="nav-link ms-4 px-0" aria-current="page" href="adminEnv.html">Projets</a>
+                                    <a class="nav-link ms-4 px-0" aria-current="page" href="./adminEnv.html">Projets</a>
                                     <span class="img_arrow">
                                         <i class="bi bi-chevron-right h4"></i>
                                     </span>
@@ -55,7 +55,7 @@
                             </li>
                             <li class="nav-item">
                                 <div class="d-flex align-items-center">
-                                    <a class="nav-link ms-4 px-0" aria-current="page" href="adminTasks.html">Mes tâches</a>
+                                    <a class="nav-link ms-4 px-0" aria-current="page" href="./adminTasks.html">Mes tâches</a>
                                     <span class="img_arrow">
                                         <i class="bi bi-chevron-right h4"></i>
                                     </span>
@@ -63,7 +63,7 @@
                             </li>
                             <li class="nav-item">
                                 <div class="d-flex align-items-center">
-                                    <a class="nav-link ms-4 px-0" aria-current="page" href="statistiqueProjet.html">Statistiques projets</a>
+                                    <a class="nav-link ms-4 px-0" aria-current="page" href="./statistiqueProjet.html">Statistiques projets</a>
                                     <span class="img_arrow">
                                         <i class="bi bi-chevron-right h4"></i>
                                     </span>
@@ -79,7 +79,7 @@
                             </li>
                             <li class="nav-item">
                                 <div class="d-flex align-items-center">
-                                    <a class="nav-link ms-4 px-0" aria-current="page" href="StatCollab.html">Statistiques collaborateurs</a>
+                                    <a class="nav-link ms-4 px-0" aria-current="page" href="./StatCollab.html">Statistiques collaborateurs</a>
                                     <span class="img_arrow">
                                         <i class="bi bi-chevron-right h4"></i>
                                     </span>
@@ -87,7 +87,7 @@
                             </li>
                             <li class="nav-item">
                                 <div class="d-flex align-items-center">
-                                    <a class="nav-link ms-4 px-0" aria-current="page" href="traçabilitéScreen.html">Trançabilité</a>
+                                    <a class="nav-link ms-4 px-0" aria-current="page" href="./traçabilitéScreen.html">Trançabilité</a>
                                     <span class="img_arrow">
                                         <i class="bi bi-chevron-right h4"></i>
                                     </span>
@@ -95,7 +95,7 @@
                             </li>
                             <li class="nav-item">
                                 <div class="d-flex align-items-center">
-                                    <a class="nav-link active ms-4 px-0" aria-current="page" href="paramScreen.html">Paramètres</a>
+                                    <a class="nav-link active ms-4 px-0" aria-current="page" href="./paramScreen.html">Paramètres</a>
                                     <span class="img_arrow">
                                         <i class="bi bi-chevron-right h4"></i>
                                     </span>
@@ -113,25 +113,26 @@
                     </div>
                 </nav>
             </sidebar>
-            <main class="container main col-9 col-sm-9 col-md-8 col-lg-9">
-                <div class="notif__bar d-flex justify-content-end rounded-2">
+            <div class="col-11 col-md-8 col-lg-9">
+                <header class="header col">
+                    <div class="notif__bar d-flex justify-content-end rounded-2">
                         <div class="dropdown">
                             <button class="btn dropdown-toggle position-relative bell" type="button" id="notificationBell"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                        
+                
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bell"
                                     viewBox="0 0 16 16">
                                     <path
                                         d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.104-14a5.02 5.02 0 0 1 4.002 2.5c.262.415.495.885.66 1.398.17.527.234 1.08.234 1.602v2.011l.77 2.707a1 1 0 0 1-.97 1.282H3.201a1 1 0 0 1-.97-1.282l.77-2.707V7.5c0-.522.064-1.075.234-1.602.165-.513.398-.983.66-1.398A5.02 5.02 0 0 1 7.896 2zM8 1a6 6 0 0 0-6 6v2.086l-.97 3.423A2 2 0 0 0 3.2 15h9.6a2 2 0 0 0 1.937-2.491L13.77 9.086V7a6 6 0 0 0-5.77-6z" />
                                 </svg>
-                        
+                
                                 <span id="notificationCount"
                                     class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                     3
                                     <span class="visually-hidden">Messages non lus</span>
                                 </span>
                             </button>
-                        
+                
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li>
                                     <h6 class="dropdown-header">Notifications</h6>
@@ -145,276 +146,273 @@
                                 <li><a class="dropdown-item text-center" href="#">Voir toutes les notifications</a></li>
                             </ul>
                         </div>
-                </div>
-                <div class="row search__body mt-5 pb-5 mx-0 align-items-center">
-                    <h5 class="col-4 col-md-7 title__text p-0">Paramètres</h5>
-                    <div class="col search__items d-flex justify-content-center p-0">
-                        <div class="input-group search-bar flex-fill">
-                            <span class="input-group-text">
-                                <i class="bi bi-search"></i>
-                            </span>
-                            <input type="text" class="form-control" placeholder="Rechercher...">
-                        </div>
-                        <button class="btn btn-custom">Rechercher</button>
                     </div>
-                </div>
-                <div class="params row mt-5">
-                    <div class="col col-xl-4 mb-2">
-                        <div class="card card-param">
-                            <div class="card-head">
-                                <h5 class="card-title text-center title-card">Liste des postes</h5>
+                    <div class="row search__body mt-5 pb-5 mx-0 align-items-center">
+                        <h5 class="col col-md-7 title__text p-0">Paramètres</h5>
+                        <div class="col search__items d-flex justify-content-center p-0">
+                            <div class="input-group search-bar flex-fill">
+                                <span class="input-group-text">
+                                    <i class="bi bi-search"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Rechercher...">
                             </div>
-                            <div class="card-body projectBackground">
-                                <div class="d-flex justify-content-between align-items-center card-text border border-light">
-                                    <span>Chef de projet</span>
-                                        <div>
-                                            <i class="bi bi-pen-fill"></i>
-                                            <i class="bi bi-trash-fill"></i>
-                                        </div>
-                                      </div>
-                                <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
-                                    <span>Système admin</span>
-                                        <div>
-                                            <i class="bi bi-pen-fill"></i>
-                                            <i class="bi bi-trash-fill"></i>
-                                        </div>
-                                      </div>
-                                <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
-                                    <span>Développeur</span>
-                                        <div>
-                                            <i class="bi bi-pen-fill"></i>
-                                            <i class="bi bi-trash-fill"></i>
-                                        </div>
-                                      </div>
-                                <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
-                                    <span>Testeur</span>
-                                        <div>
-                                            <i class="bi bi-pen-fill"></i>
-                                            <i class="bi bi-trash-fill"></i>
-                                        </div>
-                                      </div>
-                                <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
-                                    <span>Stager</span>
-                                        <div>
-                                            <i class="bi bi-pen-fill"></i>
-                                            <i class="bi bi-trash-fill"></i>
-                                        </div>
-                                      </div>
-                                <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
-                                    <span>Project management</span>
-                                        <div>
-                                            <i class="bi bi-pen-fill"></i>
-                                            <i class="bi bi-trash-fill"></i>
-                                        </div>
-                                      </div>
-                                <div class="d-flex justify-content-end position-absolute bottom-0 end-0 p-2">
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#modal_post" class="btn btn-sm projectButton border border-light button-text ">
-                                        <i class="bi bi-plus button-icon"></i> 
-                                        Ajouter un poste
-                                    </button>
-                                    <div class="modal fade" id="modal_post" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                          <div class="modal-content modalContent">
-                                            <div class="modal-header">
-                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <label class="fs-5 mb-2">Ajouter un poste :</label> 
-                                                <input type="text" class="w-100 form-control rounded" id="floatingInput" placeholder="Intitulé du poste">
-                                                <label class="fs-5 mb-2">Technologies utilisées :</label>
-                                                <select class="form-select rounded" id="floatingSelect">
-                                                    <option value="0" selected>Web</option>
-                                                    <option value="1">Mobile</option>
-                                                    <option value="2">Java</option>
-                                                    <option value="3">Autre</option>
-                                                </select>
-                                            </div>
-                                            <div class="modal-footer">
-                                              <button type="button" class="btn modal_exit" data-bs-dismiss="modal">Fermer</button>
-                                              <button type="button" class="btn modal_confirm">Confirmer</button>
+                            <button class="btn btn-custom">Rechercher</button>
+                        </div>
+                    </div>
+                </header>
+                <main class="col">
+                    <div class="params row mt-5">
+                        <div class="col col-xl-4 mb-2">
+                            <div class="card card-param">
+                                <div class="card-head">
+                                    <h5 class="card-title text-center title-card">Liste des postes</h5>
+                                </div>
+                                <div class="card-body projectBackground">
+                                    <div class="d-flex justify-content-between align-items-center card-text border border-light">
+                                        <span>Chef de projet</span>
+                                            <div>
+                                                <i class="bi bi-pen-fill"></i>
+                                                <i class="bi bi-trash-fill"></i>
                                             </div>
                                           </div>
-                                        </div>
-                                      </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col col-xl-4 mb-2">
-                        <div class="card card-param">
-                            <div class="card-head">
-                                <h5 class="card-title text-center title-card">Liste des technologies</h5>
-                            </div>
-                            <div class="card-body projectBackground">
-                                <div class="d-flex justify-content-between align-items-center card-text border border-light">
-                                    <span>Web</span>
-                                        <div>
-                                            <i class="bi bi-pen-fill"></i>
-                                            <i class="bi bi-trash-fill"></i>
-                                        </div>
-                                      </div>
-                                <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
-                                    <span>Mobile</span>
-                                        <div>
-                                            <i class="bi bi-pen-fill"></i>
-                                            <i class="bi bi-trash-fill"></i>
-                                        </div>
-                                      </div>
-                                <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
-                                    <span>Java</span>
-                                        <div>
-                                            <i class="bi bi-pen-fill"></i>
-                                            <i class="bi bi-trash-fill"></i>
-                                        </div>
-                                      </div>
-                                <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
-                                    <span>React</span>
-                                        <div>
-                                            <i class="bi bi-pen-fill"></i>
-                                            <i class="bi bi-trash-fill"></i>
-                                        </div>
-                                      </div>
-                                <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
-                                    <span>PHP</span>
-                                        <div>
-                                            <i class="bi bi-pen-fill"></i>
-                                            <i class="bi bi-trash-fill"></i>
-                                        </div>
-                                      </div>
-                                <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
-                                    <span>Jquery</span>
-                                        <div>
-                                            <i class="bi bi-pen-fill"></i>
-                                            <i class="bi bi-trash-fill"></i>
-                                        </div>
-                                      </div>
-                                <div class="d-flex justify-content-end position-absolute bottom-0 end-0 p-2">
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#modal_techno" class="btn btn-sm projectButton border border-light button-text ">
-                                        <i class="bi bi-plus button-icon"></i> 
-                                        Ajouter une technologie
-                                    </button>
-                                    <div class="modal fade" id="modal_techno" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                          <div class="modal-content modalContent">
-                                            <div class="modal-header">
-                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <label class="fs-5 mb-2">Ajouter une technologie :</label> 
-                                                <input type="text" class="w-100 form-control rounded" id="floatingInput" placeholder="Technologie voulu ...">
-                                            </div>
-                                            <div class="modal-footer">
-                                              <button type="button" class="btn modal_exit" data-bs-dismiss="modal">Fermer</button>
-                                              <button type="button" class="btn modal_confirm">Confirmer</button>
+                                    <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
+                                        <span>Système admin</span>
+                                            <div>
+                                                <i class="bi bi-pen-fill"></i>
+                                                <i class="bi bi-trash-fill"></i>
                                             </div>
                                           </div>
-                                        </div>
-                                      </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col col-xl-4 mb-2">
-                        <div class="card card-param">
-                            <div class="card-head">
-                                <h5 class="card-title text-center title-card">Liste des rôles</h5>
-                            </div>
-                            <div class="card-body projectBackground">
-                                <div class="d-flex justify-content-between align-items-center card-text border border-light">
-                                    <span>Gestionnaire de projet</span>
-                                        <div>
-                                            <i class="bi bi-pen-fill"></i>
-                                            <i class="bi bi-trash-fill"></i>
-                                        </div>
-                                      </div>
-                                <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
-                                    <span>Lead développeur</span>
-                                        <div>
-                                            <i class="bi bi-pen-fill"></i>
-                                            <i class="bi bi-trash-fill"></i>
-                                        </div>
-                                      </div>
-                                <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
-                                    <span>Analyste</span>
-                                        <div>
-                                            <i class="bi bi-pen-fill"></i>
-                                            <i class="bi bi-trash-fill"></i>
-                                        </div>
-                                      </div>
-                                <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
-                                    <span>Designer</span>
-                                        <div>
-                                            <i class="bi bi-pen-fill"></i>
-                                            <i class="bi bi-trash-fill"></i>
-                                        </div>
-                                      </div>
-                                <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
-                                    <span>Dev ops</span>
-                                        <div>
-                                            <i class="bi bi-pen-fill"></i>
-                                            <i class="bi bi-trash-fill"></i>
-                                        </div>
-                                      </div>
-                                <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
-                                    <span>Scrum Master</span>
-                                        <div>
-                                            <i class="bi bi-pen-fill"></i>
-                                            <i class="bi bi-trash-fill"></i>
-                                        </div>
-                                      </div>
-                                <div class="d-flex justify-content-end position-absolute bottom-0 end-0 p-2">
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#modal_role" class="btn btn-sm projectButton border border-light button-text ">
-                                        <i class="bi bi-plus button-icon"></i> 
-                                        Ajouter un rôle
-                                    </button>
-                                    <div class="modal fade" id="modal_role" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                          <div class="modal-content modalContent">
-                                            <div class="modal-header">
-                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
+                                        <span>Développeur</span>
+                                            <div>
+                                                <i class="bi bi-pen-fill"></i>
+                                                <i class="bi bi-trash-fill"></i>
                                             </div>
-                                            <div class="modal-body">
-                                                <label class="fs-5 mb-2">Ajouter un rôle :</label> 
+                                          </div>
+                                    <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
+                                        <span>Testeur</span>
+                                            <div>
+                                                <i class="bi bi-pen-fill"></i>
+                                                <i class="bi bi-trash-fill"></i>
+                                            </div>
+                                          </div>
+                                    <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
+                                        <span>Stager</span>
+                                            <div>
+                                                <i class="bi bi-pen-fill"></i>
+                                                <i class="bi bi-trash-fill"></i>
+                                            </div>
+                                          </div>
+                                    <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
+                                        <span>Project management</span>
+                                            <div>
+                                                <i class="bi bi-pen-fill"></i>
+                                                <i class="bi bi-trash-fill"></i>
+                                            </div>
+                                          </div>
+                                    <div class="d-flex justify-content-end position-absolute bottom-0 end-0 p-2">
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#modal_post" class="btn btn-sm projectButton border border-light button-text ">
+                                            <i class="bi bi-plus button-icon"></i> 
+                                            Ajouter un poste
+                                        </button>
+                                        <div class="modal fade" id="modal_post" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                              <div class="modal-content modalContent">
+                                                <div class="modal-header">
+                                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <label class="fs-5 mb-2">Ajouter un poste :</label> 
+                                                    <input type="text" class="w-100 form-control rounded" id="floatingInput" placeholder="Intitulé du poste">
+                                                    <label class="fs-5 mb-2">Technologies utilisées :</label>
                                                     <select class="form-select rounded" id="floatingSelect">
-                                                        <option value="1">Gestionnaire de projet</option>
-                                                        <option value="2">Lead développeur</option>
-                                                        <option value="3">Analyste</option>
-                                                        <option value="4">Designer</option>
-                                                        <option value="5">Dev ops</option>
-                                                        <option value="6">Scrum Master</option>
+                                                        <option value="0" selected>Web</option>
+                                                        <option value="1">Mobile</option>
+                                                        <option value="2">Java</option>
+                                                        <option value="3">Autre</option>
                                                     </select>
-                                                    <label class="fs-5 mb-2">Modules affectés :</label> 
-                                                        <select class="form-select rounded" id="floatingSelect">
-                                                            <option value="0" selected>Projet</option>
-                                                            <option value="1">Mes tâches</option>
-                                                            <option value="2">Statistiques collaborateurs</option>
-                                                            <option value="3">Statistiques projets</option>
-                                                            <option value="4">Collaborateurs</option>
-                                                            <option value="5">Traçabilité</option>
-                                                            <option value="6">Paramètres</option>
-                                                        </select>
-                                            </div>
-                                            <div class="modal-footer">
-                                              <button type="button" class="btn modal_exit" data-bs-dismiss="modal">Fermer</button>
-                                              <button type="button" class="btn modal_confirm">Confirmer</button>
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn modal_exit" data-bs-dismiss="modal">Fermer</button>
+                                                  <button type="button" class="btn modal_confirm">Confirmer</button>
+                                                </div>
+                                              </div>
                                             </div>
                                           </div>
-                                        </div>
-                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col col-xl-4 mb-2">
+                            <div class="card card-param">
+                                <div class="card-head">
+                                    <h5 class="card-title text-center title-card">Liste des technologies</h5>
+                                </div>
+                                <div class="card-body projectBackground">
+                                    <div class="d-flex justify-content-between align-items-center card-text border border-light">
+                                        <span>Web</span>
+                                            <div>
+                                                <i class="bi bi-pen-fill"></i>
+                                                <i class="bi bi-trash-fill"></i>
+                                            </div>
+                                          </div>
+                                    <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
+                                        <span>Mobile</span>
+                                            <div>
+                                                <i class="bi bi-pen-fill"></i>
+                                                <i class="bi bi-trash-fill"></i>
+                                            </div>
+                                          </div>
+                                    <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
+                                        <span>Java</span>
+                                            <div>
+                                                <i class="bi bi-pen-fill"></i>
+                                                <i class="bi bi-trash-fill"></i>
+                                            </div>
+                                          </div>
+                                    <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
+                                        <span>React</span>
+                                            <div>
+                                                <i class="bi bi-pen-fill"></i>
+                                                <i class="bi bi-trash-fill"></i>
+                                            </div>
+                                          </div>
+                                    <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
+                                        <span>PHP</span>
+                                            <div>
+                                                <i class="bi bi-pen-fill"></i>
+                                                <i class="bi bi-trash-fill"></i>
+                                            </div>
+                                          </div>
+                                    <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
+                                        <span>Jquery</span>
+                                            <div>
+                                                <i class="bi bi-pen-fill"></i>
+                                                <i class="bi bi-trash-fill"></i>
+                                            </div>
+                                          </div>
+                                    <div class="d-flex justify-content-end position-absolute bottom-0 end-0 p-2">
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#modal_techno" class="btn btn-sm projectButton border border-light button-text ">
+                                            <i class="bi bi-plus button-icon"></i> 
+                                            Ajouter une technologie
+                                        </button>
+                                        <div class="modal fade" id="modal_techno" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                              <div class="modal-content modalContent">
+                                                <div class="modal-header">
+                                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <label class="fs-5 mb-2">Ajouter une technologie :</label> 
+                                                    <input type="text" class="w-100 form-control rounded" id="floatingInput" placeholder="Technologie voulu ...">
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn modal_exit" data-bs-dismiss="modal">Fermer</button>
+                                                  <button type="button" class="btn modal_confirm">Confirmer</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col col-xl-4 mb-2">
+                            <div class="card card-param">
+                                <div class="card-head">
+                                    <h5 class="card-title text-center title-card">Liste des rôles</h5>
+                                </div>
+                                <div class="card-body projectBackground">
+                                    <div class="d-flex justify-content-between align-items-center card-text border border-light">
+                                        <span>Gestionnaire de projet</span>
+                                            <div>
+                                                <i class="bi bi-pen-fill"></i>
+                                                <i class="bi bi-trash-fill"></i>
+                                            </div>
+                                          </div>
+                                    <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
+                                        <span>Lead développeur</span>
+                                            <div>
+                                                <i class="bi bi-pen-fill"></i>
+                                                <i class="bi bi-trash-fill"></i>
+                                            </div>
+                                          </div>
+                                    <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
+                                        <span>Analyste</span>
+                                            <div>
+                                                <i class="bi bi-pen-fill"></i>
+                                                <i class="bi bi-trash-fill"></i>
+                                            </div>
+                                          </div>
+                                    <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
+                                        <span>Designer</span>
+                                            <div>
+                                                <i class="bi bi-pen-fill"></i>
+                                                <i class="bi bi-trash-fill"></i>
+                                            </div>
+                                          </div>
+                                    <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
+                                        <span>Dev ops</span>
+                                            <div>
+                                                <i class="bi bi-pen-fill"></i>
+                                                <i class="bi bi-trash-fill"></i>
+                                            </div>
+                                          </div>
+                                    <div class="d-flex justify-content-between align-items-center card-text border border-light mt-3">
+                                        <span>Scrum Master</span>
+                                            <div>
+                                                <i class="bi bi-pen-fill"></i>
+                                                <i class="bi bi-trash-fill"></i>
+                                            </div>
+                                          </div>
+                                    <div class="d-flex justify-content-end position-absolute bottom-0 end-0 p-2">
+                                        <button type="button" data-bs-toggle="modal" data-bs-target="#modal_role" class="btn btn-sm projectButton border border-light button-text ">
+                                            <i class="bi bi-plus button-icon"></i> 
+                                            Ajouter un rôle
+                                        </button>
+                                        <div class="modal fade" id="modal_role" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                              <div class="modal-content modalContent">
+                                                <div class="modal-header">
+                                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <label class="fs-5 mb-2">Ajouter un rôle :</label> 
+                                                        <select class="form-select rounded" id="floatingSelect">
+                                                            <option value="1">Gestionnaire de projet</option>
+                                                            <option value="2">Lead développeur</option>
+                                                            <option value="3">Analyste</option>
+                                                            <option value="4">Designer</option>
+                                                            <option value="5">Dev ops</option>
+                                                            <option value="6">Scrum Master</option>
+                                                        </select>
+                                                        <label class="fs-5 mb-2">Modules affectés :</label> 
+                                                            <select class="form-select rounded" id="floatingSelect">
+                                                                <option value="0" selected>Projet</option>
+                                                                <option value="1">Mes tâches</option>
+                                                                <option value="2">Statistiques collaborateurs</option>
+                                                                <option value="3">Statistiques projets</option>
+                                                                <option value="4">Collaborateurs</option>
+                                                                <option value="5">Traçabilité</option>
+                                                                <option value="6">Paramètres</option>
+                                                            </select>
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn modal_exit" data-bs-dismiss="modal">Fermer</button>
+                                                  <button type="button" class="btn modal_confirm">Confirmer</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </main>
-
-            <!-- Contenu de la page -->
-            <!-- <main class="main col-9 d-flex justify-content-center align-items-center mt-5 mx-5">
-                Conteneur pour les cartes -->
-               
-            <!-- </main> -->
+                </main>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

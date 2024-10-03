@@ -22,7 +22,7 @@ $rowCollor: rgba(127, 161, 195);
 }
 
 .filterButton {
-  background-color: $pageBackground;
+  background-color: $sideBar;
 }
 
 .dateControl::placeholder {
@@ -77,7 +77,6 @@ $rowCollor: rgba(127, 161, 195);
   
   }
   .midtable {
-
     border: white solid 1px;
     border-radius: 12px!important;
     caption-side: bottom;
@@ -96,46 +95,46 @@ $rowCollor: rgba(127, 161, 195);
 
 }
 
-@media (max-width: 992px) {
+// @media (max-width: 992px) {
 
-  .sidebar .user__name,
-  .sidebar .user__role {
-    font-size: 14px !important;
-  }
+//   .sidebar .user__name,
+//   .sidebar .user__role {
+//     font-size: 14px !important;
+//   }
 
-  .btn_newproj {
-    font-size: 14px !important;
-    padding: 10px !important;
-  }
+//   .btn_newproj {
+//     font-size: 14px !important;
+//     padding: 10px !important;
+//   }
 
-  .newProjectCard {
+//   .newProjectCard {
 
-    position: relative !important;
+//     position: relative !important;
 
-    width: 600px !important;
-    left: 4% !important;
-    max-width: 95vw !important;
+//     width: 600px !important;
+//     left: 4% !important;
+//     max-width: 95vw !important;
 
 
 
-  }
+//   }
 
-  .step-container {
+//   .step-container {
 
-    display: none !important;
-  }
-  .midtable {
+//     display: none !important;
+//   }
+//   .midtable {
 
-    border: white solid 1px;
-    border-radius: 12px!important;
-    caption-side: bottom;
-      border-collapse:collapse!important;
-      margin-left: auto!important;
-      margin-top: 1rem!important;
+//     border: white solid 1px;
+//     border-radius: 12px!important;
+//     caption-side: bottom;
+//       border-collapse:collapse!important;
+//       margin-left: auto!important;
+//       margin-top: 1rem!important;
     
-  }
+//   }
 
-}
+// }
 
 @media (max-width: 768px) {
   .midtable {
@@ -191,11 +190,6 @@ $rowCollor: rgba(127, 161, 195);
     }
   }
 
-  .collab {
-    margin-left: 7rem !important;
-
-  }
-
   .user__icon i {
     font-size: 1.9rem !important;
   }
@@ -208,7 +202,7 @@ $rowCollor: rgba(127, 161, 195);
   .navbar-collapse {
     position: fixed;
     top: 50px;
-    right: 10rem;
+    right: 20rem;
     background-color: rgb(23, 81, 87);
     margin-top: 0.5rem !important;
     z-index: 100 !important;
@@ -223,8 +217,9 @@ $rowCollor: rgba(127, 161, 195);
 
   .btn_newproj {
     // margin: 0 0 !important;
-    width: 11rem !important;
-    height: 2.3rem !important;
+    width: 13rem !important;
+    height: 2.8rem !important;
+    font-size: 15px;
   }
 
   .newproj__content {
@@ -258,7 +253,7 @@ $rowCollor: rgba(127, 161, 195);
   }
 
   .notif__bar {
-    margin: 0 !important;
+    margin: 0 -1rem 0 0!important;
     background-color: transparent !important;
     flex-direction: column !important;
     align-items: flex-end !important;
@@ -272,7 +267,7 @@ $rowCollor: rgba(127, 161, 195);
     align-items: center !important;
     padding-bottom: 0 !important;
     margin-top: 1rem !important;
-    margin-left: -5rem !important;
+    // margin-left: -5rem !important;
     margin-right: 0rem !important;
     border-bottom: 0 !important;
 
@@ -303,29 +298,34 @@ $rowCollor: rgba(127, 161, 195);
   }
 
   .filter__section {
-    margin-left: -7.3rem;
+    // margin-left: -7.3rem;
 
     .sp {
       width: 0 !important;
     }
 
-    .col-2 {
-      margin: 0 4.2rem 0 3rem;
-    }
+    // .col-2 {
+    //   margin: 0 4.2rem 0 3rem;
+    // }
 
     .filterButton {
-      margin-left: 1.6rem;
-      height: 1.6rem;
+      margin: 0 4.2rem 0 3rem !important;
+      // margin-left: 1.6rem;
+      height: 1.7rem;
       line-height: 0rem !important;
     }
 
     .dateControl {
-      margin-left: 1.5rem;
-      width: 7rem !important;
-      height: 1.5rem;
+      // margin: 0 1rem 0 10rem !important;
+      width: 7rem;
+      height: 1.8rem;
+
+      &#startDate {
+        margin-left: 5rem;
+      }
 
       &#endDate {
-        margin-left: 3rem;
+        margin-left: 8rem;
       }
     }
   }
@@ -335,12 +335,12 @@ $rowCollor: rgba(127, 161, 195);
   }
 
   .upper_table {
-    margin: 2rem 0 -0.5rem -5.6rem !important;
+    margin: 2rem 2rem -0.5rem 0 !important;
     color: white;
   }
 
   .table_resp_pos {
-    margin-left: -6rem !important;
+    margin-left: -1rem !important;
     border-top: none !important;
   }
 
@@ -352,7 +352,7 @@ $rowCollor: rgba(127, 161, 195);
   }
 
   .pagination {
-    margin: 1rem 5rem 0 0 !important;
+    // margin: 1rem 5rem 0 0 !important;
   }
 
   .params {
@@ -372,7 +372,7 @@ $rowCollor: rgba(127, 161, 195);
 
   .card-param {
     position: relative;
-    right: 2.5rem;
+    // right: 2.5rem;
     width: 600px !important;
   }
 
@@ -409,8 +409,11 @@ $rowCollor: rgba(127, 161, 195);
 
   .diag {
     // margin-right: -10rem !important;
-    margin-left: -2rem !important;
+    // margin-left: -2rem !important;
     overflow: scroll;
+  }
+  .btn_delete{
+    margin-top: 5rem !important;
   }
 
 
@@ -453,6 +456,37 @@ $rowCollor: rgba(127, 161, 195);
     }
   }
 }
+@media (max-width: 450px){
+  .navbar-collapse {
+    position: fixed;
+    top: 50px;
+    right: 10rem;
+  }
+  .btn_delete {
+    margin-top: 1rem !important;
+  }
+  
+  .filterButton {
+    margin: 0 4.2rem 0 3rem !important;
+    // margin-left: 1.6rem;
+    height: 1.8rem !important;
+    line-height: 0rem !important;
+  }
+
+  .dateControl {
+    // margin: 0 1rem 0 10rem !important;
+    width: 5.5rem !important;
+    height: 1.8rem;
+
+    &#startDate {
+      margin-left: 5.8rem !important;
+    }
+
+    &#endDate {
+      margin-left: 8rem;
+    }
+  }
+}
 // Scrollbar responsive mode (bonus) delete if it makes issues
 
 //Page de connexion
@@ -466,7 +500,7 @@ $rowCollor: rgba(127, 161, 195);
 }
 
 .form-control {
-  width: auto;
+  // width: auto;
 }
 
 .forgottenPass {
@@ -717,8 +751,15 @@ $rowCollor: rgba(127, 161, 195);
   color: white;
 }
 
-.filterButton {
-  background-color: $sideBar;
+
+.dateControl {
+  // margin-left: 1.5rem;
+  // width: 7rem !important;
+  // height: 1.5rem;
+
+  &#endDate {
+    // margin-left: 3rem;
+  }
 }
 
 .dateControl::-moz-placeholder {
@@ -1334,12 +1375,82 @@ button.add-collaborator {
 //Page détail collab
 
 .collabInfo{
+  padding: 1rem 0 0 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
   background-color: $sideBar;
-}
-.collabInfo i{
   color: #ffffff;
 }
 
+.btn_delete {
+  margin: 3rem 0 0 0;
+}
+.table-taches {
+  border-collapse: separate;
+  border-spacing: 0px;
+  th {
+    color: $pageBackground;
+    background-color: white;
+    border: 0;
+
+    &:first-child {
+      border-top-left-radius: 10px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 10px;
+    }
+  }
+
+  td {
+    background-color: $rowCollor;
+    color: white;
+    font-weight: 700;
+
+    &:first-child {
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+    }
+
+    &:last-child {
+      border-right: 1px solid white;
+      border-left: 1px solid white;
+    }
+  }
+
+  tr {
+    &:last-child {
+
+      td {
+        &:first-child {
+          border-bottom-left-radius: 10px;
+        }
+
+        &:last-child {
+          border-bottom-right-radius: 10px;
+        }
+      }
+    }
+  }
+}
+.pieChart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 27rem;
+}
+.btn_voirTache{
+  background-color: $sideBar;
+  color: white;
+  
+  &:hover{
+    color: white;
+    background-color: rgb(95, 147, 196);
+  }
+}
 .collab-diagram{
   background-color: $sideBar;
   color : white;
