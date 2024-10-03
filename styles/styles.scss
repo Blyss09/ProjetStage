@@ -1308,3 +1308,25 @@ button.add-collaborator {
   border-radius: 20px;
   background-color: green;
 }
+
+//Page détail collab
+
+.collabInfo{
+  background-color: $sideBar;
+}
+.collabInfo i{
+  color: #ffffff;
+}
+
+.collab-diagram{
+  background-color: $sideBar;
+  color : white;
+}
+
+.collab-diagram h2 {
+  color: #ffffff;
+}
+
+.bottomTab{
+  background-color: $sideBar;
+}

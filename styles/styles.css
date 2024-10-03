@@ -1153,4 +1153,25 @@ button.add-collaborator {
   padding: 5px;
   border-radius: 20px;
   background-color: green;
+}
+
+.collabInfo {
+  background-color: rgb(127, 161, 195);
+}
+
+.collabInfo i {
+  color: #ffffff;
+}
+
+.collab-diagram {
+  background-color: rgb(127, 161, 195);
+  color: white;
+}
+
+.collab-diagram h2 {
+  color: #ffffff;
+}
+
+.bottomTab {
+  background-color: rgb(127, 161, 195);
 }/*# sourceMappingURL=styles.css.map */

@@ -165,7 +165,7 @@
                 </div>
             </div>
             <div class="row search__body mt-5 pb-5 mx-0 align-items-center">
-                <h5 class="col-4 col-md-7 title__text p-0">Détails collaborateur</h5>
+                <h5 class="col-2 col-md-7 title__text p-0">Détails collaborateur</h5>
                 <div class="col search__items d-flex justify-content-center p-0">
                     <div class="input-group search-bar flex-fill">
                         <span class="input-group-text">
@@ -176,59 +176,64 @@
                     <button class="btn btn-custom">Rechercher</button>
                 </div>
             </div>
-            <div class="params-collab container">
+            <div class="container-fluid params-collab mt-5 h-100">
                 <div class="row">
-                    <div class="col">
-                        <div class="container mt-5">
-                            <div class="card card-collab mx-auto">
-                                <div class="card-body text-center">
-                                    <i class="fa-regular fa-user fa-2xl" style="color: #ffffff;"></i>
-                                    <br><br>
-                                    <p class="card-text"><span class="bold">Nom</span>: John</p>
-                                    <p class="card-text"><span class="bold">Prénom</span>: Doe</p>
-                                    <p class="card-text"><span class="bold">Email</span> : exemple@email.com</p>
-                                    <p class="card-text"><span class="bold">Rôle</span>: Collaborateur</p>
-                                    <p class="card-text"><span class="bold">Poste</span>: Devellopeur</p>
-                                </div>
+                    <!-- Card des informations du collaborateur -->
+                    <div class="col-12 col-md-4 mb-3">
+                        <div class="card card-collab w-100 mx-auto h-100">
+                            <div class="card-body text-center collabInfo ">
+                                <i class="fa-regular fa-user fa-2xl"></i>
+                                <br><br>
+                                <p class="card-text"><span class="bold">Nom</span>: John</p>
+                                <p class="card-text"><span class="bold">Prénom</span>: Doe</p>
+                                <p class="card-text"><span class="bold">Email</span> : exemple@email.com</p>
+                                <p class="card-text"><span class="bold">Rôle</span>: Collaborateur</p>
+                                <p class="card-text"><span class="bold">Poste</span>: Développeur</p>
+                                <button class="btn btn-danger position-absolute bottom-0 mb-5">Supprimer le collaborateur</button>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="container mt-2">
-                            <h2 class="text-center card-collab" style="color: #ffffff;">Nombre de projets</h2>
-                            <div class="card card-collab">
-                                <div class="card-body collab-diagramme">
-                                    <canvas id="pieChart"></canvas> <!-- Conteneur du diagramme circulaire -->
+            
+                    <!-- Div englobante pour les cartes graphique et tableau -->
+                    <div class="col-12 col-md-8 mb-3">
+                        <div class="d-flex flex-column h-100">
+                            <!-- Card graphique en haut à droite -->
+                            <div class="card card-collab mb-3 flex-grow-1">
+                                <div class="card-body collab-diagram">
+                                    <h2 class="text-center">Nombre de projets</h2>
+                                    <!-- Conteneur du diagramme circulaire -->
+                                    <canvas id="pieChart"></canvas> 
+                                </div>
+                            </div>
+                            
+                            <!-- Card tableau en bas à droite -->
+                            <div class="card bottomTab rounded-3 table-responsive">
+                                <table class="responsive midtable border-light text-light w-100">
+                                    <thead>
+                                        <tr class="border border-light row-custom">
+                                            <th class="px-4 border-light border-right border">Nombre de tâches : </th>
+                                            <th class="px-4 border-light border-right border">Tâches en cours : </th>
+                                            <th class="px-4">Tâches en attente : </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-light border">
+                                            <th class="px-4 border-light border-right border">20</th>
+                                            <th class="px-4 border-light border-right border">15</th>
+                                            <th class="px-4">5</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="justify-content-start mt-3">
+                                    <button type="button" href="../adminScreens/adminTasks.html" class="view-collab-tasks text-light rounded-5 responsive">
+                                        Voir les tâches <i class="bi bi-chevron-right"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            
-            
-            <div class="midbar rounded-3 px-5 pt-5 table-responsive">
-            <table class ="responsive midtable border-light text-light">
-                <thead> <tr class="border border-light row-custom ">
-                    <th class="px-4 border-light border-right border">Nombre de taches : </th>
-                    <th class="px-4 border-light border-right border">Taches en cours : </th>
-                    <th class="px-4 ">Taches en attente : </th>
-                </tr>
-                <tbody>
-                    <tr class="border-light border">
-                        <th class="px-4  px-4 border-light border-right border"> 20</th>
-                        <th class="px-4 px-4 border-light border-right border"> 15 </th>
-                        <th class="px-4 "> 5 </th>
-                    </tr>
-                </tbody>
-                </thead>
-            </table>
-            <div class="justify-content-start">
-                <button type="button" href="../adminScreens/adminTasks.html"class="view-collab-tasks text-light rounded-5 responsive">
-                    Voir les taches <i class="bi bi-chevron-right"></i>
-                </button>
-            </div></div>
-        
-        </div>
+            </div>
         </main>
 
     </div>
