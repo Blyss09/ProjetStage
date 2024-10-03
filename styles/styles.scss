@@ -1207,3 +1207,21 @@ button.add-collaborator {
 
   border-collapse: collapse;
 }
+
+.low_progress {
+  padding: 5px;
+  border-radius: 20px;
+  background-color: red;
+}
+
+.mid_progress {
+  padding: 5px;
+  border-radius: 20px;
+  background-color: orange;
+}
+
+.end_progress {
+  padding: 5px;
+  border-radius: 20px;
+  background-color: green;
+}
