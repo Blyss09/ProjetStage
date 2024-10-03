@@ -1197,4 +1197,8 @@ button.add-collaborator {
 
 .bottomTab {
   background-color: rgb(127, 161, 195);
+}
+
+.card-body-collab {
+  background-color: rgb(100, 130, 173);
 }/*# sourceMappingURL=styles.css.map */
