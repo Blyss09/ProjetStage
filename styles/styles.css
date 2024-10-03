@@ -1097,9 +1097,10 @@ button.btn-primary:hover {
 }
 
 button.add-collaborator {
-  background-color: transparent;
+  background-color: rgb(76, 146, 137);
+  border-radius: 10px;
   border: none;
-  padding: 0;
+  padding: 7px;
   color: white;
   font: inherit;
   cursor: pointer;
@@ -1153,6 +1154,33 @@ button.add-collaborator {
   padding: 5px;
   border-radius: 20px;
   background-color: green;
+}
+
+.adding_collab {
+  background-color: rgb(76, 146, 137);
+}
+
+.modalContent {
+  background-color: rgb(127, 161, 195);
+  color: white;
+}
+
+.modal_confirm {
+  background-color: rgb(76, 146, 137);
+  color: white;
+}
+
+.modal_confirm:hover {
+  background-color: rgb(76, 146, 137);
+}
+
+.modal_exit {
+  background-color: rgb(100, 130, 173);
+  color: white;
+}
+
+.modal_exit:hover {
+  background-color: rgb(100, 130, 173);
 }
 
 .collabInfo {

@@ -1246,9 +1246,10 @@ button.btn-primary {
 }
 
 button.add-collaborator {
-  background-color: transparent; 
+  background-color: $searchButton; 
+  border-radius: 10px;
   border: none; 
-  padding: 0; 
+  padding: 7px; 
   color: white; 
   font: inherit; 
   cursor: pointer; 
@@ -1307,6 +1308,33 @@ button.add-collaborator {
   padding: 5px;
   border-radius: 20px;
   background-color: green;
+}
+
+.adding_collab {
+  background-color: $searchButton;
+}
+
+.modalContent {
+  background-color: $sideBar;
+  color: white;
+}
+
+.modal_confirm {
+  background-color: $searchButton;
+  color: white;
+}
+
+.modal_confirm:hover {
+  background-color: $searchButton;
+}
+
+.modal_exit {
+  background-color: $pageBackground;
+  color: white;
+}
+
+.modal_exit:hover {
+  background-color: $pageBackground;
 }
 
 //Page détail collab
