@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.page {
+  background-color: rgb(100, 130, 173);
+}
+
 .bell {
   background-color: rgb(37, 150, 190);
 }
@@ -264,13 +268,8 @@
     scrollbar-color: white rgba(0, 0, 0, 0.1) !important;
   }
 }
-.mainLogIn {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  min-height: 70vh;
-  text-align: center;
+.mainLogIn input {
+  width: 25rem;
 }
 
 .inputLogIn {
@@ -1046,6 +1045,11 @@ button.add-collaborator {
 
 .bold {
   font-weight: bold;
+}
+
+.midbar {
+  background-color: rgb(127, 161, 195);
+  height: 96vh;
 }
 
 .search-bar input {
