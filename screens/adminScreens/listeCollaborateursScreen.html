@@ -178,11 +178,48 @@
                   dataDisplay.append(`<p>${item.name} - ${item.date}</p>`);-->
                 </div>
 
-                <div class="container my-5">
-                    <button class="add-collaborator fs-5 fw-bold">+ Ajouter un collaborateur</button>
+                <div class="container my-3">
+                    <button class="adding_collab add-collaborator fs-5 fw-bold" data-bs-toggle="modal" data-bs-target="#modal_collab">+ Nouveau collaborateur</button>
+                    <div class="modal fade" id="modal_collab" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                          <div class="modal-content modalContent">
+                                            <div class="modal-header modalHeader">
+                                                <h3>Ajouter un collaborateur</h3>
+                                              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <label class="fs-5 mb-2">Nom :</label> 
+                                                <input type="text" class="w-100 form-control rounded" id="floatingInput" placeholder="">
+                                                <label class="fs-5 mb-2">Prénom :</label> 
+                                                <input type="text" class="w-100 form-control rounded" id="floatingInput" placeholder="">
+                                                <label class="fs-5 mb-2">Email :</label> 
+                                                <input type="text" class="w-100 form-control rounded" id="floatingInput" placeholder="">
+                                                <label class="fs-5 mb-2">Poste :</label> 
+                                                    <select class="form-select rounded" id="floatingSelect">
+                                                        <option value="1">Gestionnaire de projet</option>
+                                                        <option value="2">Lead développeur</option>
+                                                        <option value="3">Analyste</option>
+                                                        <option value="4">Designer</option>
+                                                        <option value="5">Dev ops</option>
+                                                        <option value="6">Scrum Master</option>
+                                                    </select>
+                                                <label class="fs-5 mb-2">Rôle :</label>
+                                                <select class="form-select rounded" id="floatingSelect">
+                                                    <option value="0" selected>Administrateur</option>
+                                                    <option value="1">Manager</option>
+                                                    <option value="2">Collaborateur</option>
+                                                </select>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn modal_exit" data-bs-dismiss="modal">Fermer</button>
+                                              <button type="button" class="btn modal_confirm">Confirmer</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
                 </div>
                 <div class="table-responsive table_resp_pos ms-4">
-                    <table class="table proj-table mt-2 text-center">
+                    <table class="table proj-table text-center">
                         <thead>
                         <tr>
                             <th class="align-middle text-center">Nom</th>
