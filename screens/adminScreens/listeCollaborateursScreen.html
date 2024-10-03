@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../../styles/styles.css">
 </head>
 
-<body>
+<body class="page">
     <div class="container-fluid row p-4 m-0">
         <sidebar class="sidebar rounded-3 col col-sm-3 col-md-4 col-lg-3 px-5 pt-5 align-items-center">
             <div class="admin rounded-4 d-flex justify-content-center text-center p-1">
@@ -36,15 +36,17 @@
                         <div class="dashboard__title ms-4 align-self-center">DASHBOARD</div>
                     </div>
                     <div class="newproj__content d-flex justify-content-center my-4">
-                        <button type="button" class="btn btn_newproj text-white px-4 p-0">
-                            <i class="bi bi-plus-square-fill mt-2 mx-3 h4"></i>
-                          Nouveau Projet
-                        </button>
+                        <a href="./newProjectScreen.html">
+                            <button type="button" class="btn btn_newproj text-white px-4 p-0">
+                                <i class="bi bi-plus-square-fill mt-2 mx-3 h4"></i>
+                              Nouveau Projet
+                            </button>
+                        </a>
                     </div>
                     <ul class="nav nav__ul row mt-4 p-0">
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link ms-4 px-0" aria-current="page" href="adminEnv.html">Projets</a>
+                                <a class="nav-link active ms-4 px-0" aria-current="page" href="adminEnv.html">Projets</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -68,7 +70,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link active ms-4 px-0" aria-current="page" href="CollaborateurIndividu.html">Collaborateurs</a>
+                                <a class="nav-link ms-4 px-0" aria-current="page" href="./listeCollaborateursScreen.html">Collaborateurs</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -146,7 +148,7 @@
                         </div>
                 </div>
                 <div class="row search__body mt-5 pb-5 mx-0 align-items-center">
-                    <h5 class="col-4 col-md-7 title__text p-0">Projets</h5>
+                    <h5 class="col-4 col-md-7 title__text p-0">Liste des collaborateurs</h5>
                     <div class="col search__items d-flex justify-content-center p-0">
                         <div class="input-group search-bar flex-fill">
                             <span class="input-group-text">
@@ -204,7 +206,7 @@
                             <td class ="text-center">03</td>
                             <td class ="text-center">12/11/2024</td>
                             <td class ="text-center">Data 9</td>
-                            <td class ="text-center">Data 10</td>
+                            <td class ="text-center"><a class="text-light me-2" href="./CollaborateurIndividu.html"><i class="bi bi-pen-fill"></i></a><i class="bi bi-trash-fill"></i></td>
                         </tr>
                         <tr>
                             <td class ="text-center">Mason Steele</td>
@@ -216,7 +218,7 @@
                             <td class ="text-center">03</td>
                             <td class ="text-center">12/11/2024</td>
                             <td class ="text-center">Data 9</td>
-                            <td class ="text-center">Data 10</td>
+                            <td class ="text-center"><a class="text-light me-2" href="./CollaborateurIndividu.html"><i class="bi bi-pen-fill"></i></a><i class="bi bi-trash-fill"></i></td>
                         </tr>
                         <tr>
                             <td class ="text-center">Gerald Andrews</td>
@@ -228,7 +230,7 @@
                             <td class ="text-center">03</td>
                             <td class ="text-center">12/11/2024</td>
                             <td class ="text-center">Data 9</td>
-                            <td class ="text-center">Data 10</td>
+                            <td class ="text-center"><a class="text-light me-2" href="./CollaborateurIndividu.html"><i class="bi bi-pen-fill"></i></a><i class="bi bi-trash-fill"></i></td>
                         </tr>
                         <tr>
                             <td class ="text-center">Stanley Chambers</td>
@@ -240,7 +242,7 @@
                             <td class ="text-center">03</td>
                             <td class ="text-center">12/11/2024</td>
                             <td class ="text-center">Data 9</td>
-                            <td class ="text-center">Data 10</td>
+                            <td class ="text-center"><a class="text-light me-2" href="./CollaborateurIndividu.html"><i class="bi bi-pen-fill"></i></a><i class="bi bi-trash-fill"></i></td>
                         </tr>
                         <tr>
                             <td class ="text-center">Douglas Collins</td>
@@ -252,7 +254,7 @@
                             <td class ="text-center">03</td>
                             <td class ="text-center">12/11/2024</td>
                             <td class ="text-center">Data 9</td>
-                            <td class ="text-center">Data 10</td>
+                            <td class ="text-center"><a class="text-light me-2" href="./CollaborateurIndividu.html"><i class="bi bi-pen-fill"></i></a><i class="bi bi-trash-fill"></i></td>
                         </tr>
                         <tr>
                             <td class ="text-center">Douglas Carr</td>
@@ -264,7 +266,7 @@
                             <td class ="text-center">03</td>
                             <td class ="text-center">12/11/2024</td>
                             <td class ="text-center">Data 9</td>
-                            <td class ="text-center">Data 10</td>
+                            <td class ="text-center"><a class="text-light me-2" href="./CollaborateurIndividu.html"><i class="bi bi-pen-fill"></i></a><i class="bi bi-trash-fill"></i></td>
                         </tr>
                         </tbody>
                     </table>
@@ -273,8 +275,16 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-U1vE3PKSkG8Z0RaK5GtbMiybVvMcfKgDDltYbAVJk2Xyf5jYtLp67ULz+nDqgyvS"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+        <script type="module">
+            import DateFilter from '../../scripts/Classes/DateFilter.js'; 
+      
+            
+            const dateFilter = new DateFilter('#startDate', '#endDate', '#filterBtn', '#dataDisplay');
+        </script>
 </body>
 
 </html>

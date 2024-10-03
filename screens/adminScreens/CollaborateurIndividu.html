@@ -22,7 +22,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body>
+<body class="page"> 
     <div class="container-fluid row p-4 m-0">
         <sidebar class="sidebar rounded-3 col col-sm-3 col-md-4 col-lg-3 px-5 pt-5 align-items-center">
             <div class="admin rounded-4 d-flex justify-content-center text-center p-1">
@@ -47,10 +47,12 @@
                         <div class="dashboard__title ms-4 align-self-center">DASHBOARD</div>
                     </div>
                     <div class="newproj__content d-flex justify-content-center my-4">
-                        <button type="button" class="btn btn_newproj text-white px-4 p-0">
-                            <i class="bi bi-plus-square-fill mt-2 mx-3 h4"></i>
-                          Nouveau Projet
-                        </button>
+                        <a href="./newProjectScreen.html">
+                            <button type="button" class="btn btn_newproj text-white px-4 p-0">
+                                <i class="bi bi-plus-square-fill mt-2 mx-3 h4"></i>
+                              Nouveau Projet
+                            </button>
+                        </a>
                     </div>
                     <ul class="nav nav__ul row mt-4 p-0">
                         <li class="nav-item">
@@ -79,7 +81,7 @@
                         </li>
                         <li class="nav-item">
                             <div class="d-flex align-items-center">
-                                <a class="nav-link active ms-4 px-0" aria-current="page" href="CollaborateurIndividu.html">Collaborateurs</a>
+                                <a class="nav-link active ms-4 px-0" aria-current="page" href="./listeCollaborateursScreen.html">Collaborateurs</a>
                                 <span class="img_arrow">
                                     <i class="bi bi-chevron-right h4"></i>
                                 </span>
@@ -194,7 +196,24 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            
+            
+            <div class="midbar rounded-3 col col-sm-3 col-md-4 col-lg-3 px-5 pt-5 table-responsive">
+            <table class ="responsive midtable border-light ">
+                <thead> <tr class="border border-light row-custom">
+                    <th class="px-4 border-light border-right border">Nombre de taches : </th>
+                    <th class="px-4 border-light border-right border">Taches en cours : </th>
+                    <th class="px-4 ">Taches en attente : </th>
+                </tr>
+                <tbody>
+                    <tr class="border-light border">
+                        <th class="px-4  px-4 border-light border-right border"> 20</th>
+                        <th class="px-4 px-4 border-light border-right border"> 15 </th>
+                        <th class="px-4 "> 5 </th>
+                    </tr>
+                </tbody>
+                </thead>
+            </table></div></div>
         </main>
 
         </div>
@@ -233,6 +252,7 @@
             }
         });
     </script>
+    
 
         <!-- Bootstrap JS and dependencies (jQuery and Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

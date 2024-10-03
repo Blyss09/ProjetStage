@@ -1,27 +1,30 @@
-$pageBackground: rgba(100, 130, 173, 1); 
-$sideBar: rgba(127, 161, 195, 1); 
-$logOut: rgba(248, 60, 60, 1); 
-$searchButton: rgb(76, 146, 137); 
-$paginationActive: rgb(6, 24, 69); 
-$createButtonProject: rgb(32, 210, 169); 
+$pageBackground: rgba(100, 130, 173, 1);
+$sideBar: rgba(127, 161, 195, 1);
+$logOut: rgba(248, 60, 60, 1);
+$searchButton: rgb(76, 146, 137);
+$paginationActive: rgb(6, 24, 69);
+$createButtonProject: rgb(32, 210, 169);
 $returnButton: rgb(35, 28, 138);
-$returnButtonPag: rgb(103, 103, 103); 
+$returnButtonPag: rgb(103, 103, 103);
 $bellColor: rgb(37, 150, 190);
-$white: rgb(255,255,255);
+$white: rgb(255, 255, 255);
 $managerColor: rgb(55, 24, 94);
-$adminColor: rgba(248, 60, 60, 1); 
+$adminColor: rgba(248, 60, 60, 1);
 //tableaux
 $rowCollor: rgba(127, 161, 195);
 
-:root{
+.page {
   background-color: $pageBackground;
 }
+
 .bell {
   background-color: $bellColor;
 }
+
 .filterButton {
   background-color: $pageBackground;
 }
+
 .dateControl::placeholder {
 
   color: $sideBar;
@@ -33,78 +36,104 @@ $rowCollor: rgba(127, 161, 195);
 
 //Media Queries
 
-@media (max-width:1400px){
-  .admin,.manager,.collab {
+@media (max-width:1400px) {
+
+  .admin,
+  .manager,
+  .collab {
     background-color: transparent !important;
   }
+
   .nav-item .nav-link::before {
     display: none !important;
   }
-  .img_arrow{
+
+  .img_arrow {
     display: none !important;
+  }
+  .midbar {
+
+    background-color:rgba(127, 161, 195, 1)!important;
+    width: 90%!important;
+    height: 20vh!important;
+  
+  
   }
 
 }
+
 @media (max-width: 992px) {
 
   .sidebar .user__name,
   .sidebar .user__role {
     font-size: 14px !important;
   }
+
   .btn_newproj {
     font-size: 14px !important;
     padding: 10px !important;
   }
+
   .newProjectCard {
 
-    position: relative!important;
-    
+    position: relative !important;
+
     width: 600px !important;
-    left: 4%!important;
-    max-width: 95vw!important;
-    
+    left: 4% !important;
+    max-width: 95vw !important;
+
 
 
   }
 
   .step-container {
 
-    display: none!important;
+    display: none !important;
   }
-  
+
 }
+
 @media (max-width: 768px) {
+
   // $i: !important;
-  .container-fluid{
+  .container-fluid {
     padding: 0 !important;
     // height: 120vh !important;
   }
+
   .sidebar {
     width: 5% !important;
     padding: 0 !important;
     background-color: transparent !important;
     font-size: 0.7rem !important;
   }
-  .admin,.manager,.collab {
+
+  .admin,
+  .manager,
+  .collab {
 
     margin-left: 12rem !important;
 
-    .user__name{
+    .user__name {
       width: 5rem !important;
     }
   }
-  .collab{
+
+  .collab {
     margin-left: 7rem !important;
-    
+
   }
-  .user__icon i{
-    font-size: 1.9rem !important; 
+
+  .user__icon i {
+    font-size: 1.9rem !important;
   }
+
   .navbar {
     position: relative !important;
     bottom: 3.3rem !important;
   }
-  .navbar-collapse{
+
+  .navbar-collapse {
     position: fixed;
     top: 50px;
     right: 10rem;
@@ -113,40 +142,49 @@ $rowCollor: rgba(127, 161, 195);
     z-index: 100 !important;
     height: 110vh;
   }
-  .dashboard__body{
+
+  .dashboard__body {
     font-size: 14px !important;
     margin: 0 !important;
     padding: 0.3rem 0 1rem 0 !important;
   }
-  .btn_newproj{
+
+  .btn_newproj {
     // margin: 0 0 !important;
     width: 11rem !important;
     height: 2.3rem !important;
   }
-  .newproj__content{
+
+  .newproj__content {
     margin: -2rem 0 !important;
     // margin-bottom: 0 !important;
   }
-  .nav__ul{
+
+  .nav__ul {
     margin: 0 !important;
     font-size: 15px !important;
-    .nav-item{
+
+    .nav-item {
       margin: 0.3rem 6rem 0 -0.5rem !important;
       text-align: center;
     }
   }
-  .logout__btn{
+
+  .logout__btn {
     position: relative;
     bottom: 2rem;
   }
+
   .navbar-toggler {
     display: block !important;
     margin-left: 0.5rem !important;
   }
-  .logout__btn{
+
+  .logout__btn {
     margin-top: 3rem !important;
     margin-bottom: 5.4rem !important;
   }
+
   .notif__bar {
     margin: 0 !important;
     background-color: transparent !important;
@@ -155,6 +193,7 @@ $rowCollor: rgba(127, 161, 195);
     padding: 0.5rem !important;
     font-size: 0.8rem !important;
   }
+
   .search__body {
     display: flex !important;
     flex-wrap: wrap !important;
@@ -165,11 +204,11 @@ $rowCollor: rgba(127, 161, 195);
     margin-right: 0rem !important;
     border-bottom: 0 !important;
 
-    .title__text{
+    .title__text {
       // margin-bottom: 1rem !important;
       margin-left: 0 !important;
     }
-  
+
     .input-group {
       height: 2rem !important;
       flex-wrap: nowrap !important;
@@ -178,104 +217,124 @@ $rowCollor: rgba(127, 161, 195);
     .input-group-text {
       padding: 0 0 0 0.5rem !important;
     }
-    .input-group .form-control{
+
+    .input-group .form-control {
       width: 12rem !important;
     }
 
-    .btn-custom{
+    .btn-custom {
       margin: 0 0 0 1rem !important;
       height: 2rem !important;
       line-height: 1rem !important;
     }
   }
-  .filter__section{
+
+  .filter__section {
     margin-left: -7.3rem;
-    .sp{
+
+    .sp {
       width: 0 !important;
     }
-    .col-2{
+
+    .col-2 {
       margin: 0 4.2rem 0 3rem;
     }
-    .filterButton{
+
+    .filterButton {
       margin-left: 1.6rem;
-      height: 1.6rem ;
+      height: 1.6rem;
       line-height: 0rem !important;
     }
-    .dateControl{
+
+    .dateControl {
       margin-left: 1.5rem;
       width: 7rem !important;
-      height: 1.5rem ;
+      height: 1.5rem;
 
-      &#endDate{
+      &#endDate {
         margin-left: 3rem;
       }
     }
   }
+
   .btn-custom {
     margin-top: 1rem !important;
-  } 
+  }
+
   .upper_table {
     margin: 2rem 0 -0.5rem -5.6rem !important;
     color: white;
   }
-  .table_resp_pos{
+
+  .table_resp_pos {
     margin-left: -6rem !important;
     border-top: none !important;
   }
+
   .proj-table {
     margin-top: 1rem !important;
     margin-right: 0 !important;
     font-size: 0.8rem !important;
     border: 0 !important;
   }
-  .pagination{
+
+  .pagination {
     margin: 1rem 5rem 0 0 !important;
   }
+
   .params {
     display: flex !important;
     flex-direction: column !important;
     margin-left: 0 !important;
   }
+
   .params .col {
     display: flex;
   }
-  .params-collab{
+
+  .params-collab {
     display: flex !important;
     flex-direction: column !important;
   }
-  .card-param{
+
+  .card-param {
     position: relative;
     right: 2.5rem;
     width: 600px !important;
   }
-  .diag-param{
+
+  .diag-param {
     // right: 1.0rem;
     width: 600px !important;
   }
-  .card-collab{
+
+  .card-collab {
     position: relative;
     right: 2.5rem;
   }
-  .tables-overflow-scroll .btn-custom{
+
+  .tables-overflow-scroll .btn-custom {
     margin-right: 2rem;
   }
+
   .newProjectCard {
 
-    position: absolute!important;
-    
+    position: absolute !important;
+
     width: 600px !important;
-    left: 4%!important;
-    max-width: 95vw!important;
-    
+    left: 4% !important;
+    max-width: 95vw !important;
+
 
 
   }
+
   .step-container {
 
-    display:none!important;
+    display: none !important;
   }
 
-  .diag{
+  .diag {
     // margin-right: -10rem !important;
     margin-left: -2rem !important;
     overflow: scroll;
@@ -288,48 +347,45 @@ $rowCollor: rgba(127, 161, 195);
     // overflow: scroll !important; 
     scrollbar-width: auto !important;
   }
-.table-responsive::-webkit-scrollbar {
-  width: 12px !important;
-  height: 12px !important; 
-}
 
-.table-responsive::-webkit-scrollbar-thumb {
-  background-color: #ffffff !important; 
-  border-radius: 6px !important; 
-}
+  .table-responsive::-webkit-scrollbar {
+    width: 12px !important;
+    height: 12px !important;
+  }
 
-.table-responsive::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0.1) !important; 
-  border-radius: 6px !important;
+  .table-responsive::-webkit-scrollbar-thumb {
+    background-color: #ffffff !important;
+    border-radius: 6px !important;
+  }
 
-.table-responsive::-webkit-scrollbar-thumb {
-  background-color: #ffffff!important; 
-  border-radius: 6px!important; 
-}
+  .table-responsive::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    border-radius: 6px !important;
 
-.table-responsive::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0.1)!important; 
-  border-radius: 6px!important;
-}
+    .table-responsive::-webkit-scrollbar-thumb {
+      background-color: #ffffff !important;
+      border-radius: 6px !important;
+    }
 
-/* Firefox */
-.table-responsive {
-  scrollbar-width: thin !important; 
-  scrollbar-color: white rgba(0, 0, 0, 0.1) !important; 
-}
-}
+    .table-responsive::-webkit-scrollbar-track {
+      background-color: rgba(0, 0, 0, 0.1) !important;
+      border-radius: 6px !important;
+    }
+
+
+    /* Firefox */
+    .table-responsive {
+      scrollbar-width: thin !important;
+      scrollbar-color: white rgba(0, 0, 0, 0.1) !important;
+    }
+  }
 }
 // Scrollbar responsive mode (bonus) delete if it makes issues
 
 //Page de connexion
 
-.mainLogIn {
-  display: flex;
-  justify-content: center;
-  flex-direction: column; 
-  align-items: center;     
-  min-height: 70vh; 
-  text-align: center;
+.mainLogIn input {
+    width: 25rem;
 }
 
 .inputLogIn {
@@ -1102,7 +1158,7 @@ button.btn-primary {
 }
 .tables-overflow-scroll{
   overflow: scroll;
-  height: 75vh;
+  height: 78vh;
 }
 
 //Liste des collaborateurs
@@ -1127,4 +1183,27 @@ button.add-collaborator {
 
 .bold {
   font-weight: bold;
+}
+
+.midbar {
+
+  background-color:rgba(127, 161, 195, 1);
+  width: 37vw;
+  height: 20vh;
+  margin-top: 5rem;
+
+
+}
+
+.midtable {
+
+  border: white solid 1px;
+  border-radius: 12px!important;
+  caption-side: bottom;
+    border-collapse:collapse!important;
+  
+}
+.row-custom {
+
+  border-collapse: collapse;
 }
