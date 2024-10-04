@@ -1240,4 +1240,9 @@ button.add-collaborator {
 
 .card-collab {
   background-color: rgb(100, 130, 173);
+}
+
+.myTaskButton {
+  text-decoration: none;
+  color: white;
 }/*# sourceMappingURL=styles.css.map */
