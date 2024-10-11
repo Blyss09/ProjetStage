@@ -1,0 +1,12 @@
+</div>
+    </div>
+        <script src="<?= $iniObj->UIPath ?>/scripts/Classes/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+        <script src="<?= $iniObj->UIPath ?>/scripts/Classes/jquery-3.6.0.min.js"></script>
+        <script src="<?= $iniObj->UIPath ?>/scripts/Classes/bootstrap-datepicker.min.js"></script>
+        <script type="module">
+            import DateFilter from '<?= $iniObj->UIPath ?>/scripts/Classes/DateFilter.js'; 
+            const dateFilter = new DateFilter('#startDate', '#endDate', '#filterBtn', '#dataDisplay');
+        </script>
+</body>
+</html>

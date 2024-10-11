@@ -1,0 +1,66 @@
+</div>
+
+  </div>
+  <!-- Script pour générer le diagramme-->
+  <script src="<?= $iniObj->UIPath ?>/scripts/Classes/chart.js"></script>
+  <script>
+    // Sélectionner l'élément canvas
+    const ctx = document.getElementById('projectsChart').getContext('2d');
+
+    // Création du diagramme avec Chart.js
+    const projectsChart = new Chart(ctx, {
+      type: 'bar', // Type du graphique en bâtons
+      data: {
+        labels: ['Collaborateur 1', 'Collaborateur 2', 'Collaborateur 3', 'Collaborateur 4', 'Collaborateur 5', 'Collaborateur 6'], // Noms des projets
+        datasets: [{
+          label: 'Disponibilité',
+          data: [1, 2, 3, 6, 2, 10], // Valeurs de progression (correspondant aux étapes)
+          backgroundColor: [
+            'rgb(255, 165, 0)',  // Couleur des barres
+            'rgb(255, 165, 0)',
+            'rgb(255, 165, 0)',
+            'rgb(255, 165, 0)',
+            'rgb(255, 165, 0)',
+            'rgb(255, 165, 0)'
+          ],
+          borderColor: [
+            'rgb(255, 165, 0)',  // Couleur des bordures des barres
+            'rgb(255, 165, 0)',
+            'rgb(255, 165, 0)',
+            'rgb(255, 165, 0)',
+            'rgb(255, 165, 0)',
+            'rgb(255, 165, 0)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+
+          y: {
+            beginAtZero: true,
+            ticks: {
+              // Remplace les valeurs numériques par des mots
+              callback: function (value, index, values) {
+                const states = ['0%', '10%', '20%', '30%', '40%', '50%', '60%', '70%', '80%', '90%', '100%',]; // Liste des mots à afficher
+                return states[value];  // Renvoie le mot correspondant à la valeur
+              }
+            }
+          }
+        },
+        plugins: {
+          title: {
+            display: true,
+            text: 'Disponibilité des collaborateurs'  // Titre du graphique
+          }
+        }
+      }
+    });
+  </script>
+
+  
+  <script src="<?= $iniObj->UIPath ?>/scripts/Classes/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

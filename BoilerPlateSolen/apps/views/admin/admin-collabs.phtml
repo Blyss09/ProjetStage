@@ -1,0 +1,171 @@
+<?php include _VIEW_PATH . "/components/header.phtml";?> 
+<main class="col">
+                <div class="row filter__section mt-4">
+                    <div class="col-0 col-lg-5 col-md-4 col-1"></div>
+                    <div class="col-1 col-lg-1 col-md-2 col">
+                        <button id="filterBtn" class="btn filterButton fontWhite">Filtrer</button>
+                    </div>
+                  <div class="col-2 col-lg-3 col-md-3 col">
+                    <input type="text" class="form-control dateControl" id="startDate" placeholder="Date">
+                  </div>
+                  <div class="col-1 col-lg-3 col-md-3 col">
+                    <input type="text" class="form-control dateControl" id="endDate" placeholder="Date">
+                  </div>
+                </div>
+                <div id="dataDisplay" class="">
+                  <!-- Ici on montre les données, le target du script étant l'id datadisplay.
+                   Voir dans le script :
+                   data.forEach(item => {
+                  dataDisplay.append(`<p>${item.name} - ${item.date}</p>`);-->
+                </div>
+                <div class="container mt-3 mb-2 ms-3">
+                    <button class="adding_collab add-collaborator fs-5 fw-bold" data-bs-toggle="modal" data-bs-target="#modal_collab">+ Nouveau collaborateur</button>
+                    <div class="modal fade" id="modal_collab" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                          <div class="modal-content modalContent">
+                                            <div class="modal-header modalHeader">
+                                                <h3>Ajouter un collaborateur</h3>
+                                              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <label class="fs-5 mb-2">Nom :</label> 
+                                                <input type="text" class="w-100 form-control rounded" id="floatingInput" placeholder="">
+                                                <label class="fs-5 mb-2">Prénom :</label> 
+                                                <input type="text" class="w-100 form-control rounded" id="floatingInput" placeholder="">
+                                                <label class="fs-5 mb-2">Email :</label> 
+                                                <input type="text" class="w-100 form-control rounded" id="floatingInput" placeholder="">
+                                                <label class="fs-5 mb-2">Poste :</label> 
+                                                    <select class="form-select rounded" id="floatingSelect">
+                                                        <option value="1">Gestionnaire de projet</option>
+                                                        <option value="2">Lead développeur</option>
+                                                        <option value="3">Analyste</option>
+                                                        <option value="4">Designer</option>
+                                                        <option value="5">Dev ops</option>
+                                                        <option value="6">Scrum Master</option>
+                                                    </select>
+                                                <label class="fs-5 mb-2">Rôle :</label>
+                                                <select class="form-select rounded" id="floatingSelect">
+                                                    <option value="0" selected>Administrateur</option>
+                                                    <option value="1">Manager</option>
+                                                    <option value="2">Collaborateur</option>
+                                                </select>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn modal_exit" data-bs-dismiss="modal">Fermer</button>
+                                              <button type="button" class="btn modal_confirm">Confirmer</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive table_resp_pos ms-4">
+                    <table class="table proj-table text-center">
+                        <thead>
+                        <tr>
+                            <th class="align-middle text-center">Nom</th>
+                            <th class="align-middle text-center">Rôles</th>
+                            <th class="align-middle text-center">Projets</th>
+                            <th class="align-middle text-center">Tâches asssignées</th>
+                            <th class="align-middle text-center">Tâches en cours</th>
+                            <th class="align-middle text-center">Tâches en attente</th>
+                            <th class="align-middle text-center">Nombre de jours d'occupation</th>
+                            <th class="align-middle text-center">Date de fin de tâche</th>
+                            <th class="align-middle text-center">Disponibilité</th>
+                            <th class="align-middle text-center">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class ="text-center">Julian Gordon</td>
+                            <td class ="text-center">Développeur</td>
+                            <td class ="text-center">02</td>
+                            <td class ="text-center">20</td>
+                            <td class ="text-center">20</td>
+                            <td class ="text-center">20</td>
+                            <td class ="text-center">03</td>
+                            <td class ="text-center">12/11/2024</td>
+                            <td class ="text-center">Data 9</td>
+                            <td class ="text-center"><a class="text-light me-2" href="./CollaborateurIndividu.html"><i class="bi bi-pen-fill"></i></a><i class="bi bi-trash-fill"></i></td>
+                        </tr>
+                        <tr>
+                            <td class ="text-center">Mason Steele</td>
+                            <td class ="text-center">Chef de projet</td>
+                            <td class ="text-center">02</td>
+                            <td class ="text-center">20</td>
+                            <td class ="text-center">20</td>
+                            <td class ="text-center">20</td>
+                            <td class ="text-center">03</td>
+                            <td class ="text-center">12/11/2024</td>
+                            <td class ="text-center">Data 9</td>
+                            <td class ="text-center"><a class="text-light me-2" href="./CollaborateurIndividu.html"><i class="bi bi-pen-fill"></i></a><i class="bi bi-trash-fill"></i></td>
+                        </tr>
+                        <tr>
+                            <td class ="text-center">Gerald Andrews</td>
+                            <td class ="text-center">SystemAdmin</td>
+                            <td class ="text-center">02</td>
+                            <td class ="text-center">20</td>
+                            <td class ="text-center">20</td>
+                            <td class ="text-center">20</td>
+                            <td class ="text-center">03</td>
+                            <td class ="text-center">12/11/2024</td>
+                            <td class ="text-center">Data 9</td>
+                            <td class ="text-center"><a class="text-light me-2" href="./CollaborateurIndividu.html"><i class="bi bi-pen-fill"></i></a><i class="bi bi-trash-fill"></i></td>
+                        </tr>
+                        <tr>
+                            <td class ="text-center">Stanley Chambers</td>
+                            <td class ="text-center">Testeur</td>
+                            <td class ="text-center">02</td>
+                            <td class ="text-center">20</td>
+                            <td class ="text-center">20</td>
+                            <td class ="text-center">20</td>
+                            <td class ="text-center">03</td>
+                            <td class ="text-center">12/11/2024</td>
+                            <td class ="text-center">Data 9</td>
+                            <td class ="text-center"><a class="text-light me-2" href="./CollaborateurIndividu.html"><i class="bi bi-pen-fill"></i></a><i class="bi bi-trash-fill"></i></td>
+                        </tr>
+                        <tr>
+                            <td class ="text-center">Douglas Collins</td>
+                            <td class ="text-center">Stageur</td>
+                            <td class ="text-center">02</td>
+                            <td class ="text-center">20</td>
+                            <td class ="text-center">20</td>
+                            <td class ="text-center">20</td>
+                            <td class ="text-center">03</td>
+                            <td class ="text-center">12/11/2024</td>
+                            <td class ="text-center">Data 9</td>
+                            <td class ="text-center"><a class="text-light me-2" href="./CollaborateurIndividu.html"><i class="bi bi-pen-fill"></i></a><i class="bi bi-trash-fill"></i></td>
+                        </tr>
+                        <tr>
+                            <td class ="text-center">Douglas Carr</td>
+                            <td class ="text-center">Project Management</td>
+                            <td  class ="text-center">02</td>
+                            <td class ="text-center">20</td>
+                            <td class ="text-center">20</td>
+                            <td class ="text-center">20</td>
+                            <td class ="text-center">03</td>
+                            <td class ="text-center">12/11/2024</td>
+                            <td class ="text-center">Data 9</td>
+                            <td class ="text-center"><a class="text-light me-2" href="./CollaborateurIndividu.html"><i class="bi bi-pen-fill"></i></a><i class="bi bi-trash-fill"></i></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination mt-3">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </main>
+<?php include _VIEW_PATH . "/components/footer.phtml";?> 

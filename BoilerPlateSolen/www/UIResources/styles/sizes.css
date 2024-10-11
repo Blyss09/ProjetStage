@@ -1,0 +1,82 @@
+body {
+    font-size: clamp(1rem, 1.5vw, 1.5rem); /* Scales between 1rem and 1.5rem */
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+
+  .mainLogIn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 2rem;
+    flex-direction: column;
+  }
+
+  .logInPart {
+    max-width: 100%;
+    width: clamp(300px, 40vw, 400px); /* Scales between 300px and 400px */
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  img {
+    max-width: 80%; /* Ensure logo is responsive */
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .inputLogIn input {
+    font-size: clamp(1rem, 1.5vw, 1.5rem); /* Responsive font size for inputs */
+    padding: 0.8rem;
+  }
+
+  .buttonsLogIn {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttonsLogIn a {
+    margin-bottom: 1rem;
+    font-size: clamp(1rem, 1.5vw, 1.5rem); /* Scales for link text */
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: clamp(0.8rem, 1.2vw, 1.2rem); /* Footer font size scales */
+  }
+
+  /* 4K Ultra HD (3840x2160 and higher) */
+  @media only screen and (min-width: 3840px) {
+    body {
+      font-size: clamp(2rem, 2.5vw, 3rem); /* Larger base font for 4K */
+    }
+
+    .mainLogIn {
+      padding: 4rem;
+    }
+
+    .logInPart {
+      width: clamp(500px, 50vw, 700px); /* Larger width for higher resolutions */
+      padding: 3rem;
+    }
+
+    .inputLogIn input {
+      font-size: clamp(1.5rem, 2vw, 2.5rem); /* Larger input font size */
+      padding: 1.2rem;
+    }
+
+    .buttonsLogIn a {
+      font-size: clamp(1.5rem, 2vw, 2.5rem); /* Larger button/link text */
+    }
+
+    footer {
+      font-size: clamp(1.2rem, 1.5vw, 2rem); /* Larger footer text */
+    }
+  }
