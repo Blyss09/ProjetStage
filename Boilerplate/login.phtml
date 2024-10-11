@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="<?= $iniObj->UIPath ?>/styles/bootstrap.min.css"
+      rel="stylesheet"
+      
+    />
+    <link rel="stylesheet" href="<?= $iniObj->UIPath ?>/styles/styles.css" />
+    <!-- <link rel="stylesheet" href="../../styles/sizes.css" /> -->
+    <title>Document</title>
+    <style>
+      
+      
+    </style>
+  </head>
+  <body>
+    <main class="mainLogIn">
+      <div class="">
+        <img src="<?= $iniObj->UIPath ?>/assets/img/logoLogIn.png" alt="imgLogo" />
+        <div class="inputLogIn">
+          <div class="mb-3 ">
+            <label for="exampleFormControlInput1" class="form-label "></label>
+            <input
+              type="email"
+              class="form-control "
+              id="exampleFormControlInput1"
+              placeholder="Adresse Email"
+            />
+          </div>
+          <label for="inputPassword5" class="form-label"></label>
+          <input
+            type="password"
+            id="inputPassword5"
+            class="form-control"
+            aria-describedby="passwordHelpBlock"
+            placeholder="Mot de passe"
+          />
+        </div>
+      </div>
+      <div class="buttonsLogIn">
+        <a class="forgottenPass" href="./forgotPass.html">Mot de passe oublié ?</a>
+        <a class="connectionButton" href="../adminScreens/adminEnv.html">Connexion</a>
+      </div>
+    </main>
+    <footer class="footerLogIn">
+        <span>Copyright @ 2024 JIS COMPUTING</span>
+    </footer>
+
+    <script
+      src="<?= $iniObj->UIPath ?>/scripts/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+     
+    
+  </body>
+</html>
