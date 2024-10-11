@@ -38,6 +38,18 @@ switch ($page_requested)
         include "collab-dashboard.php";
         break;
 
+        case "manager-tasks":
+            include "manager-tasks.php";
+            break;
+    
+        case "manager-projects-tasks":
+            include "manager-projects-tasks.php";
+            break;
+    
+        case "manager-collabs-stats":
+            include "manager-collabs-stats.php";
+            break;
+
     case "manager-dashboard":
             include "manager-dashboard.php";
             break;

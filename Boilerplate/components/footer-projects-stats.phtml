@@ -1,0 +1,65 @@
+</div>
+
+</div>
+<!-- Script pour générer le diagramme-->
+<script src="<?= $iniObj->UIPath ?>/scripts/Classes/chart.js"></script>
+<script>
+  // Sélectionner l'élément canvas
+  const ctx = document.getElementById('projectsChart').getContext('2d');
+
+  // Création du diagramme avec Chart.js
+  const projectsChart = new Chart(ctx, {
+    type: 'bar', // Type du graphique en bâtons
+    data: {
+      labels: ['Projet 1', 'Projet 2', 'Projet 3', 'Projet 4', 'Projet 5', 'Projet 6'], // Noms des projets
+      datasets: [{
+        label: 'État du Projet',
+        data: [1, 2, 3, 6, 2, 1], // Valeurs de progression (correspondant aux étapes)
+        backgroundColor: [
+          'rgb(255, 165, 0)',  // Couleur des barres
+          'rgb(255, 165, 0)',
+          'rgb(255, 165, 0)',
+          'rgb(255, 165, 0)',
+          'rgb(255, 165, 0)',
+          'rgb(255, 165, 0)'
+        ],
+        borderColor: [
+          'rgb(255, 165, 0)',  // Couleur des bordures des barres
+          'rgb(255, 165, 0)',
+          'rgb(255, 165, 0)',
+          'rgb(255, 165, 0)',
+          'rgb(255, 165, 0)',
+          'rgb(255, 165, 0)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+
+        y: {
+          beginAtZero: true,
+          ticks: {
+            // Remplace les valeurs numériques par des mots
+            callback: function (value, index, values) {
+              const states = ['', 'CDC', 'Conception', 'Developpement', 'Test', 'Mise en stage', 'Mise en prod']; // Liste des mots à afficher
+              return states[value];  // Renvoie le mot correspondant à la valeur
+            }
+          }
+        }
+      },
+      plugins: {
+        title: {
+          display: true,
+          text: 'Evolution des projets par ordre de création'  // Titre du graphique
+        }
+      }
+    }
+  });
+</script>
+
+<!-- Bootstrap 5 JS -->
+<script src="<?= $iniObj->UIPath ?>/scripts/Classes/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+        <script src="<?= $iniObj->UIPath ?>/scripts/Classes/jquery-3.6.0.min.js"></script>
+</body>

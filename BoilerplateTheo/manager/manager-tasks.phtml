@@ -1,0 +1,111 @@
+<?php include _VIEW_PATH . "/components/headerManager.phtml";?>
+<main class="col">
+                <div class="row filter__section mt-4">
+                    <div class="col-0 col-lg-5 col-md-4 col-1"></div>
+                    <div class="col-1 col-lg-1 col-md-2 col">
+                        <button id="filterBtn" class="btn filterButton fontWhite">Filtrer</button>
+                    </div>
+                  <div class="col-2 col-lg-3 col-md-3 col">
+                    <input type="text" class="form-control dateControl" id="startDate" placeholder="Date">
+                  </div>
+                  <div class="col-1 col-lg-3 col-md-3 col">
+                    <input type="text" class="form-control dateControl" id="endDate" placeholder="Date">
+                  </div>
+                </div>
+                <div id="dataDisplay" class="">
+                  <!-- Ici on montre les données, le target du script étant l'id datadisplay.
+                   Voir dans le script :
+                   data.forEach(item => {
+                  dataDisplay.append(`<p>${item.name} - ${item.date}</p>`);-->
+                </div>
+                <div class="upper_table ms-4">
+                    <i class="bi bi-pencil-square fs-4"></i>
+                    <span class="edit_table">Modifier le tableau</span>
+                </div>
+                <div class="table-responsive table_resp_pos ms-4">
+                    <table class="table proj-table mt-2 text-center">
+                        <thead>
+                            <tr class="">
+                                <th scope="col">Libellés</th>
+                                <th scope="col">Date de début</th>
+                                <th scope="col">Heure de début</th>
+                                <th scope="col">Date Fin</th>
+                                <th scope="col">Heure Fin</th>
+                                <th scope="col">Statut</th>
+                                <th scope="col">Technologie</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col">Libellé de la tâche</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">09:00</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">18:00</td>
+                                <td class="col"><div class="waiting"></div>Attente</td>
+                                <td class="col">WEB</td>
+                                <td class="col"><button class="endingTask">Terminer la tâche</button></td>
+                            </tr>
+                            <tr>
+                                <td class="col">Libellé de la tâche</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">09:00</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">18:00</td>
+                                <td class="col"><div class="waiting"></div>Attente</td>
+                                <td class="col">WEB</td>
+                                <td class="col"><button class="finishedTask">Terminé</button></td>
+                            </tr>
+                            <tr>
+                                <td class="col">Libellé de la tâche</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">09:00</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">18:00</td>
+                                <td class="col"><div class="waiting"></div>Attente</td>
+                                <td class="col">WEB</td>
+                                <td class="col"><button class="endingTask">Terminer la tâche</button></td>
+                            </tr>
+                            <tr>
+                                <td class="col">Libellé de la tâche</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">09:00</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">18:00</td>
+                                <td class="col"><div class="finished"></div>Terminé</td>
+                                <td class="col">WEB</td>
+                                <td class="col"><button class="startingTask">Démarrer la tâche</button></td>
+                            </tr>
+                            <tr>
+                                <td class="col">Libellé de la tâche</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">09:00</td>
+                                <td class="col">jj/mm/aaaa</td>
+                                <td class="col">18:00</td>
+                                <td class="col"><div class="doing"></div>En cours</td>
+                                <td class="col">WEB</td>
+                                <td class="col"><button class="finishedTask">Terminé</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination mt-3">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </main>
+<?php include _VIEW_PATH . "/components/footer.phtml";?>
